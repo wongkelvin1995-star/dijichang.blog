@@ -1,0 +1,650 @@
+/* ==========================================================================
+   IMPERIAL ONE MAX · 白金皇家商务科技 Design System
+   dijichang.blog 顶级机场 (Imperial Network)
+   ========================================================================== */
+
+:root {
+  /* Core Palette Tokens */
+  --platinum-white: #F8F6F0;
+  --imperial-gold: #C6A66A;
+  --royal-navy: #14243C;
+  --moonlight-silver: #C9D2DF;
+  --eternal-obsidian: #10141C;
+  --champagne-gold: #E8DDC8;
+  --tech-blue: #779BC4;
+  --deep-gilt: #8B7040;
+
+  /* Semantic Surface & Text Tokens (Day Reading Mode) */
+  --bg-primary: #F8F6F0;
+  --bg-champagne: #F3EDE0;
+  --bg-tech: #EAF0F7;
+  --bg-navy: #14243C;
+  --bg-obsidian: #10141C;
+  --surface-card: rgba(255, 255, 255, 0.86);
+  --surface-glass: rgba(248, 246, 240, 0.82);
+  --surface-dark-glass: rgba(20, 36, 60, 0.84);
+  --text-primary: #14243C;
+  --text-secondary: #334663;
+  --text-muted: #5B6E8A;
+  --text-on-dark: #F8F6F0;
+  --text-on-dark-muted: #C9D2DF;
+  --border-gold: rgba(198, 166, 106, 0.42);
+  --border-silver: rgba(201, 210, 223, 0.65);
+
+  /* Typography */
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+
+  /* Spacing & Radii */
+  --container-max: 1280px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-imperial: 0 18px 48px rgba(20, 36, 60, 0.08), 0 2px 10px rgba(139, 112, 64, 0.08);
+  --shadow-gold-hover: 0 22px 54px rgba(20, 36, 60, 0.14), 0 0 0 1px rgba(198, 166, 106, 0.65);
+
+  /* Motion */
+  --ease-imperial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Night Reading Mode */
+[data-theme="night"] {
+  --bg-primary: #10141C;
+  --bg-champagne: #141B27;
+  --bg-tech: #14243C;
+  --surface-card: rgba(20, 36, 60, 0.82);
+  --surface-glass: rgba(16, 20, 28, 0.86);
+  --text-primary: #F8F6F0;
+  --text-secondary: #C9D2DF;
+  --text-muted: #98A9C2;
+  --border-gold: rgba(198, 166, 106, 0.5);
+  --border-silver: rgba(119, 155, 196, 0.3);
+  --shadow-imperial: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.75;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.45s var(--ease-imperial), color 0.35s ease;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--imperial-gold);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  background: var(--royal-navy);
+  color: var(--platinum-white);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* ==========================================================================
+   9. Executive Glass Navigation
+   ========================================================================== */
+.imperial-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface-glass);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid var(--border-gold);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imperial-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 68px;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-cn {
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.brand-en {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--deep-gilt);
+  font-weight: 700;
+}
+
+[data-theme="night"] .brand-en {
+  color: var(--imperial-gold);
+}
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 0.15rem;
+  flex-wrap: wrap;
+}
+
+.desktop-nav a {
+  padding: 0.42rem 0.62rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a[aria-current="page"] {
+  color: var(--text-primary);
+  background: rgba(198, 166, 106, 0.16);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 38px;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-gold);
+  background: var(--surface-card);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  border-color: var(--imperial-gold);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1120px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 1119px) {
+  .desktop-only-action {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Dynamic Chapter Backgrounds (7. Dynamic Color Route:
+   Platinum White -> Champagne Gold -> Tech Blue -> Royal Navy -> Obsidian)
+   ========================================================================== */
+.scene-band {
+  position: relative;
+  padding: 4.25rem 0;
+  isolation: isolate;
+}
+
+.scene-platinum {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-champagne) 100%);
+}
+
+.scene-champagne {
+  background: linear-gradient(180deg, var(--bg-champagne) 0%, #EDE2CE 100%);
+}
+[data-theme="night"] .scene-champagne {
+  background: linear-gradient(180deg, #141B27 0%, #192232 100%);
+}
+
+.scene-tech {
+  background: linear-gradient(180deg, var(--bg-tech) 0%, #DCE6F2 100%);
+}
+[data-theme="night"] .scene-tech {
+  background: linear-gradient(180deg, #14243C 0%, #182C48 100%);
+}
+
+.scene-navy {
+  background: linear-gradient(180deg, #14243C 0%, #0F1C30 100%);
+  color: var(--text-on-dark);
+}
+
+.scene-obsidian {
+  background: linear-gradient(180deg, #10141C 0%, #0B0E14 100%);
+  color: var(--text-on-dark);
+}
+
+/* Decorative Backdrop Layer - NEVER intercepts clicks */
+.scene-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Cards, Diamond Border & Buttons
+   ========================================================================== */
+.imperial-card {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--border-silver);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-imperial);
+  transition: transform 0.28s var(--ease-imperial), box-shadow 0.28s var(--ease-imperial), border-color 0.28s ease;
+}
+
+.scene-navy .imperial-card,
+.scene-obsidian .imperial-card {
+  background: rgba(20, 36, 60, 0.72);
+  border-color: rgba(198, 166, 106, 0.34);
+  color: var(--text-on-dark);
+}
+
+/* 8. Diamond Border Hover Effect */
+.diamond-hover:hover {
+  transform: translateY(-3px);
+  border-color: var(--imperial-gold);
+  box-shadow: var(--shadow-gold-hover);
+}
+
+.btn-imperial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s var(--ease-imperial), box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary-gold {
+  background: linear-gradient(135deg, #C6A66A 0%, #8B7040 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(139, 112, 64, 0.28);
+}
+
+.btn-primary-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(139, 112, 64, 0.38);
+}
+
+.btn-secondary-platinum {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border-color: var(--border-gold);
+}
+
+.scene-navy .btn-secondary-platinum,
+.scene-obsidian .btn-secondary-platinum {
+  background: rgba(248, 246, 240, 0.1);
+  color: var(--platinum-white);
+  border-color: rgba(198, 166, 106, 0.55);
+}
+
+.btn-secondary-platinum:hover {
+  border-color: var(--imperial-gold);
+  transform: translateY(-2px);
+}
+
+/* Chapter Badge */
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.78rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-gold);
+  background: rgba(198, 166, 106, 0.12);
+  color: var(--deep-gilt);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[data-theme="night"] .chapter-badge,
+.scene-navy .chapter-badge,
+.scene-obsidian .chapter-badge {
+  color: #E8DDC8;
+  background: rgba(198, 166, 106, 0.18);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+  line-height: 1.3;
+  margin: 0.6rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.section-lead {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  max-width: 72ch;
+  margin: 0 0 1.75rem;
+}
+
+.scene-navy .section-lead,
+.scene-obsidian .section-lead {
+  color: var(--text-on-dark-muted);
+}
+
+/* Grids */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+@media (min-width: 720px) {
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Scrollable Data Tables (Mobile safe, zero horizontal overflow) */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-silver);
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+}
+
+.scene-navy .table-scroll,
+.scene-obsidian .table-scroll {
+  background: rgba(16, 20, 28, 0.72);
+  border-color: rgba(198, 166, 106, 0.35);
+}
+
+.imperial-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.9rem;
+}
+
+.imperial-table th,
+.imperial-table td {
+  padding: 0.8rem 0.95rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-silver);
+  vertical-align: top;
+}
+
+.imperial-table th {
+  font-weight: 700;
+  background: rgba(198, 166, 106, 0.12);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   12 Cinematic Visual Effects (Lightweight GPU-friendly CSS)
+   ========================================================================== */
+/* 1. Imperial Reveal */
+@keyframes imperialReveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fx-reveal {
+  animation: imperialReveal 0.7s var(--ease-imperial) both;
+}
+
+/* 2. Golden Light Drift */
+@keyframes goldenLight {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.55; }
+  50% { transform: translate3d(24px, -14px, 0) scale(1.06); opacity: 0.85; }
+}
+.fx-golden-light {
+  animation: goldenLight 14s ease-in-out infinite;
+}
+
+/* 3. Goddess Parallax (subtle float) */
+@keyframes goddessFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+.fx-goddess-parallax {
+  animation: goddessFloat 7.5s ease-in-out infinite;
+}
+
+/* 4. Global Orbit */
+@keyframes globalOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.fx-global-orbit {
+  transform-origin: center;
+  animation: globalOrbit 42s linear infinite;
+}
+
+/* 5. Network Pulse (Decorative Only) */
+@keyframes networkPulse {
+  0%, 100% { stroke-dashoffset: 0; opacity: 0.45; }
+  50% { stroke-dashoffset: -48; opacity: 0.9; }
+}
+.fx-network-pulse {
+  stroke-dasharray: 8 10;
+  animation: networkPulse 6s linear infinite;
+}
+
+/* 6. Platinum Reflection */
+@keyframes platinumSheen {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+
+/* 10. Evidence Reveal */
+details.evidence-panel > summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+}
+details.evidence-panel[open] > .evidence-body {
+  animation: imperialReveal 0.35s var(--ease-imperial) both;
+}
+
+/* 12. Orion Feedback */
+@keyframes orionHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.fx-orion {
+  animation: orionHover 4.2s ease-in-out infinite;
+}
+
+/* Respect Reduced Motion & User Toggle */
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal,
+  .fx-golden-light,
+  .fx-goddess-parallax,
+  .fx-global-orbit,
+  .fx-network-pulse,
+  .fx-orion {
+    animation: none !important;
+  }
+}
+
+[data-motion="reduced"] .fx-reveal,
+[data-motion="reduced"] .fx-golden-light,
+[data-motion="reduced"] .fx-goddess-parallax,
+[data-motion="reduced"] .fx-global-orbit,
+[data-motion="reduced"] .fx-network-pulse,
+[data-motion="reduced"] .fx-orion {
+  animation: none !important;
+}
+
+/* ==========================================================================
+   Mobile Bottom Navigation Bar
+   ========================================================================== */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: var(--surface-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--border-gold);
+  padding: 0.35rem 0.25rem calc(0.35rem + env(safe-area-inset-bottom));
+}
+
+.mobile-bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  min-height: 44px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.mobile-bottom-nav a[aria-current="page"] {
+  color: var(--deep-gilt);
+}
+[data-theme="night"] .mobile-bottom-nav a[aria-current="page"] {
+  color: var(--imperial-gold);
+}
+
+@media (min-width: 1120px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1119px) {
+  body {
+    padding-bottom: 68px;
+  }
+}
+
+/* Evidence Pill */
+.evidence-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(119, 155, 196, 0.16);
+  color: var(--text-primary);
+  border: 1px solid rgba(119, 155, 196, 0.35);
+}
+
+.evidence-pill.warn {
+  background: rgba(198, 166, 106, 0.18);
+  border-color: rgba(198, 166, 106, 0.45);
+}
+
+/* Footer */
+.imperial-footer {
+  background: var(--eternal-obsidian);
+  color: var(--moonlight-silver);
+  border-top: 1px solid rgba(198, 166, 106, 0.35);
+  padding: 3.5rem 0 2.5rem;
+}
+
+.imperial-footer a:hover {
+  color: var(--imperial-gold);
+}

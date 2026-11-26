@@ -1,0 +1,302 @@
+[
+  {
+    "brandId": "lingdongyun",
+    "brandName": "灵动云",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "YouTube",
+      "TikTok",
+      "Abema",
+      "Spotify"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "muguang-jiasu",
+    "brandName": "暮光加速",
+    "declaredPlatforms": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "flyv",
+    "brandName": "飞V（FlyV）",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "YouTube Premium",
+      "Prime Video",
+      "Abema",
+      "TVer"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "tiziyun",
+    "brandName": "梯子云 LadderCloud",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "YouTube"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料称针对高清视频与流媒体用户分档配置、可用于 AI 工具访问，但 Netflix、Disney+ 解锁未逐一验证，也没有保证 AI 账号可用；本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "langwang",
+    "brandName": "浪网 WaveNet",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "YouTube"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "yinxingren",
+    "brandName": "隐形人",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "Prime Video",
+      "BBC",
+      "Abema",
+      "TVer"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准；列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "feimaoyun",
+    "brandName": "飞猫云",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "TikTok"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "guangsuyun",
+    "brandName": "光速云 LightSpeed",
+    "declaredPlatforms": [
+      "YouTube",
+      "Netflix",
+      "Disney+",
+      "Hulu",
+      "HBO",
+      "TikTok"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weituyun",
+    "brandName": "唯兔云（V2云）",
+    "declaredPlatforms": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "HUGO"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "u1s1",
+    "brandName": "U1S1（有一说一）",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "DAZN"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "quanqiuyun",
+    "brandName": "全球云",
+    "declaredPlatforms": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "sogoyun",
+    "brandName": "Sogo云",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO Max",
+      "Hulu",
+      "YouTube Premium"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weifeng-wangluo",
+    "brandName": "微风网络 Breezenet",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO Max",
+      "TikTok"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料称全节点使用住宅 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "wuyou",
+    "brandName": "无忧链接",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "YouTube",
+      "TikTok"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "lingmao",
+    "brandName": "灵猫",
+    "declaredPlatforms": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "HUGO"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "shanyue",
+    "brandName": "闪跃 FlashLeap",
+    "declaredPlatforms": [
+      "Netflix",
+      "Disney+",
+      "HBO"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "firefly",
+    "brandName": "飞为（Firefly）",
+    "declaredPlatforms": [
+      "YouTube",
+      "Netflix",
+      "Disney+",
+      "HBO"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": true,
+    "disclaimer": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实测为准",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "kuajie",
+    "brandName": "跨界",
+    "declaredPlatforms": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "supportsNetflixClaim": true,
+    "supportsDisneyClaim": true,
+    "supportsYouTubeClaim": false,
+    "disclaimer": "资料列出的平台为品牌声称，本站未测试",
+    "evidenceNature": "服务商公开声明",
+    "verifiedAt": "2026-11-25"
+  }
+]

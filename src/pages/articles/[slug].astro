@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articles } from '../../data/articles';
+import { brands } from '../../lib/data';
+
+export function getStaticPaths() {
+  return articles.map((a) => ({
+    params: { slug: a.slug },
+    props: { article: a },
+  }));
+}
+
+const { article } = Astro.props;
+const relatedArticles = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
+---
+<BaseLayout
+  title={article.seoTitle}
+  description={article.metaDescription}
+  ogType="article"
+  articleMeta={{
+    headline: article.title,
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    authorName: article.author,
+  }}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '专业阅读中心', url: '/articles/' },
+    { name: article.title, url: `/articles/${article.slug}/` },
+  ]}
+>
+  <article class="scene-band scene-platinum">
+    <div class="container" style="max-width:920px;">
+      <span class="chapter-badge">Article #{article.number} · 模板 {article.template} · {article.category}</span>
+      <h1 class="section-title" style="font-size:clamp(1.75rem,3vw,2.45rem);margin-top:0.75rem;">
+        {article.title}
+      </h1>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;">
+        <span>作者：{article.author}</span>
+        <span>发布：{article.publishedAt}</span>
+        <span>更新：{article.updatedAt}</span>
+      </div>
+
+      <nav aria-label="文章目录" class="imperial-card" style="padding:1.1rem 1.4rem;margin-bottom:2rem;">
+        <div style="font-weight:700;margin-bottom:0.45rem;">文章目录</div>
+        <ul style="margin:0;padding-left:1.2rem;display:grid;gap:0.3rem;font-size:0.9rem;">
+          {article.sections.map((s) => (
+            <li><a href={`#${s.id}`} style="text-decoration:underline;">{s.heading}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <div style="display:grid;gap:1.75rem;margin-bottom:2.25rem;">
+        {article.sections.map((s) => (
+          <section id={s.id} class="imperial-card">
+            <h2 style="margin:0 0 0.75rem;font-size:1.3rem;">{s.heading}</h2>
+            {s.paragraphs.map((p) => (
+              <p style="margin:0 0 0.85rem;font-size:0.98rem;line-height:1.85;color:var(--text-secondary);">
+                {p}
+              </p>
+            ))}
+          </section>
+        ))}
+      </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <div class="imperial-card">
+          <h3 style="margin:0 0 0.5rem;font-size:1.05rem;">资料来源与核验依据</h3>
+          <ul style="margin:0;padding-left:1.2rem;font-size:0.86rem;color:var(--text-muted);display:grid;gap:0.3rem;">
+            {article.sources.map((src) => <li>{src}</li>)}
+          </ul>
+        </div>
+        <div class="imperial-card">
+          <h3 style="margin:0 0 0.5rem;font-size:1.05rem;">关联工具与专题入口</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+            <a href={article.relatedToolUrl} class="btn-imperial btn-primary-gold" style="min-height:38px;padding:0.35rem 0.95rem;font-size:0.84rem;">
+              {article.relatedToolLabel}
+            </a>
+            <a href={article.relatedTopicUrl} class="btn-imperial btn-secondary-platinum" style="min-height:38px;padding:0.35rem 0.95rem;font-size:0.84rem;">
+              进入对应专题
+            </a>
+            <a href="/contact/" class="btn-imperial btn-secondary-platinum" style="min-height:38px;padding:0.35rem 0.95rem;font-size:0.84rem;">
+              资料纠错入口
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imperial-card" style="margin-bottom:2rem;">
+        <h3 style="margin:0 0 0.6rem;font-size:1.05rem;">品牌资料直达（18家）</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:0.45rem;">
+          {brands.map((b) => (
+            <a href={`/airports/${b.id}/`} class="evidence-pill" style="text-decoration:none;">{b.name}</a>
+          ))}
+        </div>
+      </div>
+
+      <h2 class="section-title" style="font-size:1.35rem;">相关推荐阅读</h2>
+      <div class="grid-3">
+        {relatedArticles.map((ra) => (
+          <a href={`/articles/${ra.slug}/`} class="imperial-card diamond-hover">
+            <div style="font-size:0.75rem;color:var(--deep-gilt);font-weight:700;">#{ra.number} · {ra.category}</div>
+            <div style="font-weight:700;margin-top:0.3rem;">{ra.title}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </article>
+</BaseLayout>

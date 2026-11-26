@@ -1,0 +1,165 @@
+{
+  "methodology": {
+    "notice": "本站严格区分「服务商宣传」「第三方历史资料」与「独立实测证据」。目前 18 家品牌尚未完成独立多日晚高峰实测采样，因此不发布虚构速度、延迟、丢包或抖动数值。实测数据由独立实测站 jichangshice.mom 负责采集。",
+    "requiredFields": [
+      "测试日期及时间",
+      "测试地区",
+      "网络运营商",
+      "接入网络类型",
+      "测试品牌及套餐",
+      "测试节点",
+      "测试工具",
+      "测试方法",
+      "样本数量",
+      "原始结果",
+      "测试局限性"
+    ]
+  },
+  "records": [],
+  "brandStatus": [
+    {
+      "brandId": "lingdongyun",
+      "brandName": "灵动云",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "muguang-jiasu",
+      "brandName": "暮光加速",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "flyv",
+      "brandName": "飞V（FlyV）",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "tiziyun",
+      "brandName": "梯子云 LadderCloud",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "langwang",
+      "brandName": "浪网 WaveNet",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "yinxingren",
+      "brandName": "隐形人",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "feimaoyun",
+      "brandName": "飞猫云",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "guangsuyun",
+      "brandName": "光速云 LightSpeed",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "weituyun",
+      "brandName": "唯兔云（V2云）",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "u1s1",
+      "brandName": "U1S1（有一说一）",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "quanqiuyun",
+      "brandName": "全球云",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "sogoyun",
+      "brandName": "Sogo云",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "weifeng-wangluo",
+      "brandName": "微风网络 Breezenet",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "wuyou",
+      "brandName": "无忧链接",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "lingmao",
+      "brandName": "灵猫",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "shanyue",
+      "brandName": "闪跃 FlashLeap",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "firefly",
+      "brandName": "飞为（Firefly）",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "未见明确带宽上限公开承诺",
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "kuajie",
+      "brandName": "跨界",
+      "independentTestCount": 0,
+      "status": "待独立实测核验",
+      "providerClaims": "服务商公开说明标注不限速（不代表保证无限带宽）",
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="联系与资料纠错入口 - 顶级机场 Imperial Network"
+  description="若发现套餐价格变更、优惠码失效、退款条款更新或事实性误差，欢迎通过纠错渠道反馈核实。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '联系与纠错', url: '/contact/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container" style="max-width:860px;">
+      <span class="chapter-badge">Contact &amp; Corrections</span>
+      <h1 class="section-title">联系与资料纠错入口</h1>
+      <div class="imperial-card">
+        <p style="margin:0 0 1rem;">
+          顶级机场（dijichang.blog）坚持以可核验公开资料为基准。由于服务商套餐价格、优惠码与客户端政策可能随时调整，若您发现以下情况，欢迎提供公开来源截图或官方公告链接以便核验更正：
+        </p>
+        <ul style="margin:0 0 1rem;padding-left:1.25rem;display:grid;gap:0.4rem;">
+          <li>历史套餐价格已下架或周期售价发生变动；</li>
+          <li>原始优惠码已失效或适用范围变更；</li>
+          <li>服务商公开线路声明、设备限制或退款政策更新；</li>
+          <li>页面链接、分类或文字存在错漏。</li>
+        </ul>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+          编辑部联系邮箱：<code style="font-weight:700;">editorial@dijichang.blog</code>（所有核实后的更正均将公开记录于 <a href="/updates/" style="text-decoration:underline;">/updates/</a> 页面）。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

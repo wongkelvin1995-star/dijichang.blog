@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14243C" />
+      <stop offset="60%" stop-color="#1A2F4E" />
+      <stop offset="100%" stop-color="#10141C" />
+    </linearGradient>
+    <linearGradient id="og-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8DDC8" />
+      <stop offset="50%" stop-color="#C6A66A" />
+      <stop offset="100%" stop-color="#8B7040" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og-bg)" />
+  <circle cx="940" cy="315" r="240" stroke="#779BC4" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.55" />
+  <ellipse cx="940" cy="315" rx="290" ry="95" transform="rotate(-18 940 315)" stroke="#C6A66A" stroke-width="2" opacity="0.7" />
+  <polygon points="940,145 1030,245 940,420 850,245" fill="rgba(248,246,240,0.08)" stroke="url(#og-gold)" stroke-width="2.5" />
+  <path d="M895 245L912 205L940 228L968 205L985 245H895Z" fill="url(#og-gold)" />
+  <rect x="80" y="130" width="220" height="36" rx="18" fill="rgba(198,166,106,0.18)" stroke="#C6A66A" />
+  <text x="190" y="153" text-anchor="middle" fill="#E8DDC8" font-size="14" font-weight="700" font-family="sans-serif" letter-spacing="2">IMPERIAL ONE MAX</text>
+  <text x="80" y="235" fill="#F8F6F0" font-size="58" font-weight="800" font-family="sans-serif">顶级机场 · Imperial Network</text>
+  <text x="80" y="295" fill="#C6A66A" font-size="28" font-weight="700" font-family="sans-serif">高端专线、优质节点与服务品质选购指南</text>
+  <text x="80" y="360" fill="#C9D2DF" font-size="22" font-family="sans-serif">真正的品质，不止于速度 · True Quality Goes Beyond Speed</text>
+  <text x="80" y="510" fill="#98A9C2" font-size="18" font-family="sans-serif">dijichang.blog · 原创顾问 AUREVIA 奥蕾薇娅 &amp; ORION 铂金智核</text>
+</svg>

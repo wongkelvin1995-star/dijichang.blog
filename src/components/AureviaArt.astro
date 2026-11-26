@@ -1,0 +1,49 @@
+---
+import type { AureviaPose } from '../lib/types';
+
+interface Props {
+  pose?: AureviaPose;
+  class?: string;
+  compact?: boolean;
+}
+
+const { pose = 'welcome', class: className = '', compact = false } = Astro.props;
+
+const poseMeta: Record<AureviaPose, { title: string; badge: string; propLabel: string }> = {
+  welcome: { title: '皇家旗舰欢迎姿态', badge: 'IMPERIAL ADVISOR', propLabel: '金色网络罗盘' },
+  quality: { title: '专业品质评选姿态', badge: 'QUALITY INDEX', propLabel: '皇家品质评定终端' },
+  backbone: { title: '精品专线研究姿态', badge: 'PLATINUM BACKBONE', propLabel: '专线拓扑图谱' },
+  atlas: { title: '全球网络探索姿态', badge: 'GLOBAL ATLAS', propLabel: '透明数字地球' },
+  business: { title: '国际商务指导姿态', badge: 'EXECUTIVE LOUNGE', propLabel: '商务连续性面板' },
+  plans: { title: '高端套餐分析姿态', badge: 'PRESTIGE PLANS', propLabel: '套餐价值核算表' },
+  risk: { title: '安全与风险提醒姿态', badge: 'RISK AUDIT', propLabel: '证据核验盾徽' },
+  qa: { title: '专业知识答疑姿态', badge: 'EXPERT Q&A', propLabel: '皇家档案问答录' },
+};
+
+const meta = poseMeta[pose];
+const imgSrc = `/images/characters/aurevia-${pose}.jpg`;
+---
+<figure
+  class={`aurevia-figure ${compact ? 'aurevia-compact' : ''} ${className}`}
+  style="margin:0;position:relative;border-radius:18px;overflow:hidden;border:1.5px solid var(--border-gold);box-shadow:var(--shadow-imperial);background:var(--royal-navy);"
+>
+  <img
+    src={imgSrc}
+    alt={`AUREVIA 奥蕾薇娅 - ${meta.title}（${meta.propLabel}）`}
+    width="768"
+    height="1024"
+    loading={compact ? 'lazy' : 'eager'}
+    decoding="async"
+    style="width:100%;height:auto;display:block;aspect-ratio:3/4;object-fit:cover;object-position:center top;"
+  />
+  <figcaption
+    style="position:absolute;left:0.75rem;right:0.75rem;bottom:0.75rem;padding:0.48rem 0.85rem;border-radius:999px;background:rgba(16,20,28,0.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(198,166,106,0.65);text-align:center;"
+  >
+    <div style="color:#E8DDC8;font-size:0.72rem;font-weight:800;letter-spacing:0.12em;">
+      AUREVIA · {meta.badge}
+    </div>
+    <div style="color:#C9D2DF;font-size:0.68rem;margin-top:0.1rem;">
+      {meta.title}（{meta.propLabel}）
+    </div>
+  </figcaption>
+</figure>

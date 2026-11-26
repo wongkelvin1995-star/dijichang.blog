@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCompareIsland from '../../components/tools/ServiceCompareIsland';
+import { brands, plans, qualityIndex, servicePolicies } from '../../lib/data';
+
+const compareBrands = brands.map((b) => {
+  const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+  const p = servicePolicies.find((x) => x.brandId === b.id);
+  return {
+    id: b.id,
+    name: b.name,
+    ratio: b.ratio,
+    deviceLimit: b.deviceLimit,
+    lineTypes: b.lineTypes,
+    aiTools: b.aiTools,
+    streaming: b.streaming,
+    supportChannels: p?.supportChannels || [],
+    refundPolicy: p?.refundPolicy || '未明示',
+    trialPolicy: p?.trialPolicy || '未明示',
+    evidenceCompleteness: q?.evidenceCompleteness ?? 0,
+    plans: plans.filter((pl) => pl.brandId === b.id),
+  };
+});
+---
+<BaseLayout
+  title="高端套餐与服务对比矩阵｜18家品牌真实套餐对比工具 - 顶级机场"
+  description="选择2–4家品牌与真实历史套餐，横向对比整期售价、折合月价、流量倍率、设备限制与售后退款政策。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '独家工具', url: '/tools/' },
+    { name: '高端套餐与服务对比', url: '/tools/service-compare/' },
+  ]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">Function 09 · Premium Service Compare</span>
+      <h1 class="section-title">高端套餐与服务对比矩阵</h1>
+      <p class="section-lead">全站套餐数据统一读取自核心数据库，支持自由切换同一品牌的不同周期套餐进行 17 项维度比对。</p>
+      <ServiceCompareIsland client:load brands={compareBrands} />
+    </div>
+  </section>
+</BaseLayout>

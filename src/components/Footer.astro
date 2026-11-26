@@ -1,0 +1,99 @@
+---
+import ImperialLogo from './ImperialLogo.astro';
+
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '/' } = Astro.props;
+
+const mobileNav = [
+  { label: '首页', href: '/', icon: '⌂' },
+  { label: '精品', href: '/rankings/', icon: '◆' },
+  { label: '对比', href: '/tools/service-compare/', icon: '⇄' },
+  { label: '搜索', href: '/search/', icon: '⌕' },
+  { label: '我的', href: '/profile/', icon: '♛' },
+];
+---
+<footer class="imperial-footer">
+  <div class="container">
+    <div class="grid-4" style="gap:2rem;margin-bottom:2.25rem;">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.85rem;">
+          <ImperialLogo size={32} />
+          <div>
+            <div style="font-weight:800;color:#F8F6F0;">顶级机场 · Imperial Network</div>
+            <div style="font-size:0.72rem;letter-spacing:0.12em;color:#C6A66A;">IMPERIAL ONE MAX</div>
+          </div>
+        </div>
+        <p style="font-size:0.88rem;line-height:1.7;color:#C9D2DF;margin:0 0 0.75rem;">
+          真正的品质，不止于速度。True Quality Goes Beyond Speed.
+        </p>
+        <p style="font-size:0.8rem;color:#98A9C2;margin:0;">
+          独立高端网络服务资料研究与消费选购博客。本站与所评测服务商无官方隶属关系，所有推广链接均以 <code style="color:#E8DDC8;">rel="sponsored"</code> 明确披露。
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;color:#E8DDC8;margin:0 0 0.85rem;">十大旗舰研究中心</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.45rem;font-size:0.86rem;">
+          <li><a href="/premium/">高端机场总览</a></li>
+          <li><a href="/rankings/methodology/">Imperial Quality Index 评选标准</a></li>
+          <li><a href="/lines/">IEPL / IPLC 精品专线研究</a></li>
+          <li><a href="/regions/">全球七大核心出口图谱</a></li>
+          <li><a href="/performance/">网络性能与晚高峰证据</a></li>
+          <li><a href="/ai/">AI 应用兼容性研究</a></li>
+          <li><a href="/streaming/">4K / 8K 高端流媒体研究</a></li>
+          <li><a href="/business/">国际商务办公网络规划</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;color:#E8DDC8;margin:0 0 0.85rem;">独家交互工具与档案</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.45rem;font-size:0.86rem;">
+          <li><a href="/tools/premium-selector/">高端机场智能选购助手</a></li>
+          <li><a href="/tools/line-matrix/">精品专线对比矩阵</a></li>
+          <li><a href="/tools/streaming-calculator/">皇家影音带宽计算器</a></li>
+          <li><a href="/tools/business-planner/">国际商务网络规划工具</a></li>
+          <li><a href="/tools/service-compare/">高端套餐与服务对比</a></li>
+          <li><a href="/airports/">全部 18 家品牌资料档案</a></li>
+          <li><a href="/articles/">专业原创阅读中心（30篇）</a></li>
+          <li><a href="/profile/">我的皇家档案（本地存储）</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;color:#E8DDC8;margin:0 0 0.85rem;">编辑规范与信息披露</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.45rem;font-size:0.86rem;">
+          <li><a href="/about/">关于顶级机场（Imperial ONE MAX）</a></li>
+          <li><a href="/updates/">最新资料核验与更正记录</a></li>
+          <li><a href="/faq/">40 项常见问题解答</a></li>
+          <li><a href="/disclosure/">推广关系与佣金披露</a></li>
+          <li><a href="/privacy/">隐私政策与数据声明</a></li>
+          <li><a href="/contact/">联系与资料纠错入口</a></li>
+        </ul>
+        <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <button type="button" id="motion-toggle-btn" class="icon-btn" style="background:rgba(20,36,60,0.85);color:#E8DDC8;">
+            <span id="motion-toggle-label">动态视觉：开启</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid rgba(198,166,106,0.22);padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.75rem;font-size:0.8rem;color:#98A9C2;">
+      <span>© 2026–2027 顶级机场 dijichang.blog · Imperial Network · 简体中文独立研究站</span>
+      <span>原创作画角色 AUREVIA · 奥蕾薇娅 &amp; ORION · 铂金智核均为虚构品牌形象</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mobile-bottom-nav" aria-label="移动端快捷导航">
+  {mobileNav.map((item) => {
+    const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+    return (
+      <a href={item.href} aria-current={active ? 'page' : undefined}>
+        <span aria-hidden="true" style="font-size:1rem;">{item.icon}</span>
+        <span>{item.label}</span>
+      </a>
+    );
+  })}
+</nav>

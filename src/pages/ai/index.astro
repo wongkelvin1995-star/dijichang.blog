@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { aiCompatibility } from '../../lib/data';
+---
+<BaseLayout
+  title="AI 工具专用机场研究｜ChatGPT、Claude 与 Gemini 兼容性分析 - 顶级机场"
+  description="研究 ChatGPT、Claude 与 Gemini 的官方支持条件、IP 风控边界与 18 家品牌 AI 兼容声明。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: 'AI应用', url: '/ai/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <FlagshipScene scene="nexus" />
+    <div class="container">
+      <span class="chapter-badge">Chapter 06 · Intelligence Nexus</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        高端 AI 研究中心：ChatGPT / Claude / Gemini 兼容分析
+      </h1>
+      <p class="section-lead">
+        不能将原生 IP、住宅 IP 或专线直接认定为 AI 平台访问保证。所有 AI 工具使用均需遵守目标平台适用法律与官方地区服务条款。
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.65rem;margin-bottom:2rem;">
+        <a href="/ai/compatibility/" class="btn-imperial btn-primary-gold">进入 AI 兼容对比中心</a>
+        <a href="/ai/chatgpt/" class="btn-imperial btn-secondary-platinum">ChatGPT 研究</a>
+        <a href="/ai/claude/" class="btn-imperial btn-secondary-platinum">Claude 研究</a>
+        <a href="/ai/gemini/" class="btn-imperial btn-secondary-platinum">Gemini 研究</a>
+      </div>
+
+      <div class="grid-3">
+        {aiCompatibility.slice(0, 6).map((a) => (
+          <a href={`/airports/${a.brandId}/`} class="imperial-card diamond-hover">
+            <h2 style="margin:0 0 0.4rem;font-size:1.05rem;">{a.brandName}</h2>
+            <p style="margin:0 0 0.4rem;font-size:0.86rem;color:var(--text-secondary);">
+              公开提及：{a.declaredAiTools.join('、') || '未单独列出'}
+            </p>
+            <span class="evidence-pill warn">{a.independentTestStatus}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

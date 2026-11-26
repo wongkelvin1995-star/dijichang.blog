@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AureviaArt from '../components/AureviaArt.astro';
+import OrionSprite from '../components/OrionSprite.astro';
+---
+<BaseLayout
+  title="404 · 皇家档案馆未找到该页面 - 顶级机场"
+  description="您访问的页面不存在或已归档，请返回皇家旗舰首页或使用智能搜索。"
+  noindex={true}
+>
+  <section class="scene-band scene-obsidian">
+    <div class="container" style="text-align:center;max-width:780px;">
+      <div style="display:flex;justify-content:center;align-items:center;gap:1.25rem;margin-bottom:1.25rem;">
+        <div style="max-width:220px;"><AureviaArt pose="qa" compact /></div>
+        <OrionSprite size={56} />
+      </div>
+      <span class="chapter-badge">404 · Royal Archives Navigation</span>
+      <h1 class="section-title" style="color:#F8F6F0;">404 · 您在皇家档案馆迷路了</h1>
+      <p style="color:#C9D2DF;margin:0 0 1.5rem;">
+        奥蕾薇娅与铂金智核未能检索到当前路径对应的档案卷宗。请返回旗舰首页或使用全站智能搜索定位目标研究页面。
+      </p>
+      <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+        <a href="/" class="btn-imperial btn-primary-gold">返回皇家旗舰首页</a>
+        <a href="/search/" class="btn-imperial btn-secondary-platinum">前往全站智能搜索</a>
+        <a href="/airports/" class="btn-imperial btn-secondary-platinum">浏览 18 家品牌档案</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

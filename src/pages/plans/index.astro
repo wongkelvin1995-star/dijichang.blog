@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import ServiceCompareIsland from '../../components/tools/ServiceCompareIsland';
+import { brands, plans, qualityIndex, servicePolicies } from '../../lib/data';
+
+const compareBrands = brands.map((b) => {
+  const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+  const p = servicePolicies.find((x) => x.brandId === b.id);
+  return {
+    id: b.id,
+    name: b.name,
+    ratio: b.ratio,
+    deviceLimit: b.deviceLimit,
+    lineTypes: b.lineTypes,
+    aiTools: b.aiTools,
+    streaming: b.streaming,
+    supportChannels: p?.supportChannels || [],
+    refundPolicy: p?.refundPolicy || '未明示',
+    trialPolicy: p?.trialPolicy || '未明示',
+    evidenceCompleteness: q?.evidenceCompleteness ?? 0,
+    plans: plans.filter((pl) => pl.brandId === b.id),
+  };
+});
+---
+<BaseLayout
+  title="高端套餐与服务研究｜18家品牌实际售价、售后与退款政策 - 顶级机场"
+  description="统一数据库呈现 329 条历史套餐价格、月付与年付折算单价、流量倍率、客服渠道及试用退款条款。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '高端套餐', url: '/plans/' }]}
+>
+  <section class="scene-band scene-champagne">
+    <FlagshipScene scene="collection" />
+    <div class="container">
+      <span class="chapter-badge">Chapter 09 · Prestige Collection</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        精品套餐服务中心：价格结构、权益与售后透明度
+      </h1>
+      <p class="section-lead">
+        所有套餐数据均统一读取自 18 家品牌数据库（共 {plans.length} 条历史套餐记录），绝不硬编码虚假比价。所有历史价格均标明来源与核验日期，不代表当前实时结算价。
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+        <a href="/plans/monthly/" class="btn-imperial btn-primary-gold">月付套餐研究</a>
+        <a href="/plans/yearly/" class="btn-imperial btn-secondary-platinum">年付划算吗</a>
+        <a href="/plans/support/" class="btn-imperial btn-secondary-platinum">客服与售后</a>
+        <a href="/plans/trial-refund/" class="btn-imperial btn-secondary-platinum">试用与退款政策</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">交互式高端套餐与服务对比矩阵</h2>
+      <ServiceCompareIsland client:load brands={compareBrands} />
+    </div>
+  </section>
+</BaseLayout>

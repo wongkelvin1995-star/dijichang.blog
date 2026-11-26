@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartSearchIsland, { type SearchItem } from '../../components/tools/SmartSearchIsland';
+import { brands, plans, regions } from '../../lib/data';
+import { articles } from '../../data/articles';
+import { topicPages } from '../../data/topics';
+
+const searchItems: SearchItem[] = [
+  ...brands.map((b) => ({
+    id: `brand-${b.id}`,
+    category: '品牌' as const,
+    title: `${b.name}（${b.nameEn}）`,
+    subtitle: b.tagline,
+    url: `/airports/${b.id}/`,
+    keywords: `${b.name} ${b.nameEn} ${b.shortName} ${(b.aliases || []).join(' ')} ${b.coupon?.code || ''} ${(b.lineTypes || []).join(' ')} ${(b.regions || []).join(' ')} ${(b.aiTools || []).join(' ')}`,
+  })),
+  ...brands.map((b) => {
+    const bPlans = plans.filter((p) => p.brandId === b.id);
+    const minPrice = bPlans.length ? Math.min(...bPlans.map((p) => p.price)) : null;
+    return {
+      id: `plan-${b.id}`,
+      category: '精品套餐' as const,
+      title: `${b.name} 历史套餐（${bPlans.length}条记录）`,
+      subtitle: minPrice !== null ? `历史最低 ¥${minPrice} 起｜优惠码 ${b.coupon?.code || '无'}` : '查看套餐详情',
+      url: `/airports/${b.id}/`,
+      keywords: `${b.name} 套餐 价格 月付 年付 退款 ${b.coupon?.code || ''}`,
+    };
+  }),
+  ...regions.map((r) => ({
+    id: `reg-${r.id}`,
+    category: '全球节点' as const,
+    title: `${r.name}（${r.nameEn}）节点覆盖`,
+    subtitle: `${r.brandCount} 家品牌声明覆盖｜${r.role}`,
+    url: r.slug,
+    keywords: `${r.name} ${r.nameEn} 节点 出口 原生IP 住宅IP`,
+  })),
+  ...topicPages.map((t) => ({
+    id: `topic-${t.path}`,
+    category: (t.path.startsWith('/lines/')
+      ? '线路知识'
+      : t.path.startsWith('/business/')
+      ? '商务办公'
+      : '应用研究') as SearchItem['category'],
+    title: t.title,
+    subtitle: t.lead,
+    url: t.path,
+    keywords: `${t.title} ${t.chapterLabel} ${t.seoTitle}`,
+  })),
+  ...articles.map((a) => ({
+    id: `art-${a.slug}`,
+    category: '专业文章' as const,
+    title: a.title,
+    subtitle: a.summary,
+    url: `/articles/${a.slug}/`,
+    keywords: `${a.title} ${a.category} ${a.summary}`,
+  })),
+  {
+    id: 'tool-selector',
+    category: '独家工具',
+    title: '高端机场智能选购助手 (Premium Selector)',
+    subtitle: '按预算、设备与流量条件匹配真实套餐',
+    url: '/tools/premium-selector/',
+    keywords: '智能选购 工具 筛选 预算',
+  },
+  {
+    id: 'tool-line-matrix',
+    category: '独家工具',
+    title: '精品专线对比矩阵 (Line Matrix)',
+    subtitle: '横向对比 IEPL / IPLC / BGP 声明',
+    url: '/tools/line-matrix/',
+    keywords: 'IEPL IPLC BGP 专线 对比',
+  },
+  {
+    id: 'tool-streaming',
+    category: '独家工具',
+    title: '皇家影音带宽计算器 (Streaming Lab)',
+    subtitle: '1080P / 4K / 8K 月流量与倍率精算',
+    url: '/tools/streaming-calculator/',
+    keywords: '4K 8K 流媒体 Netflix YouTube 流量 计算器',
+  },
+  {
+    id: 'tool-business',
+    category: '独家工具',
+    title: '国际商务网络规划工具 (Business Planner)',
+    subtitle: '团队带宽估算与连续性备用方案',
+    url: '/tools/business-planner/',
+    keywords: '商务 办公 团队 视频会议',
+  },
+  {
+    id: 'tool-compare',
+    category: '独家工具',
+    title: '高端套餐与服务对比矩阵 (Service Compare)',
+    subtitle: '2–4 家品牌套餐价格与售后政策对比',
+    url: '/tools/service-compare/',
+    keywords: '套餐 对比 年付 月付 退款',
+  },
+];
+---
+<BaseLayout
+  title="全站智能搜索｜ORION 铂金智核检索中心 - 顶级机场"
+  description="支持中文模糊匹配、英文大小写兼容、同义词扩展、品牌优惠码、IEPL/IPLC专线、全球节点与30篇原创文章实时检索。"
+  noindex={true}
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '全站搜索', url: '/search/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">ORION Smart Search · 全站智能检索</span>
+      <h1 class="section-title">全站智能搜索</h1>
+      <SmartSearchIsland client:load items={searchItems} />
+    </div>
+  </section>
+</BaseLayout>

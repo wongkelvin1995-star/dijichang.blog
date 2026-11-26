@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LineMatrixIsland from '../../components/tools/LineMatrixIsland';
+import { lines } from '../../lib/data';
+---
+<BaseLayout
+  title="精品专线对比矩阵｜IEPL / IPLC / BGP 声明对比 - 顶级机场"
+  description="选择2–4家品牌横向对比 IEPL、IPLC、BGP 线路声明、计费倍率与独立核验状态。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '独家工具', url: '/tools/' },
+    { name: '精品专线对比矩阵', url: '/tools/line-matrix/' },
+  ]}
+>
+  <section class="scene-band scene-tech">
+    <div class="container">
+      <span class="chapter-badge">Function 04 · Dedicated Line Matrix</span>
+      <h1 class="section-title">精品专线对比矩阵</h1>
+      <p class="section-lead">自由勾选 2–4 家品牌，横向对照各服务商的线路公开声明、流量倍率与独立核验边界。</p>
+      <LineMatrixIsland client:load lines={lines} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import { faqs } from '../../data/faqs';
+
+const categories = Array.from(new Set(faqs.map((f) => f.category)));
+---
+<BaseLayout
+  title="常见问题解答｜40项顶级机场与高端专线FAQ - 顶级机场"
+  description="由奥蕾薇娅专业答疑形式呈现40项核心FAQ，涵盖顶级机场标准、IEPL/IPLC专线、全球节点、性能指标、AI应用、4K/8K流媒体及购买风险。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '常见问题', url: '/faq/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;margin-bottom:2rem;">
+        <div>
+          <span class="chapter-badge">AUREVIA Expert Q&amp;A · 40 项完整答疑</span>
+          <h1 class="section-title">顶级机场 40 项核心常见问题解答</h1>
+          <p class="section-lead">所有问题均具备完整独立原创回答，正文直接输出于 HTML 供检索与阅读。</p>
+        </div>
+        <div style="max-width:300px;margin:0 auto;">
+          <AureviaArt pose="qa" compact />
+        </div>
+      </div>
+
+      <div style="display:grid;gap:2rem;">
+        {categories.map((cat) => (
+          <div>
+            <h2 class="section-title" style="font-size:1.35rem;border-bottom:1px solid var(--border-gold);padding-bottom:0.45rem;">
+              {cat}
+            </h2>
+            <div style="display:grid;gap:0.85rem;">
+              {faqs.filter((f) => f.category === cat).map((f) => (
+                <details class="imperial-card evidence-panel" open>
+                  <summary style="font-size:1.02rem;">{f.question}</summary>
+                  <div class="evidence-body" style="margin-top:0.65rem;color:var(--text-secondary);font-size:0.94rem;">
+                    <p style="margin:0 0 0.5rem;">{f.answer}</p>
+                    <a href={f.relatedUrl} style="font-size:0.84rem;color:var(--deep-gilt);font-weight:700;text-decoration:underline;">
+                      关联专题：{f.relatedLabel} →
+                    </a>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

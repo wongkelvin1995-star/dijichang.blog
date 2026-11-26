@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { aiCompatibility } from '../../lib/data';
+---
+<BaseLayout
+  title="高端 AI 应用兼容中心｜ChatGPT、Claude、Gemini 18家品牌声明对比 - 顶级机场"
+  description="横向对比 18 家机场品牌对 ChatGPT、Claude 与 Gemini 的公开兼容声明及核验边界。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: 'AI应用', url: '/ai/' },
+    { name: 'AI应用兼容中心', url: '/ai/compatibility/' },
+  ]}
+>
+  <section class="scene-band scene-platinum">
+    <FlagshipScene scene="nexus" />
+    <div class="container">
+      <span class="chapter-badge">Function 06 · AI Compatibility Center</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        高端 AI 应用兼容中心
+      </h1>
+      <p class="section-lead">
+        下表仅汇总各品牌公开资料中提及的 AI 工具兼容声明，尚未取得独立长期持续测试样本，不构成平台永不风控的保证。
+      </p>
+
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>品牌名称</th>
+              <th>ChatGPT 声明</th>
+              <th>Claude 声明</th>
+              <th>Gemini 声明</th>
+              <th>完整提及清单</th>
+              <th>证据性质</th>
+            </tr>
+          </thead>
+          <tbody>
+            {aiCompatibility.map((a) => (
+              <tr>
+                <td><a href={`/airports/${a.brandId}/`} style="font-weight:700;text-decoration:underline;">{a.brandName}</a></td>
+                <td>{a.supportsChatGPTClaim ? '有公开声明' : '未单独列出'}</td>
+                <td>{a.supportsClaudeClaim ? '有公开声明' : '未单独列出'}</td>
+                <td>{a.supportsGeminiClaim ? '有公开声明' : '未单独列出'}</td>
+                <td>{a.declaredAiTools.join('、') || '无'}</td>
+                <td><span class="evidence-pill">{a.evidenceNature}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

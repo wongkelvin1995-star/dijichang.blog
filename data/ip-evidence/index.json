@@ -1,0 +1,164 @@
+[
+  {
+    "brandId": "lingdongyun",
+    "brandName": "灵动云",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "muguang-jiasu",
+    "brandName": "暮光加速",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "flyv",
+    "brandName": "飞V（FlyV）",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "tiziyun",
+    "brandName": "梯子云 LadderCloud",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "langwang",
+    "brandName": "浪网 WaveNet",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "yinxingren",
+    "brandName": "隐形人",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "feimaoyun",
+    "brandName": "飞猫云",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "guangsuyun",
+    "brandName": "光速云 LightSpeed",
+    "mentionsNativeIp": true,
+    "mentionsResidentialIp": true,
+    "ipTypeStatus": "服务商资料提及特定IP类型，尚待独立ASN归属核验",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weituyun",
+    "brandName": "唯兔云（V2云）",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "u1s1",
+    "brandName": "U1S1（有一说一）",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "quanqiuyun",
+    "brandName": "全球云",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "sogoyun",
+    "brandName": "Sogo云",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weifeng-wangluo",
+    "brandName": "微风网络 Breezenet",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "wuyou",
+    "brandName": "无忧链接",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "lingmao",
+    "brandName": "灵猫",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "shanyue",
+    "brandName": "闪跃 FlashLeap",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "firefly",
+    "brandName": "飞为（Firefly）",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "kuajie",
+    "brandName": "跨界",
+    "mentionsNativeIp": false,
+    "mentionsResidentialIp": false,
+    "ipTypeStatus": "未见明确原生IP或住宅IP公开承诺，按常规机房出口处理",
+    "evidenceNature": "历史公开资料 / 服务商声明",
+    "verifiedAt": "2026-11-25"
+  }
+]

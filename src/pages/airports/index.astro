@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { brands, plans, qualityIndex } from '../../lib/data';
+---
+<BaseLayout
+  title="全部18家机场品牌资料档案｜套餐价格、优惠码与证据完整度 - 顶级机场"
+  description="完整收录18家机场品牌公开档案、329条历史套餐价格、原始优惠码、线路声明与证据完整度核验状态。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '全部机场品牌', url: '/airports/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <FlagshipScene scene="collection" />
+    <div class="container">
+      <span class="chapter-badge">18 Brands Archive · 品牌资料总库</span>
+      <h1 class="section-title">全部 18 家机场品牌资料档案</h1>
+      <p class="section-lead">
+        以下 18 家品牌按资料导入顺序排列，不代表高端机场评选排名。每家品牌均保留原始推广链接（<code style="font-family:var(--font-mono);">rel="sponsored"</code>）与历史优惠码，并逐项标注证据边界。
+      </p>
+
+      <div class="grid-3">
+        {brands.map((b) => {
+          const bPlans = plans.filter((p) => p.brandId === b.id);
+          const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+          return (
+            <article class="imperial-card diamond-hover" style="display:flex;flex-direction:column;gap:0.55rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.75rem;color:var(--deep-gilt);font-weight:700;">#{String(b.order).padStart(2, '0')} · {b.nameEn}</span>
+                <span class="evidence-pill">完整度 {q?.evidenceCompleteness ?? 0}%</span>
+              </div>
+              <h2 style="margin:0;font-size:1.2rem;">
+                <a href={`/airports/${b.id}/`}>{b.name}</a>
+              </h2>
+              <p style="margin:0;font-size:0.86rem;color:var(--text-secondary);">{b.tagline}</p>
+              <div style="font-size:0.8rem;color:var(--text-muted);">
+                历史套餐：{bPlans.length} 条｜优惠码：<code style="font-weight:700;">{b.coupon?.code || '无'}</code>
+              </div>
+              <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;padding-top:0.5rem;">
+                <a href={`/airports/${b.id}/`} class="btn-imperial btn-primary-gold" style="min-height:36px;padding:0.35rem 0.9rem;font-size:0.82rem;">
+                  查看 30 项档案
+                </a>
+                <a
+                  href={b.affiliateUrl}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  class="btn-imperial btn-secondary-platinum"
+                  style="min-height:36px;padding:0.35rem 0.9rem;font-size:0.82rem;"
+                >
+                  官方推广入口 ↗
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

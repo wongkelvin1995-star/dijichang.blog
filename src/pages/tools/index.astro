@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OrionSprite from '../../components/OrionSprite.astro';
+---
+<BaseLayout
+  title="独家工具中心｜十大皇家智能选购与研究工具 - 顶级机场"
+  description="集成高端机场智能选购助手、精品专线对比矩阵、皇家影音带宽计算器、国际商务网络规划工具与套餐服务对比矩阵。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '独家工具中心', url: '/tools/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;">
+        <OrionSprite size={56} />
+        <div>
+          <span class="chapter-badge">IMPERIAL ONE MAX · 独家工具中心</span>
+          <h1 class="section-title" style="margin:0.35rem 0 0;">十大专业研究与智能选购工具</h1>
+        </div>
+      </div>
+      <p class="section-lead">所有交互工具均统一读取核心数据库，无虚构比价或强行推广逻辑。</p>
+
+      <div class="grid-3">
+        <a href="/rankings/methodology/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">01. Imperial Quality Index</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">六大权重维度的皇家品质评选指数与资格审查机制。</p>
+        </a>
+        <a href="/tools/premium-selector/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">02. Premium Selector 智能选购</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">按月付/整期预算、设备数、流量与场景匹配真实套餐。</p>
+        </a>
+        <a href="/regions/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">03. Global Network Atlas 图谱</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">查询香港、日本、新加坡、台湾、美国、韩国与欧洲覆盖。</p>
+        </a>
+        <a href="/tools/line-matrix/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">04. Dedicated Line Matrix</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">选择 2–4 家品牌横向对比 IEPL/IPLC/BGP 线路声明。</p>
+        </a>
+        <a href="/performance/evidence/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">05. Performance Evidence 证据中心</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">11 项实测环境标准与 18 家品牌性能实测核验状态。</p>
+        </a>
+        <a href="/ai/compatibility/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">06. AI Compatibility Center</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">ChatGPT、Claude 与 Gemini 官方政策与兼容声明对比。</p>
+        </a>
+        <a href="/tools/streaming-calculator/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">07. Streaming Quality Lab 计算器</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">1080P/4K/8K 十进制 GB 月流量与倍率精算工具。</p>
+        </a>
+        <a href="/tools/business-planner/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">08. Business Network Planner</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">国际商务团队带宽估算、合规边界与备用连接建议。</p>
+        </a>
+        <a href="/tools/service-compare/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">09. Premium Service Compare</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">2–4 家品牌及具体套餐整期售价、倍率与售后政策对比。</p>
+        </a>
+        <a href="/profile/" class="imperial-card diamond-hover">
+          <h2 style="font-size:1.1rem;margin:0 0 0.4rem;">10. My Prestige 我的皇家档案</h2>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted);">浏览器本地收藏品牌、预算记录与个人选购笔记。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

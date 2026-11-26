@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import StreamingCalcIsland from '../../components/tools/StreamingCalcIsland';
+import { plans, streamingCompatibility } from '../../lib/data';
+---
+<BaseLayout
+  title="精品流媒体研究｜Netflix、Disney+ 与 YouTube 4K/8K 带宽分析 - 顶级机场"
+  description="提供皇家影音带宽计算器，解析 1080P/4K/8K 视频流量需求与 18 家品牌流媒体公开兼容声明。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '流媒体', url: '/streaming/' }]}
+>
+  <section class="scene-band scene-navy">
+    <FlagshipScene scene="cinema" />
+    <div class="container">
+      <span class="chapter-badge">Chapter 07 · Platinum Cinema</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        皇家影音剧院：4K / 8K 高码率流媒体研究
+      </h1>
+      <p class="section-lead">
+        高码率流媒体不仅考验持续下行吞吐，更对套餐流量额度与节点倍率提出严格要求。历史流媒体解锁记录随版权库动态变化，不作长期保证。
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+        <a href="/tools/streaming-calculator/" class="btn-imperial btn-primary-gold">皇家影音带宽计算器</a>
+        <a href="/streaming/netflix/" class="btn-imperial btn-secondary-platinum">Netflix 研究</a>
+        <a href="/streaming/disney-plus/" class="btn-imperial btn-secondary-platinum">Disney+ 研究</a>
+        <a href="/streaming/youtube/" class="btn-imperial btn-secondary-platinum">YouTube 4K</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">皇家影音带宽与月流量精算工具</h2>
+      <div style="margin-bottom:2.5rem;">
+        <StreamingCalcIsland client:load plans={plans} />
+      </div>
+
+      <h2 class="section-title">18 家品牌流媒体公开声明汇总</h2>
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>品牌</th>
+              <th>Netflix 声明</th>
+              <th>Disney+ 声明</th>
+              <th>YouTube 声明</th>
+              <th>公开提及平台</th>
+            </tr>
+          </thead>
+          <tbody>
+            {streamingCompatibility.map((s) => (
+              <tr>
+                <td><a href={`/airports/${s.brandId}/`} style="font-weight:700;text-decoration:underline;">{s.brandName}</a></td>
+                <td>{s.supportsNetflixClaim ? '有提及' : '未单列'}</td>
+                <td>{s.supportsDisneyClaim ? '有提及' : '未单列'}</td>
+                <td>{s.supportsYouTubeClaim ? '有提及' : '未单列'}</td>
+                <td>{s.declaredPlatforms.join('、') || '无'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import GlobalAtlasIsland from '../../components/tools/GlobalAtlasIsland';
+import { regions, ipEvidence } from '../../lib/data';
+---
+<BaseLayout
+  title="全球网络品质图谱｜七大主要地区出口、原生IP与住宅IP研究 - 顶级机场"
+  description="交互式查询香港、日本、新加坡、台湾、美国、韩国与欧洲七大核心地区节点覆盖，厘清原生IP与住宅IP证据边界。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '全球节点', url: '/regions/' }]}
+>
+  <section class="scene-band scene-tech">
+    <FlagshipScene scene="atlas" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 04 · Global Atlas</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            全球网络探索大厅：七大核心出口与 IP 证据图谱
+          </h1>
+          <p class="section-lead">
+            仅基于服务商公开资料展示地区级覆盖，绝不虚构具体机房坐标或虚假实时在线节点数量。支持查询原生 IP 与住宅 IP 证据边界。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            <a href="/regions/native-ip/" class="btn-imperial btn-primary-gold">原生 IP 怎么选</a>
+            <a href="/regions/residential-ip/" class="btn-imperial btn-secondary-platinum">住宅 IP 节点研究</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="atlas" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">交互式七大地区覆盖查询（香港 / 日本 / 新加坡 / 台湾 / 美国 / 韩国 / 欧洲）</h2>
+      <div style="margin-bottom:2.5rem;">
+        <GlobalAtlasIsland client:load regions={regions} />
+      </div>
+
+      <h2 class="section-title">18 家品牌 IP 类型证据状态</h2>
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>品牌</th>
+              <th>原生 IP 提及</th>
+              <th>住宅 IP 提及</th>
+              <th>IP 证据状态说明</th>
+              <th>核验日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ipEvidence.map((item) => (
+              <tr>
+                <td><a href={`/airports/${item.brandId}/`} style="font-weight:700;text-decoration:underline;">{item.brandName}</a></td>
+                <td>{item.mentionsNativeIp ? '有提及' : '未明确提及'}</td>
+                <td>{item.mentionsResidentialIp ? '有提及' : '未明确提及'}</td>
+                <td>{item.ipTypeStatus}</td>
+                <td>{item.verifiedAt}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

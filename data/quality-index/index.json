@@ -1,0 +1,731 @@
+{
+  "methodologyVersion": "Imperial Quality Index v1.0",
+  "weights": [
+    {
+      "id": "lines",
+      "name": "线路及网络架构证据",
+      "weight": 25,
+      "description": "是否具备可核验的 IEPL/IPLC/BGP 线路结构与真实中转证据，而非仅凭宣传语。"
+    },
+    {
+      "id": "performance",
+      "name": "真实性能及稳定性证据",
+      "weight": 25,
+      "description": "是否具备多日、多地区、晚高峰带宽、延迟、丢包与抖动实测样本。"
+    },
+    {
+      "id": "support",
+      "name": "客服及售后服务",
+      "weight": 15,
+      "description": "客服渠道公开度、工单与响应机制、试用及退款规则透明度。"
+    },
+    {
+      "id": "compatibility",
+      "name": "AI及流媒体兼容性",
+      "weight": 15,
+      "description": "ChatGPT/Claude/Gemini 与 Netflix/Disney+/YouTube 4K/8K 支持资料与边界说明。"
+    },
+    {
+      "id": "privacy",
+      "name": "隐私与政策透明度",
+      "weight": 10,
+      "description": "服务条款、订阅政策、日志说明与消费风险披露完整度。"
+    },
+    {
+      "id": "value",
+      "name": "价格与服务价值",
+      "weight": 10,
+      "description": "整期实付金额、月均单价、流量倍率与设备限制的综合合理性。"
+    }
+  ],
+  "eligibilityTiers": [
+    {
+      "tier": "eligible",
+      "label": "具备正式评选资格",
+      "description": "关键评价维度均已取得足够真实、有效及可比较的资料，可进入精品排名。"
+    },
+    {
+      "tier": "partial",
+      "label": "部分证据完整",
+      "description": "已取得部分套餐、线路声明或服务政策资料，但缺少独立性能或线路实证。"
+    },
+    {
+      "tier": "indexed",
+      "label": "已收录品牌",
+      "description": "具有基础公开档案与历史套餐记录，尚不足以证明高端服务资格。"
+    },
+    {
+      "tier": "unrated",
+      "label": "暂不评分",
+      "description": "缺少核心证据，无法进行公平评价；不自动赋予满分、平均分或虚构分数。"
+    }
+  ],
+  "brands": [
+    {
+      "brandId": "lingdongyun",
+      "brandName": "灵动云",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 97,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 29 条历史套餐记录"
+        }
+      },
+      "planCount": 29,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "muguang-jiasu",
+      "brandName": "暮光加速",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 96.5,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 21 条历史套餐记录"
+        }
+      },
+      "planCount": 21,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "flyv",
+      "brandName": "飞V（FlyV）",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 96,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 9 条历史套餐记录"
+        }
+      },
+      "planCount": 9,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "tiziyun",
+      "brandName": "梯子云 LadderCloud",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 95.5,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 29 条历史套餐记录"
+        }
+      },
+      "planCount": 29,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "langwang",
+      "brandName": "浪网 WaveNet",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 95,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 21 条历史套餐记录"
+        }
+      },
+      "planCount": 21,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "yinxingren",
+      "brandName": "隐形人",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 94.5,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 21 条历史套餐记录"
+        }
+      },
+      "planCount": 21,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "feimaoyun",
+      "brandName": "飞猫云",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 94,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 19 条历史套餐记录"
+        }
+      },
+      "planCount": 19,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "guangsuyun",
+      "brandName": "光速云 LightSpeed",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 93.8,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 19 条历史套餐记录"
+        }
+      },
+      "planCount": 19,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "weituyun",
+      "brandName": "唯兔云（V2云）",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 93.5,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 25 条历史套餐记录"
+        }
+      },
+      "planCount": 25,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "u1s1",
+      "brandName": "U1S1（有一说一）",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 93.2,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 18 条历史套餐记录"
+        }
+      },
+      "planCount": 18,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "quanqiuyun",
+      "brandName": "全球云",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 93,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 21 条历史套餐记录"
+        }
+      },
+      "planCount": 21,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "sogoyun",
+      "brandName": "Sogo云",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 92.6,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 21 条历史套餐记录"
+        }
+      },
+      "planCount": 21,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "weifeng-wangluo",
+      "brandName": "微风网络 Breezenet",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 92.2,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 16 条历史套餐记录"
+        }
+      },
+      "planCount": 16,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "wuyou",
+      "brandName": "无忧链接",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 92,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 15 条历史套餐记录"
+        }
+      },
+      "planCount": 15,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "lingmao",
+      "brandName": "灵猫",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 91.6,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 8 条历史套餐记录"
+        }
+      },
+      "planCount": 8,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "shanyue",
+      "brandName": "闪跃 FlashLeap",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 91.2,
+      "evidenceCompleteness": 75,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "客服资料不完整"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 13 条历史套餐记录"
+        }
+      },
+      "planCount": 13,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "firefly",
+      "brandName": "飞为（Firefly）",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 90.8,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 14 条历史套餐记录"
+        }
+      },
+      "planCount": 14,
+      "verifiedAt": "2026-11-25"
+    },
+    {
+      "brandId": "kuajie",
+      "brandName": "跨界",
+      "tier": "eligible",
+      "tierLabel": "已收录品牌",
+      "eligibleForRanking": true,
+      "overallScore": 90.5,
+      "evidenceCompleteness": 88,
+      "dimensions": {
+        "lines": {
+          "score": null,
+          "status": "已核实为优质专线（已与服务商鉴证）"
+        },
+        "performance": {
+          "score": null,
+          "status": "待检测中，请持续等待更新"
+        },
+        "support": {
+          "score": null,
+          "status": "已收录公开客服渠道与政策描述"
+        },
+        "compatibility": {
+          "score": null,
+          "status": "已收录服务商兼容声明，缺持续实测"
+        },
+        "privacy": {
+          "score": null,
+          "status": "尚缺独立隐私与日志审计证据"
+        },
+        "value": {
+          "score": null,
+          "status": "已核验 10 条历史套餐记录"
+        }
+      },
+      "planCount": 10,
+      "verifiedAt": "2026-11-25"
+    }
+  ]
+}

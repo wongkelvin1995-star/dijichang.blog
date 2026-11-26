@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { evidenceSources, corrections } from '../../lib/data';
+---
+<BaseLayout
+  title="最新资料核验与更正记录 - 顶级机场 Imperial Network"
+  description="公开展示顶级机场的数据采集来源、核验日期与历史更正记录。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '最新资料', url: '/updates/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">Evidence &amp; Corrections</span>
+      <h1 class="section-title">最新资料核验与更正记录</h1>
+
+      <h2 class="section-title" style="font-size:1.35rem;">核心数据源清单</h2>
+      <div class="grid-3" style="margin-bottom:2.25rem;">
+        {evidenceSources.map((s) => (
+          <div class="imperial-card">
+            <div style="font-size:0.78rem;color:var(--deep-gilt);font-weight:700;">采集日期：{s.collectedAt}</div>
+            <h3 style="margin:0.35rem 0;font-size:1.05rem;">{s.title}</h3>
+            <p style="margin:0;font-size:0.86rem;color:var(--text-muted);">{s.nature}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="section-title" style="font-size:1.35rem;">编辑更正与说明记录</h2>
+      <div style="display:grid;gap:1rem;">
+        {corrections.map((c) => (
+          <div class="imperial-card">
+            <div style="font-size:0.8rem;color:var(--deep-gilt);font-weight:700;">{c.date} · {c.scope}</div>
+            <p style="margin:0.4rem 0 0;font-size:0.94rem;">{c.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

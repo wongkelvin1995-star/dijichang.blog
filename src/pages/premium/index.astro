@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import { brands, qualityIndex } from '../../lib/data';
+---
+<BaseLayout
+  title="高端机场总览｜一线机场与高品质网络服务选购框架 - 顶级机场"
+  description="全面解析高端机场、一线机场与高品质网络服务的定义标准，汇总18家品牌公开资料与选购入口。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '高端机场总览', url: '/premium/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <FlagshipScene scene="headquarters" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 01 · Imperial Headquarters</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            高端机场与一线网络服务总览
+          </h1>
+          <p class="section-lead">
+            真正的品质，不止于速度。本频道聚焦一线机场、优质机场与高品质网络服务的筛选标准，不将价格高昂自动等同于顶级品质，所有结论均基于可核验的公开资料与服务条款。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+            <a href="/tools/premium-selector/" class="btn-imperial btn-primary-gold">启动智能选购助手</a>
+            <a href="/rankings/methodology/" class="btn-imperial btn-secondary-platinum">查看评选标准</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="welcome" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-champagne">
+    <div class="container">
+      <h2 class="section-title">核心专题研究入口</h2>
+      <div class="grid-3" style="margin-bottom:2.5rem;">
+        <a href="/premium/annual/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">2026–2027 年度资料汇总</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">基于 2026 年可获取公开资料编写的 2027 前瞻指南与核验边界。</p>
+        </a>
+        <a href="/premium/boutique/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">精品机场筛选门槛</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">拆解倍率透明度、客户端政策与售后条款的精品标准。</p>
+        </a>
+        <a href="/premium/premium-vs-standard/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">高端机场与普通机场区别</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">从跨境架构、晚高峰冗余与售后机制对比实质差异。</p>
+        </a>
+        <a href="/premium/value/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">高端机场值得买吗？</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">结合办公、AI 与影音场景分析长期消费价值。</p>
+        </a>
+        <a href="/premium/network-services/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">高端梯子与服务边界</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">明确消费级代理与企业专线的适用边界与安全提示。</p>
+        </a>
+        <a href="/airports/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">全部 18 家品牌档案库</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">查阅每家品牌的 30 项专业资料、优惠码与历史价格。</p>
+        </a>
+      </div>
+
+      <h2 class="section-title">已收录 18 家品牌资料状态</h2>
+      <div class="grid-3">
+        {brands.map((b) => {
+          const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+          return (
+            <a href={`/airports/${b.id}/`} class="imperial-card diamond-hover" style="display:flex;flex-direction:column;gap:0.4rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+                <strong style="font-size:1.05rem;">{b.name}</strong>
+                <span class="evidence-pill">完整度 {q?.evidenceCompleteness ?? 0}%</span>
+              </div>
+              <p style="margin:0;font-size:0.86rem;color:var(--text-muted);">{b.tagline}</p>
+              <div style="font-size:0.78rem;color:var(--deep-gilt);font-weight:700;margin-top:auto;">
+                {q?.tierLabel || '已收录'} · 查看 30 项档案 →
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

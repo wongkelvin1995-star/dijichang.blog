@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { qualityIndex } from '../../lib/data';
+---
+<BaseLayout
+  title="顶级机场评选标准｜Imperial Quality Index 皇家品质指数 - 顶级机场"
+  description="公开 Imperial Quality Index 六大评价维度权重、0-100评分规范、评选资格门槛及编辑评价边界。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '精品品质评选', url: '/rankings/' },
+    { name: '评选标准', url: '/rankings/methodology/' },
+  ]}
+>
+  <section class="scene-band scene-champagne">
+    <FlagshipScene scene="prestige" />
+    <div class="container">
+      <span class="chapter-badge">Function 01 · Imperial Quality Index</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        Imperial Quality Index · 皇家品质评选指数方法论
+      </h1>
+      <p class="section-lead">
+        综合评分 = 各维度评分（0–100分）乘以相应权重后的加总。本指数属于本站独立编辑研究方法，不代表官方认证或第三方行业认证，且绝不将价格高昂或推广佣金作为客观加分项。
+      </p>
+
+      <div class="grid-3" style="margin-bottom:2.5rem;">
+        {qualityIndex.weights.map((w) => (
+          <article class="imperial-card diamond-hover">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+              <h2 style="margin:0;font-size:1.1rem;">{w.name}</h2>
+              <span class="chapter-badge">{w.weight}%</span>
+            </div>
+            <p style="margin:0;color:var(--text-secondary);font-size:0.92rem;">{w.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <h2 class="section-title">四级评选资格机制</h2>
+      <div class="grid-2">
+        {qualityIndex.eligibilityTiers.map((t) => (
+          <div class="imperial-card">
+            <h3 style="margin:0 0 0.4rem;font-size:1.05rem;">{t.label}</h3>
+            <p style="margin:0;color:var(--text-secondary);font-size:0.9rem;">{t.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

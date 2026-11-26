@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import LineMatrixIsland from '../../components/tools/LineMatrixIsland';
+import { lines } from '../../lib/data';
+---
+<BaseLayout
+  title="精品专线研究｜IEPL、IPLC 与 BGP 跨境网络架构 - 顶级机场"
+  description="深入解析 IEPL、IPLC 与 BGP 中转架构原理，提供 18 家品牌线路声明对比矩阵与独立核验边界说明。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '专线研究', url: '/lines/' }]}
+>
+  <section class="scene-band scene-tech">
+    <FlagshipScene scene="backbone" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 03 · Platinum Backbone</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            铂金专线研究中心：IEPL / IPLC / BGP 架构解析
+          </h1>
+          <p class="section-lead">
+            跨境专线决定传输层的抗拥塞上限，但服务商宣传的“全专线”并不自动等于独立核验事实。点击下方专题或使用专线矩阵对比 18 家品牌公开线路声明。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            <a href="/lines/iepl/" class="btn-imperial btn-primary-gold">IEPL 专线研究</a>
+            <a href="/lines/iplc/" class="btn-imperial btn-secondary-platinum">IPLC 专线研究</a>
+            <a href="/lines/iepl-vs-iplc/" class="btn-imperial btn-secondary-platinum">IEPL vs IPLC</a>
+            <a href="/lines/bgp/" class="btn-imperial btn-secondary-platinum">BGP 中转研究</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="backbone" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">交互式精品专线对比矩阵</h2>
+      <LineMatrixIsland client:load lines={lines} />
+    </div>
+  </section>
+</BaseLayout>

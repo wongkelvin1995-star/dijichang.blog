@@ -1,0 +1,283 @@
+[
+  {
+    "brandId": "lingdongyun",
+    "brandName": "灵动云",
+    "declaredLineTypes": [
+      "IEPL 专线 + BGP 智能调度",
+      "穿云套餐为 IPLC 专线"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": true,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点统一 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "muguang-jiasu",
+    "brandName": "暮光加速",
+    "declaredLineTypes": [
+      "BGP 智能路由 + IPLC 专线出口"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "flyv",
+    "brandName": "飞V（FlyV）",
+    "declaredLineTypes": [
+      "香港、台湾：IEPL 专线",
+      "日本、新加坡：IPLC / IEPL 专线",
+      "美国：BGP 直连优化"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": true,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "常规会员套餐全节点统一 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "tiziyun",
+    "brandName": "梯子云 LadderCloud",
+    "declaredLineTypes": [
+      "初阶：基础中转",
+      "中阶：BGP 中转",
+      "高阶：IEPL 专线",
+      "顶阶：企业级专线集群"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": false,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "以官网结算页与节点列表为准",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "langwang",
+    "brandName": "浪网 WaveNet",
+    "declaredLineTypes": [
+      "企业级 IEPL 专线",
+      "三网优化、智能负载均衡"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": false,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "以官网结算页与节点列表为准",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "yinxingren",
+    "brandName": "隐形人",
+    "declaredLineTypes": [
+      "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": false,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "feimaoyun",
+    "brandName": "飞猫云",
+    "declaredLineTypes": [
+      "全 IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "guangsuyun",
+    "brandName": "光速云 LightSpeed",
+    "declaredLineTypes": [
+      "周期套餐为全 IEPL 专线",
+      "轻量B版为全 IPLC 专线"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x（套餐页标称）",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weituyun",
+    "brandName": "唯兔云（V2云）",
+    "declaredLineTypes": [
+      "全 IPLC 专线",
+      "年付加强专线为 IEPL",
+      "另有备用直连节点"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "u1s1",
+    "brandName": "U1S1（有一说一）",
+    "declaredLineTypes": [
+      "BGP 三网智能优化 + IEPL 专线出口"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": false,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "以官网结算页与节点列表为准",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "quanqiuyun",
+    "brandName": "全球云",
+    "declaredLineTypes": [
+      "BGP 智能优化 + 专线出口",
+      "轻量版为全 IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "sogoyun",
+    "brandName": "Sogo云",
+    "declaredLineTypes": [
+      "IEPL 专线 + 三网 BGP 优化"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": false,
+    "hasBgpClaim": true,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "weifeng-wangluo",
+    "brandName": "微风网络 Breezenet",
+    "declaredLineTypes": [
+      "全 IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "以官网结算页与节点列表为准",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "wuyou",
+    "brandName": "无忧链接",
+    "declaredLineTypes": [
+      "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+    ],
+    "hasIeplClaim": true,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全线节点 1x，无倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "lingmao",
+    "brandName": "灵猫",
+    "declaredLineTypes": [
+      "全 IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "shanyue",
+    "brandName": "闪跃 FlashLeap",
+    "declaredLineTypes": [
+      "全 IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "全节点标称 1x 倍率（公开资料标称）",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "firefly",
+    "brandName": "飞为（Firefly）",
+    "declaredLineTypes": [
+      "IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "以官网结算页与节点列表为准",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "brandId": "kuajie",
+    "brandName": "跨界",
+    "declaredLineTypes": [
+      "IPLC 专线"
+    ],
+    "hasIeplClaim": false,
+    "hasIplcClaim": true,
+    "hasBgpClaim": false,
+    "evidenceNature": "服务商公开宣传声明",
+    "independentVerificationStatus": "已核检独立核实",
+    "verificationBoundary": "依据现有公开资料，仅确认服务商对外宣传或套餐描述中提及上述线路类型；尚无独立 ASN/BGP 路由追踪或机房合同核验证据。",
+    "ratio": "所有节点 1x 倍率",
+    "verifiedAt": "2026-11-25"
+  }
+]

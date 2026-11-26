@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FlagshipScene from './FlagshipScene.astro';
+import AureviaArt from './AureviaArt.astro';
+import type { AureviaPose } from '../lib/types';
+import { type TopicPageData } from '../data/topics';
+import { brands } from '../lib/data';
+
+interface Props {
+  topic: TopicPageData;
+}
+
+const { topic } = Astro.props;
+
+const poseMap: Record<string, AureviaPose> = {
+  headquarters: 'welcome',
+  prestige: 'quality',
+  backbone: 'backbone',
+  atlas: 'atlas',
+  velocity: 'quality',
+  nexus: 'qa',
+  cinema: 'plans',
+  lounge: 'business',
+  collection: 'plans',
+  archives: 'risk',
+};
+
+const pose = poseMap[topic.scene] || 'welcome';
+const isDark = topic.scene === 'velocity' || topic.scene === 'archives';
+const sceneClass =
+  topic.scene === 'velocity'
+    ? 'scene-navy'
+    : topic.scene === 'archives'
+    ? 'scene-obsidian'
+    : topic.scene === 'backbone' || topic.scene === 'atlas'
+    ? 'scene-tech'
+    : topic.scene === 'prestige' || topic.scene === 'collection'
+    ? 'scene-champagne'
+    : 'scene-platinum';
+---
+<BaseLayout
+  title={topic.seoTitle}
+  description={topic.metaDescription}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: topic.parentLabel, url: topic.parentUrl },
+    { name: topic.title, url: topic.path },
+  ]}
+>
+  <section class={`scene-band ${sceneClass}`}>
+    <FlagshipScene scene={topic.scene} />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">{topic.chapterLabel}</span>
+          <h1 class="section-title" style="font-size:clamp(1.75rem,3vw,2.45rem);margin-top:0.75rem;">
+            {topic.title}
+          </h1>
+          <p class="section-lead">{topic.lead}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+            <a href={topic.relatedToolUrl} class="btn-imperial btn-primary-gold">{topic.relatedToolLabel}</a>
+            <a href={topic.parentUrl} class="btn-imperial btn-secondary-platinum">返回{topic.parentLabel}</a>
+          </div>
+          <p style={`margin-top:1rem;font-size:0.82rem;color:${isDark ? '#C9D2DF' : 'var(--text-muted)'};`}>
+            {topic.evidenceNote}
+          </p>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose={pose} compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">核心研究要点与核验标准</h2>
+      <div class="grid-3" style="margin-bottom:2.25rem;">
+        {topic.keyPoints.map((kp) => (
+          <article class="imperial-card diamond-hover">
+            <h3 style="margin:0 0 0.55rem;font-size:1.1rem;">{kp.heading}</h3>
+            <p style="margin:0;color:var(--text-secondary);font-size:0.94rem;line-height:1.7;">{kp.body}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="imperial-card" style="padding:1.5rem;">
+        <h2 style="margin:0 0 0.65rem;font-size:1.25rem;">关联品牌档案索引（共 {brands.length} 家）</h2>
+        <p style="margin:0 0 1rem;color:var(--text-muted);font-size:0.9rem;">
+          点击以下任意品牌进入独立 30 项专业资料档案页，核验其公开线路声明、历史套餐价格、设备限制与证据完整度：
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          {brands.map((b) => (
+            <a href={`/airports/${b.id}/`} class="evidence-pill" style="text-decoration:none;padding:0.35rem 0.75rem;">
+              {b.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

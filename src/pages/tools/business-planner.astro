@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BusinessPlannerIsland from '../../components/tools/BusinessPlannerIsland';
+import { brands } from '../../lib/data';
+---
+<BaseLayout
+  title="国际商务网络规划工具｜团队带宽、连续性与合规规划 - 顶级机场"
+  description="为远程办公与跨境团队估算聚合带宽、月度流量与设备并发，明确个人服务与企业级SLA的安全边界。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '独家工具', url: '/tools/' },
+    { name: '国际商务网络规划工具', url: '/tools/business-planner/' },
+  ]}
+>
+  <section class="scene-band scene-champagne">
+    <div class="container">
+      <span class="chapter-badge">Function 08 · Business Network Planner</span>
+      <h1 class="section-title">国际商务网络规划工具</h1>
+      <p class="section-lead">输入团队规模、视频会议时长与连续性等级，生成设备兼容性、隐私安全与备用连接规划建议。</p>
+      <BusinessPlannerIsland client:load brands={brands} />
+    </div>
+  </section>
+</BaseLayout>

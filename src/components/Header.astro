@@ -1,0 +1,68 @@
+---
+import ImperialLogo from './ImperialLogo.astro';
+
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '/' } = Astro.props;
+
+const navItems = [
+  { label: '首页', href: '/' },
+  { label: '精品评选', href: '/rankings/' },
+  { label: '专线研究', href: '/lines/' },
+  { label: '全球节点', href: '/regions/' },
+  { label: '性能研究', href: '/performance/' },
+  { label: 'AI应用', href: '/ai/' },
+  { label: '流媒体', href: '/streaming/' },
+  { label: '商务办公', href: '/business/' },
+  { label: '高端套餐', href: '/plans/' },
+  { label: '购买指南', href: '/guide/' },
+];
+
+const isCurrent = (href: string) =>
+  href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+<header class="imperial-header">
+  <div class="container imperial-nav-bar">
+    <a href="/" class="brand-lockup" aria-label="顶级机场 Imperial Network 首页">
+      <ImperialLogo size={36} />
+      <div class="brand-titles">
+        <span class="brand-cn">顶级机场</span>
+        <span class="brand-en">Imperial ONE MAX</span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="主导航">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          aria-current={isCurrent(item.href) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <a href="/search/" class="icon-btn" aria-label="全站智能搜索">
+        <span aria-hidden="true">⌕</span>
+        <span>搜索</span>
+      </a>
+      <a href="/tools/service-compare/" class="icon-btn desktop-only-action" aria-label="套餐对比">
+        <span>对比</span>
+      </a>
+      <a href="/profile/" class="icon-btn desktop-only-action" aria-label="我的皇家档案">
+        <span>档案</span>
+      </a>
+      <button
+        type="button"
+        id="theme-toggle-btn"
+        class="icon-btn"
+        aria-label="切换日间与夜间阅读模式"
+        title="切换日间/夜间模式"
+      >
+        <span id="theme-toggle-label">夜间</span>
+      </button>
+    </div>
+  </div>
+</header>

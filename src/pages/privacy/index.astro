@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="隐私政策与本地数据声明 - 顶级机场 Imperial Network"
+  description="说明 dijichang.blog 的数据收集边界：不强制注册，不收集机场账户、密码或订阅链接。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '隐私政策', url: '/privacy/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container" style="max-width:860px;">
+      <span class="chapter-badge">Privacy Policy</span>
+      <h1 class="section-title">隐私政策与数据声明</h1>
+      <div class="imperial-card">
+        <ul style="margin:0;padding-left:1.25rem;display:grid;gap:0.6rem;">
+          <li><strong>不强制注册：</strong>浏览本站全部研究文章、品牌档案与交互工具均无需登录或提交个人邮箱/手机号。</li>
+          <li><strong>零敏感凭证收集：</strong>本站绝不收集任何用户的机场账户、密码、完整订阅链接或支付凭据。</li>
+          <li><strong>纯本地存储：</strong>「我的皇家档案（/profile/）」中的收藏品牌、预算记录与笔记仅保存于您当前浏览器的 <code style="font-family:var(--font-mono);">localStorage</code>，您可随时一键清除。</li>
+          <li><strong>第三方外链：</strong>点击标注 <code style="font-family:var(--font-mono);">rel="sponsored"</code> 的第三方服务商官网后，适用该服务商自身的隐私政策。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

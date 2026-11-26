@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PremiumSelectorIsland from '../../components/tools/PremiumSelectorIsland';
+import { brands, plans, qualityIndex, servicePolicies } from '../../lib/data';
+
+const selectorBrands = brands.map((b) => {
+  const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+  const p = servicePolicies.find((x) => x.brandId === b.id);
+  return {
+    id: b.id,
+    name: b.name,
+    tagline: b.tagline,
+    deviceLimit: b.deviceLimit,
+    lineTypes: b.lineTypes,
+    aiTools: b.aiTools,
+    streaming: b.streaming,
+    supportChannels: p?.supportChannels || [],
+    evidenceCompleteness: q?.evidenceCompleteness ?? 0,
+  };
+});
+---
+<BaseLayout
+  title="高端机场智能选购助手｜Premium Selector - 顶级机场"
+  description="根据您的月度预算、整期付款上限、设备数量、月流量与专线需求，从18家品牌真实套餐库中客观匹配方案。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '独家工具', url: '/tools/' },
+    { name: '智能选购助手', url: '/tools/premium-selector/' },
+  ]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">Function 02 · Premium Selector</span>
+      <h1 class="section-title">高端机场智能选购助手</h1>
+      <p class="section-lead">
+        输入您的真实预算与使用条件，系统将直接从 329 条历史套餐记录中筛选匹配项；若无完全契合方案，将如实告知差距原因，绝不强行推荐高佣金品牌。
+      </p>
+      <PremiumSelectorIsland client:load brands={selectorBrands} plans={plans} />
+    </div>
+  </section>
+</BaseLayout>

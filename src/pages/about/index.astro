@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import OrionSprite from '../../components/OrionSprite.astro';
+---
+<BaseLayout
+  title="关于顶级机场｜Imperial ONE MAX 品牌设计体系与五站定位 - 顶级机场"
+  description="了解 dijichang.blog 顶级机场（Imperial Network）的 Imperial ONE MAX 设计框架、原创角色奥蕾薇娅与铂金智核、以及五站独立博客矩阵分工。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '关于顶级机场', url: '/about/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;margin-bottom:2.5rem;">
+        <div>
+          <span class="chapter-badge">Imperial ONE MAX · 品牌档案</span>
+          <h1 class="section-title">关于顶级机场（Imperial Network）</h1>
+          <p class="section-lead">
+            <strong>真正的品质，不止于速度。（True Quality Goes Beyond Speed.）</strong><br />
+            顶级机场（dijichang.blog）是五站独立博客体系中的第五站，专注高端网络服务品质评选、IEPL/IPLC 专线研究、全球优质出口与国际商务选购指南。
+          </p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:1rem;">
+          <div style="max-width:260px;"><AureviaArt pose="welcome" compact /></div>
+          <OrionSprite size={64} />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="imperial-card">
+          <h2 style="margin:0 0 0.6rem;font-size:1.2rem;">虚构品牌角色声明</h2>
+          <p style="margin:0;font-size:0.92rem;color:var(--text-secondary);">
+            本站原创主角 <strong>AUREVIA · 奥蕾薇娅</strong>（26岁，虚构皇家网络研究总部品质顾问）与辅助精灵 <strong>ORION · 铂金智核</strong> 均为独立原创虚构品牌形象，不冒充真实网络工程师、第三方认证机构或实际测评专家。
+          </p>
+        </div>
+        <div class="imperial-card">
+          <h2 style="margin:0 0 0.6rem;font-size:1.2rem;">五站独立分工体系</h2>
+          <ul style="margin:0;padding-left:1.2rem;font-size:0.9rem;display:grid;gap:0.35rem;">
+            <li><strong>xingyuejichang.blog 星月机场</strong>：综合推荐与年度排行榜。</li>
+            <li><strong>yunduantizi.blog 云端梯子</strong>：办公、游戏、日常场景与多设备匹配。</li>
+            <li><strong>jcxueyuan.blog 机场学院</strong>：学生党、新手教程与校园网络排障。</li>
+            <li><strong>jichangwuyu.blog 机场物语</strong>：品牌历史档案、价格变化与长期消费观察。</li>
+            <li><strong>dijichang.blog 顶级机场</strong>：高端品质评选、精品专线、AI/4K/商务研究。</li>
+            <li><strong>jichangshice.mom 机场实测</strong>：独立负责真实节点测速与晚高峰实测报告。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

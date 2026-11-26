@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import { qualityIndex } from '../../lib/data';
+
+const eligible = qualityIndex.brands.filter((b) => b.eligibleForRanking);
+---
+<BaseLayout
+  title="顶级机场排行榜｜精品品质评选与资料收集状态 - 顶级机场"
+  description="展示顶级机场 Imperial Quality Index 评选资格核验结果。严格遵守无充分实证不强行排名的编辑原则。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '精品品质评选', url: '/rankings/' }]}
+>
+  <section class="scene-band scene-champagne">
+    <FlagshipScene scene="prestige" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 02 · Prestige Hall</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            顶级机场精品品质评选大厅
+          </h1>
+          <p class="section-lead">
+            当前已具备正式评选资格品牌数：<strong>{eligible.length} 家</strong>（共收录 {qualityIndex.brands.length} 家）。18 家品牌均已完成基础档案、历史套餐与公开条款建档；在独立多日性能实测未补充前，综合评分栏保持「待实测核验」，不虚构跑分。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+            <a href="/rankings/methodology/" class="btn-imperial btn-primary-gold">查看六大评选维度</a>
+            <a href="/rankings/compare/" class="btn-imperial btn-secondary-platinum">多品牌参数对比</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="quality" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">18 家品牌证据完整度与评选资格核验表</h2>
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>品牌名称</th>
+              <th>评选资格状态</th>
+              <th>资料证据完整度</th>
+              <th>历史套餐数</th>
+              <th>线路证据</th>
+              <th>性能实测</th>
+              <th>综合评分</th>
+            </tr>
+          </thead>
+          <tbody>
+            {qualityIndex.brands.map((q) => (
+              <tr>
+                <td><a href={`/airports/${q.brandId}/`} style="font-weight:700;text-decoration:underline;">{q.brandName}</a></td>
+                <td><span class="evidence-pill">{q.tierLabel}</span></td>
+                <td><strong>{q.evidenceCompleteness}%</strong></td>
+                <td>{q.planCount} 条</td>
+                <td>{q.dimensions.lines.status}</td>
+                <td>{q.dimensions.performance.status}</td>
+                <td><strong>{q.overallScore !== null ? `${q.overallScore} / 100` : '待评分'}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

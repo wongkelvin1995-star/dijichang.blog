@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { performanceData } from '../../lib/data';
+---
+<BaseLayout
+  title="高端网络性能证据中心｜实测规范与18家品牌证据状态 - 顶级机场"
+  description="展示每份网络实测必须包含的11项环境要素与18家品牌当前实测证据状态，绝不发布虚构速度与延迟图表。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '性能研究', url: '/performance/' },
+    { name: '性能证据中心', url: '/performance/evidence/' },
+  ]}
+>
+  <section class="scene-band scene-navy">
+    <FlagshipScene scene="velocity" />
+    <div class="container">
+      <span class="chapter-badge">Function 05 · Performance Evidence</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        高端网络性能证据中心
+      </h1>
+      <p class="section-lead">
+        {performanceData.methodology.notice}
+      </p>
+
+      <div class="imperial-card" style="margin-bottom:2rem;">
+        <h2 style="margin:0 0 0.75rem;font-size:1.2rem;">每份有效实测记录必须包含的 11 项要素</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          {performanceData.methodology.requiredFields.map((f) => (
+            <span class="evidence-pill" style="color:#F8F6F0;border-color:rgba(198,166,106,0.5);">{f}</span>
+          ))}
+        </div>
+      </div>
+
+      <h2 class="section-title">18 家品牌性能实测证据状态表</h2>
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>品牌名称</th>
+              <th>独立实测样本数</th>
+              <th>当前证据状态</th>
+              <th>服务商公开速度声明</th>
+              <th>核验日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            {performanceData.brandStatus.map((b) => (
+              <tr>
+                <td><a href={`/airports/${b.brandId}/`} style="font-weight:700;text-decoration:underline;">{b.brandName}</a></td>
+                <td>{b.independentTestCount}</td>
+                <td><span class="evidence-pill warn" style="color:#F8F6F0;">{b.status}</span></td>
+                <td>{b.providerClaims}</td>
+                <td>{b.verifiedAt}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

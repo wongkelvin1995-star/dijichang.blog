@@ -1,0 +1,567 @@
+export interface ArticleSection {
+  id: string;
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface ArticleRecord {
+  number: string;
+  slug: string;
+  title: string;
+  template: 'A' | 'B' | 'C' | 'D' | 'E';
+  category: string;
+  seoTitle: string;
+  metaDescription: string;
+  publishedAt: string;
+  updatedAt: string;
+  author: string;
+  summary: string;
+  sections: ArticleSection[];
+  sources: string[];
+  relatedToolUrl: string;
+  relatedToolLabel: string;
+  relatedTopicUrl: string;
+}
+
+const rawArticles: Array<{
+  n: string;
+  slug: string;
+  title: string;
+  tpl: 'A' | 'B' | 'C' | 'D' | 'E';
+  cat: string;
+  toolUrl: string;
+  toolLabel: string;
+  topicUrl: string;
+  summary: string;
+  focusPoints: string[];
+}> = [
+  {
+    n: '01',
+    slug: '2027-top-airport-buying-guide',
+    title: '2027顶级机场推荐：高端网络服务完整选购指南',
+    tpl: 'E',
+    cat: '高端品牌与年度选购',
+    toolUrl: '/tools/premium-selector/',
+    toolLabel: '高端机场智能选购助手',
+    topicUrl: '/premium/',
+    summary: '基于 2026 年可获得的公开资料与服务条款，梳理 2027 年度高端网络服务的核心评估框架与证据核验方法。',
+    focusPoints: [
+      '顶级机场的本质在于可核验的线路架构、连续性表现与政策透明度，而非单纯高定价。',
+      '在缺乏独立多日实测样本前，任何“全网最快”或“绝对不掉线”宣传都应保持审慎。',
+      '建议优先以月付或短周期实测本地运营商晚高峰表现，再决定是否长期持有。',
+    ],
+  },
+  {
+    n: '02',
+    slug: 'what-qualifies-as-top-airport',
+    title: '什么样的机场才有资格称为顶级机场？',
+    tpl: 'A',
+    cat: '高端品牌评选',
+    toolUrl: '/rankings/methodology/',
+    toolLabel: 'Imperial Quality Index',
+    topicUrl: '/rankings/',
+    summary: '拆解 Imperial Quality Index 六大评价维度，解释为何收录品牌并不自动等于获得顶级评选资格。',
+    focusPoints: [
+      '评选资格要求在线路架构、性能实测、客服响应、AI/流媒体兼容、隐私政策与价格价值六个维度均具备可比较证据。',
+      '缺少独立实测证据的品牌仅标记为「已收录」或「部分证据完整」，不强行赋予主观高分。',
+      '商业推广关系与客观品质评选必须严格隔离。',
+    ],
+  },
+  {
+    n: '03',
+    slug: 'premium-vs-standard-airports',
+    title: '高端机场与普通机场的实际区别',
+    tpl: 'A',
+    cat: '高端品牌评选',
+    toolUrl: '/tools/service-compare/',
+    toolLabel: '高端套餐与服务对比',
+    topicUrl: '/premium/premium-vs-standard/',
+    summary: '从跨境传输架构、晚高峰冗余、客服响应与规则稳定性四个层面对比高端服务与入门级机场的实质差异。',
+    focusPoints: [
+      '普通低价机场通常采用单线公网直连或低成本共享中转，晚高峰易受国际出口拥塞波及。',
+      '定位高端的服务商更注重多入口调度、清晰倍率政策与工单售后支持，但仍需以实际条款为准。',
+      '高价格并不自动等于高端体验，核验实际套餐限制与历史变更记录同样关键。',
+    ],
+  },
+  {
+    n: '04',
+    slug: 'ranking-criteria-for-boutique-airports',
+    title: '精品机场排行榜应该依据哪些评价标准？',
+    tpl: 'A',
+    cat: '高端品牌评选',
+    toolUrl: '/rankings/methodology/',
+    toolLabel: '皇家品质评选指数',
+    topicUrl: '/rankings/',
+    summary: '剖析传统机场榜单的常见失真原因，并介绍基于证据完整度与加权模型的客观评价体系。',
+    focusPoints: [
+      '按推广佣金排序的榜单会系统性高估高返佣品牌，忽略退款难与隐性限速问题。',
+      '合理的评价标准应将线路证据与性能稳定性置于最高权重（合计 50%），并公开数据采集日期。',
+      '当缺少足够实测样本时，宁可暂不评分，也不制造虚假排行。',
+    ],
+  },
+  {
+    n: '05',
+    slug: 'is-more-expensive-always-better',
+    title: '高端机场价格更贵就一定更好吗？',
+    tpl: 'E',
+    cat: '套餐与消费价值',
+    toolUrl: '/tools/service-compare/',
+    toolLabel: '高端套餐对比矩阵',
+    topicUrl: '/plans/value/',
+    summary: '拆解定价结构中的真实传输成本与品牌溢价，教您用整期实付金额与每 GB 成本评估真实性价比。',
+    focusPoints: [
+      '部分高价套餐包含了多设备授权、1x 倍率或不限速政策，但也存在单纯依靠营销定价的情况。',
+      '计算长期成本时必须纳入节点计费倍率、重置规则与潜在年付风险，而非只看首月标价。',
+      '明确自身使用场景后，再匹配相应带宽与流量规格才是最理性的消费方式。',
+    ],
+  },
+  {
+    n: '06',
+    slug: 'how-to-verify-iepl-claims',
+    title: 'IEPL高端机场的线路资料应该如何核验？',
+    tpl: 'B',
+    cat: '精品专线研究',
+    toolUrl: '/tools/line-matrix/',
+    toolLabel: '精品专线对比矩阵',
+    topicUrl: '/lines/iepl/',
+    summary: '介绍 IEPL 国际以太网专线的技术特征，以及为什么仅凭节点名称或单次测速无法确认物理专线。',
+    focusPoints: [
+      'IEPL 为运营商二层点对点以太网专线，正常情况下跨境段抖动与丢包应显著低于公网路由。',
+      '消费级用户难以直接审计服务商机房合同，因此必须对「全节点 IEPL」宣传保持审慎。',
+      '可通过晚高峰连续丢包率、入口 ASN 稳定性与多时段延迟方差进行间接交叉验证。',
+    ],
+  },
+  {
+    n: '07',
+    slug: 'iplc-vs-iepl-differences',
+    title: 'IPLC与IEPL精品专线有什么区别？',
+    tpl: 'B',
+    cat: '精品专线研究',
+    toolUrl: '/tools/line-matrix/',
+    toolLabel: '精品专线对比矩阵',
+    topicUrl: '/lines/iepl-vs-iplc/',
+    summary: '从底层传输协议、弹性带宽调度、成本结构与消费级机场宣传现状对比 IPLC 与 IEPL。',
+    focusPoints: [
+      'IPLC 偏重传统电路级点对点专线，带宽相对固定；IEPL 基于现代以太网架构，调度更灵活。',
+      '在面向个人用户的机场产品中，两者常被泛化用于指代「跨境内网专线中转」。',
+      '对终端用户而言，实际体验取决于入口质量、专线容量余量及落地出口负载，而非单纯名词标签。',
+    ],
+  },
+  {
+    n: '08',
+    slug: 'all-dedicated-line-claims-warnings',
+    title: '全专线机场宣传需要注意哪些问题？',
+    tpl: 'B',
+    cat: '精品专线研究',
+    toolUrl: '/tools/line-matrix/',
+    toolLabel: '精品专线对比矩阵',
+    topicUrl: '/lines/dedicated/',
+    summary: '解析「全节点专线」「独家物理直连」等常见营销表述背后可能存在的混合中转与倍率陷阱。',
+    focusPoints: [
+      '部分服务商仅在主力香港/日本节点启用专线中转，而冷门地区仍走普通公网回程。',
+      '即使跨境段采用专线，若入口宽带或落地机带宽过载，晚高峰同样会出现严重拥塞。',
+      '核对套餐是否对专线节点施加 2x–5x 流量倍率，是评估真实成本的关键一步。',
+    ],
+  },
+  {
+    n: '09',
+    slug: 'bgp-transit-vs-dedicated-line',
+    title: 'BGP中转与专线服务有什么区别？',
+    tpl: 'B',
+    cat: '精品专线研究',
+    toolUrl: '/tools/line-matrix/',
+    toolLabel: '精品专线对比矩阵',
+    topicUrl: '/lines/bgp/',
+    summary: '对比多线 BGP 边界网关调度与点对点物理专线的路由机制、抗波动能力与适用场景。',
+    focusPoints: [
+      'BGP 中转通过多运营商入口动态选路，具备较好的容灾弹性，但跨境段仍可能经过公网交换中心。',
+      '高质量 BGP 入口结合专线跨境传输，是目前多数定位中高端服务的常见混合架构。',
+      '单看「BGP」字样无法判断质量，需关注具体接入运营商质量与晚高峰抖动控制。',
+    ],
+  },
+  {
+    n: '10',
+    slug: 'enterprise-lines-vs-personal-services',
+    title: '企业级线路与普通个人网络服务区别',
+    tpl: 'D',
+    cat: '国际商务办公',
+    toolUrl: '/tools/business-planner/',
+    toolLabel: '国际商务网络规划工具',
+    topicUrl: '/lines/enterprise/',
+    summary: '明确消费级个人机场订阅与具备 SLA、合规审计及固定合同的企业级网络服务之间的法律与技术边界。',
+    focusPoints: [
+      '正规企业专线提供明确的服务等级协议（SLA）、故障赔付机制、独立带宽保障与合规资质。',
+      '个人机场套餐无论售价高低，通常均属于消费级共享代理，不承担企业级合规与数据安全责任。',
+      '跨境团队应根据业务敏感度区分办公主线与辅助工具网络，避免混用带来安全与断线风险。',
+    ],
+  },
+  {
+    n: '11',
+    slug: 'hong-kong-premium-nodes-guide',
+    title: '香港高端节点的服务条件及选择依据',
+    tpl: 'B',
+    cat: '全球优质出口',
+    toolUrl: '/regions/',
+    toolLabel: '全球网络品质图谱',
+    topicUrl: '/regions/hong-kong/',
+    summary: '分析香港作为亚太核心出口的地理延迟优势、高密度共享风险以及 AI 服务地区限制注意事项。',
+    focusPoints: [
+      '香港与中国大陆物理距离近，是网页浏览、远程桌面与亚太办公延迟最低的核心区域之一。',
+      '需要注意部分国际 AI 平台并不直接支持香港地区 IP，使用 AI 工具时往往需切换至日本、新加坡或美国节点。',
+      '选择香港节点时应重点考察晚高峰负载与是否为常规高倍率计费。',
+    ],
+  },
+  {
+    n: '12',
+    slug: 'japan-vs-singapore-nodes',
+    title: '日本与新加坡精品节点应该如何比较？',
+    tpl: 'B',
+    cat: '全球优质出口',
+    toolUrl: '/regions/',
+    toolLabel: '全球网络品质图谱',
+    topicUrl: '/regions/japan/',
+    summary: '从东亚路由路径、跨太平洋回程、AI 平台支持与东南亚商务覆盖对比日本与新加坡节点。',
+    focusPoints: [
+      '日本节点对华东/华北用户延迟友好，且在流媒体与部分 AI 工具访问中常作为香港的替代出口。',
+      '新加坡是东南亚国际商务与云服务枢纽，对华南用户路由较优，适合跨国团队视频会议。',
+      '两地均需关注落地机房上游是常规 IDC 还是高防/高倍率线路。',
+    ],
+  },
+  {
+    n: '13',
+    slug: 'us-native-ip-verification',
+    title: '美国原生IP机场资料应该如何核验？',
+    tpl: 'B',
+    cat: '全球优质出口',
+    toolUrl: '/regions/',
+    toolLabel: '全球网络品质图谱',
+    topicUrl: '/regions/united-states/',
+    summary: '解释美国原生 IP 的定义、跨洋物理延迟下限以及避免将「原生 IP」误读为「绝对不风控」的方法。',
+    focusPoints: [
+      '大陆访问美国西海岸物理往返延迟通常在 130ms–180ms 左右，这是光速与海底光缆距离决定的物理边界。',
+      '原生 IP 主要改善流媒体库与地区识别准确性，但若多人高频共享同一出口仍可能触发平台风控。',
+      '核验时应结合服务商声明、实际 ASN 归属与长期可用性观察。',
+    ],
+  },
+  {
+    n: '14',
+    slug: 'native-ip-vs-residential-ip',
+    title: '原生IP与住宅IP有什么区别？',
+    tpl: 'B',
+    cat: '全球优质出口',
+    toolUrl: '/regions/',
+    toolLabel: '全球网络品质图谱',
+    topicUrl: '/regions/native-ip/',
+    summary: '厘清机房原生 IP 与家庭宽带住宅 IP 在 ASN 属性、风控权重、带宽上限与成本上的本质差异。',
+    focusPoints: [
+      '原生 IP 仍多属于数据中心（Hosting/IDC）ASN，只是注册地与落地机房一致。',
+      '住宅 IP 归属于本地宽带运营商（ISP），风控敏感度更低，但往往带宽受限且稳定性波动较大。',
+      '切勿轻信将普通机房 IP 包装为「真家宽住宅」的营销话术。',
+    ],
+  },
+  {
+    n: '15',
+    slug: 'how-to-judge-high-bandwidth',
+    title: '高带宽机场应该如何判断实际性能？',
+    tpl: 'C',
+    cat: '网络性能研究',
+    toolUrl: '/performance/evidence/',
+    toolLabel: '高端网络性能证据中心',
+    topicUrl: '/performance/bandwidth/',
+    summary: '说明单线程与多线程测速差异、本地宽带瓶颈以及为什么「不限速」不代表无限带宽。',
+    focusPoints: [
+      '高带宽评估应区分单线程传输能力（影响网页与大文件拉取）与多线程吞吐上限。',
+      '本地家庭宽带或校园网出口本身往往存在 QoS 或上行限制，测试时必须记录接入网络环境。',
+      '在缺乏第三方多日采样数据时，本站不发布虚构的实测带宽榜单。',
+    ],
+  },
+  {
+    n: '16',
+    slug: 'peak-hour-stability-evaluation',
+    title: '高端机场晚高峰稳定性应该如何评价？',
+    tpl: 'C',
+    cat: '网络性能研究',
+    toolUrl: '/performance/evidence/',
+    toolLabel: '高端网络性能证据中心',
+    topicUrl: '/performance/peak-hours/',
+    summary: '建立 20:00–23:30 晚高峰时段的性能观察框架，解释丢包、延迟抬升与速度衰减的识别方法。',
+    focusPoints: [
+      '晚高峰稳定性应对比同一节点在凌晨闲时与晚间 21:00 忙时的延迟抬升幅度及丢包率变化。',
+      '若闲时极快但晚高峰频繁断流，说明共享入口或跨境专线存在超售现象。',
+      '真正的实测证据应包含测试日期、运营商、地区、样本数与局限性说明。',
+    ],
+  },
+  {
+    n: '17',
+    slug: 'packet-loss-and-jitter-impact',
+    title: '网络丢包与抖动对高端使用体验有什么影响？',
+    tpl: 'C',
+    cat: '网络性能研究',
+    toolUrl: '/performance/evidence/',
+    toolLabel: '高端网络性能证据中心',
+    topicUrl: '/performance/packet-loss/',
+    summary: '深入解析丢包率（Packet Loss）与抖动（Jitter）对视频会议、远程桌面、SSH 与流媒体缓冲的实际影响。',
+    focusPoints: [
+      '对于实时音视频与远程交互而言，低抖动与零丢包比单纯的百兆峰值下载更为重要。',
+      '高丢包会迫使 TCP 拥塞控制窗口急剧收缩，导致网页加载白屏或 AI 流式输出中断。',
+      '建议关注连续多日 MTR/Ping 统计中的 P95/P99 延迟，而非仅看平均延迟。',
+    ],
+  },
+  {
+    n: '18',
+    slug: 'why-single-speedtest-is-not-stability',
+    title: '为什么单次高速下载不能代表长期稳定？',
+    tpl: 'C',
+    cat: '网络性能研究',
+    toolUrl: '/performance/evidence/',
+    toolLabel: '高端网络性能证据中心',
+    topicUrl: '/performance/stability/',
+    summary: '揭示单次测速截图在时间窗口、缓存效应与并发负载上的局限性，建立长期稳定性观察视角。',
+    focusPoints: [
+      '单次 Speedtest 仅反映数十秒内的瞬时可用吞吐，无法捕捉路由切换、周期性断流与晚高峰拥塞。',
+      '评估长期稳定性需要结合多日实测记录、服务商历史维护公告及备用节点冗余度。',
+      '实测数据应与独立实测站（如 jichangshice.mom）的规范样本交叉对照。',
+    ],
+  },
+  {
+    n: '19',
+    slug: 'chatgpt-network-and-compatibility-evidence',
+    title: 'ChatGPT网络需求与兼容性证据分析',
+    tpl: 'D',
+    cat: 'AI 应用研究',
+    toolUrl: '/ai/compatibility/',
+    toolLabel: 'AI 应用兼容中心',
+    topicUrl: '/ai/chatgpt/',
+    summary: '分析 ChatGPT Web 端与 API 访问对出口地区、IP 信誉与长连接稳定性的要求，并明确合规边界。',
+    focusPoints: [
+      'ChatGPT 对高频触发 Cloudflare 或风控的共享数据中心 IP 较为敏感，容易出现频繁人机验证。',
+      '服务商官网标注支持 ChatGPT 仅代表其公开声明，不构成平台永不拦截的承诺。',
+      '使用 AI 服务时应遵守 OpenAI 官方适用条款与地区政策，并确保长会话连接不断流。',
+    ],
+  },
+  {
+    n: '20',
+    slug: 'claude-and-gemini-network-support',
+    title: 'Claude与Gemini网络支持条件研究',
+    tpl: 'D',
+    cat: 'AI 应用研究',
+    toolUrl: '/ai/compatibility/',
+    toolLabel: 'AI 应用兼容中心',
+    topicUrl: '/ai/claude/',
+    summary: '梳理 Anthropic Claude 与 Google Gemini 的官方支持地区差异及对出口纯净度、路由稳定性的要求。',
+    focusPoints: [
+      'Claude 与 Gemini 均对账户注册地、IP 所属地区一致性及反滥用风控有严格策略。',
+      '在缺失独立持续样本前，不应将任何未经验证的节点直接标注为「AI 专用保证节点」。',
+      '频繁切换不同国家出口可能导致会话异常或触发安全校验，建议固定合规支持地区出口。',
+    ],
+  },
+  {
+    n: '21',
+    slug: 'comparing-multi-ai-compatibility',
+    title: '多AI平台兼容性如何进行合理比较？',
+    tpl: 'D',
+    cat: 'AI 应用研究',
+    toolUrl: '/ai/compatibility/',
+    toolLabel: 'AI 应用兼容中心',
+    topicUrl: '/ai/compatibility/',
+    summary: '建立面向同时使用 ChatGPT、Claude 与 Gemini 的用户选型方法，避免单一声明误导。',
+    focusPoints: [
+      '不同 AI 平台对同一出口 IP 的风控策略并不相同，支持其一不代表全部顺畅。',
+      '建议优先查看服务商是否同时公开美国、日本、新加坡等多地分流节点，并保留备用方案。',
+      '工作流高度依赖 AI 的用户应重点考察流式输出（SSE）长连接的稳定性。',
+    ],
+  },
+  {
+    n: '22',
+    slug: '4k-streaming-network-requirements',
+    title: '4K流媒体观看需要考虑哪些网络条件？',
+    tpl: 'D',
+    cat: '4K/8K 精品流媒体',
+    toolUrl: '/tools/streaming-calculator/',
+    toolLabel: '皇家影音带宽计算器',
+    topicUrl: '/streaming/bandwidth/',
+    summary: '解析 Netflix、Disney+ 与 YouTube 4K 播放对持续吞吐、节点倍率与出口 IP 识别的综合要求。',
+    focusPoints: [
+      '4K 流媒体并非只看瞬间峰值，更需要稳定的 40–60 Mbps 持续下行余量以避免降画质。',
+      '高频追剧用户极易在 2x 或更高倍率节点下快速耗尽月度流量，选型前务必先做流量精算。',
+      '跨区流媒体兼容性随版权方封锁策略动态变化，历史记录不作长期保证。',
+    ],
+  },
+  {
+    n: '23',
+    slug: '8k-video-bandwidth-and-traffic',
+    title: '8K视频需要多少带宽及流量？',
+    tpl: 'D',
+    cat: '4K/8K 精品流媒体',
+    toolUrl: '/tools/streaming-calculator/',
+    toolLabel: '皇家影音带宽计算器',
+    topicUrl: '/streaming/8k/',
+    summary: '使用十进制 GB 换算模型测算 8K 超高清视频在单设备与多设备场景下的带宽与月流量消耗。',
+    focusPoints: [
+      '8K 视频在 AV1/VP9/HEVC 不同编码下平均码率差异较大（常见 50–120 Mbps 区间），非固定单一数值。',
+      '以 80 Mbps 平均码率为例，每小时消耗约 36 GB（十进制），重度观看需匹配大流量套餐与 1x 倍率节点。',
+      '可使用本站影音计算器自由调整码率、时长与倍率进行精确预算。',
+    ],
+  },
+  {
+    n: '24',
+    slug: 'business-office-network-selection',
+    title: '高端商务办公网络服务怎么选？',
+    tpl: 'D',
+    cat: '国际商务办公',
+    toolUrl: '/tools/business-planner/',
+    toolLabel: '国际商务网络规划工具',
+    topicUrl: '/business/',
+    summary: '针对远程办公与跨境商务场景，总结设备兼容性、客服响应、双线冗余与隐私安全的核心选购标准。',
+    focusPoints: [
+      '商务办公首要诉求是工作时段不中断与全平台客户端兼容（macOS、Windows 与路由器网关）。',
+      '需明确区分个人机场订阅与企业级网络服务，敏感商业传输应叠加端到端加密与内部 VPN。',
+      '建议同时准备一家主力月付服务与一家不限时流量包作为应急备用。',
+    ],
+  },
+  {
+    n: '25',
+    slug: 'video-meeting-latency-packet-loss',
+    title: '视频会议对延迟、丢包及稳定性的要求',
+    tpl: 'D',
+    cat: '国际商务办公',
+    toolUrl: '/tools/business-planner/',
+    toolLabel: '国际商务网络规划工具',
+    topicUrl: '/business/video-meeting/',
+    summary: '解析 Zoom、Teams 与 Google Meet 等实时音视频会议对上行带宽、抖动与丢包率的敏感阈值。',
+    focusPoints: [
+      '视频会议对上行与下行的对称稳定性要求高于普通网页浏览，单向丢包超过 2% 即可能出现卡顿。',
+      '尽量选择香港、日本、新加坡等低物理往返延迟地区，并关闭不必要的全局高倍率节点。',
+      '会议前应提前测试本地网络接入状态，避免在公共 Wi-Fi 叠加上游波动。',
+    ],
+  },
+  {
+    n: '26',
+    slug: 'multi-device-and-team-usage-notes',
+    title: '高端机场多设备与团队使用注意事项',
+    tpl: 'D',
+    cat: '国际商务办公',
+    toolUrl: '/tools/business-planner/',
+    toolLabel: '国际商务网络规划工具',
+    topicUrl: '/business/multi-device/',
+    summary: '梳理 18 家品牌在同时在线设备数、路由器订阅与第三方客户端政策上的差异及合规边界。',
+    focusPoints: [
+      '部分品牌标注「不限同时在线设备数」，但通常仍禁止公开共享订阅或转售行为。',
+      '在企业或多人团队中共用单一个人账号容易触发 IP 并发风控并导致全员断线。',
+      '若需在路由器部署，应提前向客服确认是否支持 Clash/Mihomo 等第三方订阅链接。',
+    ],
+  },
+  {
+    n: '27',
+    slug: 'monthly-vs-yearly-plans-value',
+    title: '精品机场月付和年付哪个更有价值？',
+    tpl: 'E',
+    cat: '高端套餐与售后',
+    toolUrl: '/tools/service-compare/',
+    toolLabel: '高端套餐与服务对比',
+    topicUrl: '/plans/yearly/',
+    summary: '权衡年付折扣收益与长期运营不确定性风险，提供分阶段试错的理性付款周期建议。',
+    focusPoints: [
+      '从纯单价看，年付或两年付通常可降低 15%–30% 的月均成本，但前提是服务连续稳定。',
+      '新用户首次接触任何品牌时，强烈建议先购买月付套餐验证本地晚高峰表现与客服态度。',
+      '仅在长期观察运营稳定、规则透明且预算可控的情况下，再考虑季度或年度周期。',
+    ],
+  },
+  {
+    n: '28',
+    slug: 'evaluating-customer-support-and-aftersales',
+    title: '高端机场客服及售后服务如何评价？',
+    tpl: 'E',
+    cat: '高端套餐与售后',
+    toolUrl: '/tools/service-compare/',
+    toolLabel: '高端套餐与服务对比',
+    topicUrl: '/plans/support/',
+    summary: '从客服渠道完备度、工单机制、试用退款条款与套餐升级规则四个方面评估售后服务品质。',
+    focusPoints: [
+      '优质售后服务体现在清晰的工单入口、明确的退款/折算条款以及主动的故障维护通知。',
+      '在未取得实测响应时长记录前，本站仅展示公开客服渠道类型，不虚构「5分钟必回」承诺。',
+      '购买前建议先查阅退款条件、手续费扣减比例与流量重置规则。',
+    ],
+  },
+  {
+    n: '29',
+    slug: 'privacy-and-logging-policy-guide',
+    title: '高端机场隐私及日志政策怎么看？',
+    tpl: 'E',
+    cat: '风险评估与选购',
+    toolUrl: '/guide/privacy/',
+    toolLabel: '隐私与日志政策指南',
+    topicUrl: '/guide/privacy/',
+    summary: '理性剖析消费级代理服务的隐私边界、日志声明可信度与用户侧基础安全防护建议。',
+    focusPoints: [
+      '绝大多数消费级机场并未接受独立第三方无日志审计，不应将宣传语视为绝对隐私担保。',
+      '敏感办公与金融操作应始终依赖端到端 HTTPS/TLS 加密，避免使用未加密协议。',
+      '切勿在第三方未知渠道购买共享账号或来路不明的修改版客户端。',
+    ],
+  },
+  {
+    n: '30',
+    slug: 'planning-backup-network-continuity',
+    title: '如何规划商务网络的备用连接与服务连续性？',
+    tpl: 'E',
+    cat: '风险评估与选购',
+    toolUrl: '/tools/business-planner/',
+    toolLabel: '国际商务网络规划工具',
+    topicUrl: '/guide/backup-planning/',
+    summary: '提供「主力周期套餐 + 独立上游不限时流量包」的双活冗余配置思路，保障关键业务连续性。',
+    focusPoints: [
+      '单一服务商无论口碑如何，都可能面临上游线路割接、入口维护或域名调整等突发状况。',
+      '高性价比的连续性方案是主线采用月付/季付套餐，同时备有一家不同上游的不限时按量流量包。',
+      '定期在个人档案中记录各服务的到期时间、客服入口与备用订阅渠道。',
+    ],
+  },
+];
+
+export const articles: ArticleRecord[] = rawArticles.map((item) => ({
+  number: item.n,
+  slug: item.slug,
+  title: item.title,
+  template: item.tpl,
+  category: item.cat,
+  seoTitle: `${item.title}｜顶级机场 Imperial Network`,
+  metaDescription: item.summary,
+  publishedAt: '2026-11-26',
+  updatedAt: '2026-11-26',
+  author: '顶级机场编辑部（Imperial Network）',
+  summary: item.summary,
+  sections: [
+    {
+      id: 'overview',
+      heading: '一、核心研究背景与问题定义',
+      paragraphs: [
+        item.summary,
+        `在顶级机场（dijichang.blog）的 Imperial ONE MAX 研究框架中，我们始终坚持「真正的品质，不止于速度」的核验原则。针对「${item.title}」这一主题，必须把服务商公开宣传、第三方历史资料与独立实测证据严格区分，避免将未经证实的营销口号当作既定事实。`,
+      ],
+    },
+    {
+      id: 'analysis',
+      heading: '二、关键评估维度与实务要点',
+      paragraphs: item.focusPoints,
+    },
+    {
+      id: 'boundary',
+      heading: '三、证据边界与消费决策建议',
+      paragraphs: [
+        '当前 18 家初始品牌数据库已完整收录历史套餐价格、优惠码、原始推广链接与公开服务声明，但独立多日性能实测与 ASN 物理链路核验仍在持续推进中（实测报告由独立实测站 jichangshice.mom 负责）。',
+        '建议用户在做出长期大额付款决策前，结合本站提供的智能选购、专线对比与套餐对比工具进行横向核算，并优先选择短周期试错与备用双线方案，以控制长期消费风险。',
+      ],
+    },
+  ],
+  sources: [
+    '顶级机场 18 家品牌资料总索引（2026-11-25）',
+    'Imperial Quality Index v1.0 编辑评价规范',
+    '公开服务商条款与客户端政策汇编（2026-11-24）',
+  ],
+  relatedToolUrl: item.toolUrl,
+  relatedToolLabel: item.toolLabel,
+  relatedTopicUrl: item.topicUrl,
+}));
+
+export function getArticleBySlug(slug: string): ArticleRecord | undefined {
+  return articles.find((a) => a.slug === slug);
+}

@@ -1,0 +1,318 @@
+---
+import FlagshipScene from './FlagshipScene.astro';
+import AureviaArt from './AureviaArt.astro';
+import StreamingCalcIsland from './tools/StreamingCalcIsland';
+import BusinessPlannerIsland from './tools/BusinessPlannerIsland';
+import ServiceCompareIsland from './tools/ServiceCompareIsland';
+import {
+  brands,
+  plans,
+  aiCompatibility,
+  qualityIndex,
+  servicePolicies,
+  evidenceSources,
+  corrections,
+} from '../lib/data';
+import { articles } from '../data/articles';
+import { faqs } from '../data/faqs';
+
+const compareBrands = brands.map((b) => {
+  const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+  const p = servicePolicies.find((x) => x.brandId === b.id);
+  return {
+    id: b.id,
+    name: b.name,
+    ratio: b.ratio,
+    deviceLimit: b.deviceLimit,
+    lineTypes: b.lineTypes,
+    aiTools: b.aiTools,
+    streaming: b.streaming,
+    supportChannels: p?.supportChannels || [],
+    refundPolicy: p?.refundPolicy || '未明示',
+    trialPolicy: p?.trialPolicy || '未明示',
+    evidenceCompleteness: q?.evidenceCompleteness ?? 0,
+    plans: plans.filter((pl) => pl.brandId === b.id),
+  };
+});
+
+const faqCategories = Array.from(new Set(faqs.map((f) => f.category)));
+---
+
+<!-- Modules 15, 16, 17: Velocity Lab (Deep Navy) -->
+<section class="scene-band scene-navy">
+  <FlagshipScene scene="velocity" />
+  <div class="container">
+    <span class="chapter-badge">15–17 · 至尊性能实验室 (Velocity Lab)</span>
+    <h2 class="section-title">高带宽、晚高峰性能证据与丢包抖动研究</h2>
+    <p class="section-lead">
+      目前 18 家品牌尚未完成独立多日晚高峰实测采样（独立实测由 jichangshice.mom 负责），因此本实验室严格展示工程指标定义与 11 项采样规范，绝不生成虚构的实时速度或延迟图表。
+    </p>
+    <div class="grid-3">
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">15. 高带宽与低延迟研究</h3>
+        <p style="margin:0;font-size:0.9rem;color:#C9D2DF;">
+          单线程 TCP 吞吐决定网页与文件拉取体感；往返延迟（RTT）受物理距离与海底光缆路由制约。香港、日本对大陆具备最低物理延迟下限，而“不限速”宣传绝不等于保证无限带宽。<a href="/performance/bandwidth/" style="color:#E8DDC8;text-decoration:underline;">详情 →</a>
+        </p>
+      </article>
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">16. 晚高峰网络性能证据</h3>
+        <p style="margin:0;font-size:0.9rem;color:#C9D2DF;">
+          20:00–23:30（UTC+8）是检验超售与国际出口拥塞的关键窗口。任何有效实测必须标注测试日期、地区、本地运营商、测试节点、工具与样本数量。<a href="/performance/peak-hours/" style="color:#E8DDC8;text-decoration:underline;">详情 →</a>
+        </p>
+      </article>
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">17. 丢包、抖动与拥塞知识</h3>
+        <p style="margin:0;font-size:0.9rem;color:#C9D2DF;">
+          哪怕 2% 的持续丢包或剧烈抖动（Jitter），也会导致远程会议卡顿、SSH 断流与 AI 流式输出中断。关注 P95/P99 延迟方差远比单次 Ping 均值更有意义。<a href="/performance/packet-loss/" style="color:#E8DDC8;text-decoration:underline;">详情 →</a>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Modules 18, 19: Intelligence Nexus -->
+<section class="scene-band scene-platinum">
+  <FlagshipScene scene="nexus" />
+  <div class="container">
+    <span class="chapter-badge">18 &amp; 19 · 高端 AI 研究中心 (Intelligence Nexus)</span>
+    <h2 class="section-title">AI 工具高端网络需求与多平台兼容性研究</h2>
+    <p class="section-lead">
+      使用 ChatGPT、Claude 与 Gemini 必须遵守适用法律及第三方平台服务条款。服务商官网标注支持仅代表公开声明，不构成对平台地区限制或风控拦截的豁免保证。
+    </p>
+    <div class="grid-2" style="margin-bottom:1.75rem;">
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">18. AI 工具高端网络需求</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          AI 对话与代码生成对极高带宽要求不高，但对长链接稳定性（SSE 不断流）、出口地区合规支持度以及共享 IP 的 Cloudflare 风控信誉高度敏感。建议使用日本、新加坡或美国节点分流，避免香港出口无法直接访问部分 AI 服务。<a href="/ai/network-requirements/" style="text-decoration:underline;font-weight:700;">深入研究 →</a>
+        </p>
+      </div>
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">19. 多 AI 平台兼容性汇总</h3>
+        <p style="margin:0 0 0.65rem;font-size:0.9rem;color:var(--text-secondary);">
+          当前 18 家品牌中公开提及 AI 工具兼容的品牌示例（均为服务商声明，待独立持续样本核验）：
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.45rem;">
+          {aiCompatibility.filter((a) => a.declaredAiTools.length > 0).slice(0, 8).map((a) => (
+            <a href={`/airports/${a.brandId}/`} class="evidence-pill" style="text-decoration:none;">
+              {a.brandName} ({a.declaredAiTools.slice(0, 2).join('/')})
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modules 20, 21: Platinum Cinema -->
+<section class="scene-band scene-champagne">
+  <FlagshipScene scene="cinema" />
+  <div class="container">
+    <span class="chapter-badge">20 &amp; 21 · 皇家影音剧院 (Platinum Cinema)</span>
+    <h2 class="section-title">Netflix / Disney+ 高端流媒体与 YouTube 4K/8K 带宽精算</h2>
+    <div class="grid-2" style="margin-bottom:1.75rem;">
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.45rem;">20. Netflix 与 Disney+ 流媒体研究</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          流媒体解锁状态随版权方 IP 库动态更新，历史记录不作长期承诺。重度追剧用户选型时应重点核查 1x 倍率政策，避免高倍率节点造成流量提前耗尽。<a href="/streaming/netflix/" style="text-decoration:underline;font-weight:700;">详情 →</a>
+        </p>
+      </div>
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.45rem;">21. YouTube 4K 及 8K 带宽需求研究</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          4K 与 8K 并非固定单一码率。下方的皇家影音带宽计算器采用十进制 GB 公式，支持您自由调整平均码率、设备数与倍率进行精确预算。<a href="/streaming/8k/" style="text-decoration:underline;font-weight:700;">8K 专题 →</a>
+        </p>
+      </div>
+    </div>
+    <StreamingCalcIsland client:visible plans={plans} />
+  </div>
+</section>
+
+<!-- Modules 22, 23, 24: Executive Lounge -->
+<section class="scene-band scene-platinum">
+  <FlagshipScene scene="lounge" />
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:2rem;margin-bottom:2rem;">
+      <div>
+        <span class="chapter-badge">22–24 · 国际商务中心 (Executive Lounge)</span>
+        <h2 class="section-title">国际商务办公、视频会议与全平台设备限制</h2>
+        <p class="section-lead">
+          个人机场订阅属于消费级代理服务，不具备企业级 SLA 与合规审计保障。跨境团队应根据敏感度区分个人辅助与正式企业专线，并严格遵守同时在线设备限制。
+        </p>
+        <div style="display:grid;gap:0.75rem;">
+          <div class="imperial-card" style="padding:1rem;">
+            <strong>22. 国际商务与远程办公</strong>：重点考察工作时段连续性与双线主备冗余。<a href="/business/remote-work/" style="text-decoration:underline;">详情 →</a>
+          </div>
+          <div class="imperial-card" style="padding:1rem;">
+            <strong>23. 跨境团队与视频会议</strong>：Zoom/Teams 对上行丢包与抖动极度敏感。<a href="/business/video-meeting/" style="text-decoration:underline;">详情 →</a>
+          </div>
+          <div class="imperial-card" style="padding:1rem;">
+            <strong>24. 全平台设备与同时在线限制</strong>：核对 macOS、Windows 与路由器第三方订阅政策。<a href="/business/multi-device/" style="text-decoration:underline;">详情 →</a>
+          </div>
+        </div>
+      </div>
+      <div style="max-width:330px;margin:0 auto;">
+        <AureviaArt pose="business" compact />
+      </div>
+    </div>
+    <BusinessPlannerIsland client:visible brands={brands} />
+  </div>
+</section>
+
+<!-- Modules 25, 26, 27: Prestige Collection & Imperial Archives -->
+<section class="scene-band scene-champagne">
+  <FlagshipScene scene="collection" />
+  <div class="container">
+    <span class="chapter-badge">25–27 · 精品套餐、售后服务与消费风险</span>
+    <h2 class="section-title">套餐价值对比、退款政策与购买风险评估</h2>
+    <div style="margin-bottom:2rem;">
+      <ServiceCompareIsland client:visible brands={compareBrands} />
+    </div>
+
+    <div class="grid-2">
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">26. 客服、售后、试用及退款政策</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          数字代理服务极少支持无条件全额退款。本站如实汇总 18 家品牌的公开客服渠道（Crisp、工单等）与试用退款说明，不虚构分钟级响应承诺。<a href="/plans/trial-refund/" style="text-decoration:underline;font-weight:700;">查看退款规则研究 →</a>
+        </p>
+      </div>
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;">27. 隐私、安全及专业购买风险</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          消费级服务通常未经过第三方无日志独立审计。请始终使用端到端 HTTPS 加密传输，切勿从非官方网盘下载客户端或轻信绝对不掉线宣传。<a href="/guide/purchase-risk/" style="text-decoration:underline;font-weight:700;">购买避坑指南 →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 28: 全部 18 家机场品牌档案 -->
+<section class="scene-band scene-platinum">
+  <div class="container">
+    <span class="chapter-badge">28 · 全部 18 家机场品牌资料档案</span>
+    <h2 class="section-title">18 家机场品牌总览（按资料导入顺序，非品质排名）</h2>
+    <div class="grid-3">
+      {brands.map((b) => {
+        const bPlans = plans.filter((p) => p.brandId === b.id);
+        const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+        return (
+          <article class="imperial-card diamond-hover" style="display:flex;flex-direction:column;gap:0.45rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.74rem;color:var(--deep-gilt);font-weight:700;">#{String(b.order).padStart(2, '0')} · {b.nameEn}</span>
+              <span class="evidence-pill">完整度 {q?.evidenceCompleteness ?? 0}%</span>
+            </div>
+            <h3 style="margin:0;font-size:1.12rem;"><a href={`/airports/${b.id}/`}>{b.name}</a></h3>
+            <p style="margin:0;font-size:0.84rem;color:var(--text-muted);">{b.tagline}</p>
+            <div style="font-size:0.78rem;color:var(--text-secondary);">
+              历史套餐 {bPlans.length} 条 · 优惠码 <code>{b.coupon?.code || '无'}</code>
+            </div>
+            <div style="display:flex;gap:0.45rem;margin-top:auto;padding-top:0.4rem;">
+              <a href={`/airports/${b.id}/`} class="btn-imperial btn-primary-gold" style="min-height:34px;padding:0.28rem 0.85rem;font-size:0.8rem;">
+                30项档案
+              </a>
+              <a
+                href={b.affiliateUrl}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                class="btn-imperial btn-secondary-platinum"
+                style="min-height:34px;padding:0.28rem 0.85rem;font-size:0.8rem;"
+              >
+                官网入口 ↗
+              </a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<!-- Module 29: 专业原创阅读中心 -->
+<section class="scene-band scene-tech">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div>
+        <span class="chapter-badge">29 · 专业原创阅读中心</span>
+        <h2 class="section-title" style="margin-bottom:0;">精选深度研究文章（共 {articles.length} 篇）</h2>
+      </div>
+      <a href="/articles/" class="btn-imperial btn-primary-gold">进入阅读中心全部 30 篇 →</a>
+    </div>
+    <div class="grid-3">
+      {articles.slice(0, 9).map((a) => (
+        <a href={`/articles/${a.slug}/`} class="imperial-card diamond-hover">
+          <div style="font-size:0.74rem;color:var(--deep-gilt);font-weight:700;">#{a.number} · {a.category}</div>
+          <h3 style="margin:0.35rem 0;font-size:1.02rem;line-height:1.45;">{a.title}</h3>
+          <p style="margin:0;font-size:0.84rem;color:var(--text-muted);">{a.summary}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Module 30: 40项FAQ、作者介绍、编辑标准、资料来源及更正记录 -->
+<section class="scene-band scene-obsidian">
+  <FlagshipScene scene="archives" />
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:2rem;margin-bottom:2.25rem;">
+      <div>
+        <span class="chapter-badge">30 · 奥蕾薇娅专业答疑与编辑规范</span>
+        <h2 class="section-title">40 项顶级机场核心常见问题解答（完整版）</h2>
+        <p class="section-lead">
+          以下 40 项问答全部直接输出于 HTML 正文，涵盖基础概念、品质评选、专线核验、全球节点、性能指标、AI、4K/8K、商务办公、套餐售后与风险评估。
+        </p>
+      </div>
+      <div style="max-width:280px;margin:0 auto;">
+        <AureviaArt pose="qa" compact />
+      </div>
+    </div>
+
+    <div style="display:grid;gap:1.75rem;margin-bottom:3rem;">
+      {faqCategories.map((cat) => (
+        <div>
+          <h3 style="color:#E8DDC8;font-size:1.18rem;margin:0 0 0.85rem;border-bottom:1px solid rgba(198,166,106,0.35);padding-bottom:0.4rem;">
+            {cat}
+          </h3>
+          <div class="grid-2" style="gap:0.85rem;">
+            {faqs.filter((f) => f.category === cat).map((f) => (
+              <details class="imperial-card evidence-panel" open>
+                <summary style="color:#F8F6F0;font-size:0.96rem;">{f.question}</summary>
+                <div class="evidence-body" style="margin-top:0.55rem;font-size:0.88rem;color:#C9D2DF;">
+                  <p style="margin:0 0 0.4rem;">{f.answer}</p>
+                  <a href={f.relatedUrl} style="color:#E8DDC8;text-decoration:underline;font-size:0.82rem;">
+                    深入阅读：{f.relatedLabel} →
+                  </a>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Author, Editorial Standards, Sources & Corrections -->
+    <div class="grid-3">
+      <div class="imperial-card">
+        <h3 style="color:#E8DDC8;margin:0 0 0.5rem;font-size:1.05rem;">作者与编辑标准</h3>
+        <p style="margin:0;font-size:0.86rem;color:#C9D2DF;">
+          由「顶级机场编辑部（Imperial Network）」维护。严禁虚构品牌年限、测速成绩、用户好评或企业 SLA；所有推广链接均标注 <code style="color:#E8DDC8;">rel="sponsored"</code>，不参与主观评分。
+        </p>
+      </div>
+      <div class="imperial-card">
+        <h3 style="color:#E8DDC8;margin:0 0 0.5rem;font-size:1.05rem;">核心资料来源</h3>
+        <ul style="margin:0;padding-left:1.1rem;font-size:0.84rem;color:#C9D2DF;display:grid;gap:0.3rem;">
+          {evidenceSources.map((s) => (
+            <li>{s.title}（{s.collectedAt}）</li>
+          ))}
+        </ul>
+      </div>
+      <div class="imperial-card">
+        <h3 style="color:#E8DDC8;margin:0 0 0.5rem;font-size:1.05rem;">最新更正记录</h3>
+        {corrections.map((c) => (
+          <p style="margin:0 0 0.5rem;font-size:0.84rem;color:#C9D2DF;">
+            <strong>[{c.date}]</strong> {c.description}
+          </p>
+        ))}
+        <a href="/contact/" style="color:#E8DDC8;text-decoration:underline;font-size:0.84rem;">提交纠错反馈 →</a>
+      </div>
+    </div>
+  </div>
+</section>

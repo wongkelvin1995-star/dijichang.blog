@@ -1,0 +1,2006 @@
+[
+  {
+    "id": "hong-kong",
+    "name": "香港",
+    "nameEn": "Hong Kong",
+    "slug": "/regions/hong-kong/",
+    "role": "低延迟亚太核心出口与高密度中文服务枢纽",
+    "brandCount": 18,
+    "brands": [
+      {
+        "brandId": "lingdongyun",
+        "brandName": "灵动云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能调度",
+          "穿云套餐为 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "muguang-jiasu",
+        "brandName": "暮光加速",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能路由 + IPLC 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "flyv",
+        "brandName": "飞V（FlyV）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "香港、台湾：IEPL 专线",
+          "日本、新加坡：IPLC / IEPL 专线",
+          "美国：BGP 直连优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "tiziyun",
+        "brandName": "梯子云 LadderCloud",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "初阶：基础中转",
+          "中阶：BGP 中转",
+          "高阶：IEPL 专线",
+          "顶阶：企业级专线集群"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "langwang",
+        "brandName": "浪网 WaveNet",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "企业级 IEPL 专线",
+          "三网优化、智能负载均衡"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "yinxingren",
+        "brandName": "隐形人",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 20,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weifeng-wangluo",
+        "brandName": "微风网络 Breezenet",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国",
+          "台湾"
+        ],
+        "declaredNodeCount": 14,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "lingmao",
+        "brandName": "灵猫",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "shanyue",
+        "brandName": "闪跃 FlashLeap",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "firefly",
+        "brandName": "飞为（Firefly）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "kuajie",
+        "brandName": "跨界",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "japan",
+    "name": "日本",
+    "nameEn": "Japan",
+    "slug": "/regions/japan/",
+    "role": "东亚高带宽出海节点与跨太平洋中转枢纽",
+    "brandCount": 18,
+    "brands": [
+      {
+        "brandId": "lingdongyun",
+        "brandName": "灵动云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能调度",
+          "穿云套餐为 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "muguang-jiasu",
+        "brandName": "暮光加速",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能路由 + IPLC 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "flyv",
+        "brandName": "飞V（FlyV）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "香港、台湾：IEPL 专线",
+          "日本、新加坡：IPLC / IEPL 专线",
+          "美国：BGP 直连优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "tiziyun",
+        "brandName": "梯子云 LadderCloud",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "初阶：基础中转",
+          "中阶：BGP 中转",
+          "高阶：IEPL 专线",
+          "顶阶：企业级专线集群"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "langwang",
+        "brandName": "浪网 WaveNet",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "企业级 IEPL 专线",
+          "三网优化、智能负载均衡"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "yinxingren",
+        "brandName": "隐形人",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weifeng-wangluo",
+        "brandName": "微风网络 Breezenet",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国",
+          "台湾"
+        ],
+        "declaredNodeCount": 14,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "lingmao",
+        "brandName": "灵猫",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "shanyue",
+        "brandName": "闪跃 FlashLeap",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "firefly",
+        "brandName": "飞为（Firefly）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "kuajie",
+        "brandName": "跨界",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "singapore",
+    "name": "新加坡",
+    "nameEn": "Singapore",
+    "slug": "/regions/singapore/",
+    "role": "东南亚国际商务中心与稳定海缆枢纽",
+    "brandCount": 18,
+    "brands": [
+      {
+        "brandId": "lingdongyun",
+        "brandName": "灵动云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能调度",
+          "穿云套餐为 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "muguang-jiasu",
+        "brandName": "暮光加速",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能路由 + IPLC 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "flyv",
+        "brandName": "飞V（FlyV）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "香港、台湾：IEPL 专线",
+          "日本、新加坡：IPLC / IEPL 专线",
+          "美国：BGP 直连优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "tiziyun",
+        "brandName": "梯子云 LadderCloud",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "初阶：基础中转",
+          "中阶：BGP 中转",
+          "高阶：IEPL 专线",
+          "顶阶：企业级专线集群"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "langwang",
+        "brandName": "浪网 WaveNet",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "企业级 IEPL 专线",
+          "三网优化、智能负载均衡"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "yinxingren",
+        "brandName": "隐形人",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weifeng-wangluo",
+        "brandName": "微风网络 Breezenet",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国",
+          "台湾"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "lingmao",
+        "brandName": "灵猫",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "shanyue",
+        "brandName": "闪跃 FlashLeap",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "firefly",
+        "brandName": "飞为（Firefly）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "kuajie",
+        "brandName": "跨界",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "taiwan",
+    "name": "台湾",
+    "nameEn": "Taiwan",
+    "slug": "/regions/taiwan/",
+    "role": "繁体中文流媒体兼容与东亚备选出口",
+    "brandCount": 17,
+    "brands": [
+      {
+        "brandId": "lingdongyun",
+        "brandName": "灵动云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能调度",
+          "穿云套餐为 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "muguang-jiasu",
+        "brandName": "暮光加速",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能路由 + IPLC 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "flyv",
+        "brandName": "飞V（FlyV）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "香港、台湾：IEPL 专线",
+          "日本、新加坡：IPLC / IEPL 专线",
+          "美国：BGP 直连优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "langwang",
+        "brandName": "浪网 WaveNet",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "企业级 IEPL 专线",
+          "三网优化、智能负载均衡"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "yinxingren",
+        "brandName": "隐形人",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 5,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 5,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weifeng-wangluo",
+        "brandName": "微风网络 Breezenet",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国",
+          "台湾"
+        ],
+        "declaredNodeCount": 5,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "lingmao",
+        "brandName": "灵猫",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "shanyue",
+        "brandName": "闪跃 FlashLeap",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "firefly",
+        "brandName": "飞为（Firefly）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "kuajie",
+        "brandName": "跨界",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "united-states",
+    "name": "美国",
+    "nameEn": "United States",
+    "slug": "/regions/united-states/",
+    "role": "AI 原生服务与北美跨洋计算资源核心出口",
+    "brandCount": 18,
+    "brands": [
+      {
+        "brandId": "lingdongyun",
+        "brandName": "灵动云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能调度",
+          "穿云套餐为 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "muguang-jiasu",
+        "brandName": "暮光加速",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能路由 + IPLC 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "flyv",
+        "brandName": "飞V（FlyV）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "香港、台湾：IEPL 专线",
+          "日本、新加坡：IPLC / IEPL 专线",
+          "美国：BGP 直连优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "tiziyun",
+        "brandName": "梯子云 LadderCloud",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "初阶：基础中转",
+          "中阶：BGP 中转",
+          "高阶：IEPL 专线",
+          "顶阶：企业级专线集群"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "langwang",
+        "brandName": "浪网 WaveNet",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "企业级 IEPL 专线",
+          "三网优化、智能负载均衡"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "yinxingren",
+        "brandName": "隐形人",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weifeng-wangluo",
+        "brandName": "微风网络 Breezenet",
+        "declaredRegions": [
+          "香港",
+          "日本",
+          "新加坡",
+          "美国",
+          "台湾"
+        ],
+        "declaredNodeCount": 10,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "lingmao",
+        "brandName": "灵猫",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "shanyue",
+        "brandName": "闪跃 FlashLeap",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "firefly",
+        "brandName": "飞为（Firefly）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "kuajie",
+        "brandName": "跨界",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "south-korea",
+    "name": "韩国",
+    "nameEn": "South Korea",
+    "slug": "/regions/south-korea/",
+    "role": "东北亚低延迟游戏与补充流媒体出口",
+    "brandCount": 3,
+    "brands": [
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": 3,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  },
+  {
+    "id": "europe",
+    "name": "欧洲",
+    "nameEn": "Europe",
+    "slug": "/regions/europe/",
+    "role": "国际跨境商务、GDPR 合规区与欧亚备选路由",
+    "brandCount": 7,
+    "brands": [
+      {
+        "brandId": "feimaoyun",
+        "brandName": "飞猫云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "越南",
+          "菲律宾",
+          "泰国",
+          "印度",
+          "英国",
+          "法国",
+          "德国",
+          "阿根廷"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "guangsuyun",
+        "brandName": "光速云 LightSpeed",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "周期套餐为全 IEPL 专线",
+          "轻量B版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "weituyun",
+        "brandName": "唯兔云（V2云）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "马来西亚",
+          "美国",
+          "英国",
+          "德国",
+          "法国",
+          "泰国",
+          "菲律宾",
+          "印度"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "全 IPLC 专线",
+          "年付加强专线为 IEPL",
+          "另有备用直连节点"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "u1s1",
+        "brandName": "U1S1（有一说一）",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "英国",
+          "德国",
+          "法国"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 三网智能优化 + IEPL 专线出口"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "quanqiuyun",
+        "brandName": "全球云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "马来西亚",
+          "德国",
+          "土耳其",
+          "巴西"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "BGP 智能优化 + 专线出口",
+          "轻量版为全 IPLC 专线"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "sogoyun",
+        "brandName": "Sogo云",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "韩国",
+          "马来西亚",
+          "英国",
+          "法国",
+          "德国",
+          "土耳其",
+          "泰国",
+          "巴西"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IEPL 专线 + 三网 BGP 优化"
+        ],
+        "evidenceNature": "服务商公开资料"
+      },
+      {
+        "brandId": "wuyou",
+        "brandName": "无忧链接",
+        "declaredRegions": [
+          "香港",
+          "台湾",
+          "日本",
+          "新加坡",
+          "美国",
+          "东南亚",
+          "欧美"
+        ],
+        "declaredNodeCount": null,
+        "declaredLines": [
+          "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+        ],
+        "evidenceNature": "服务商公开资料"
+      }
+    ],
+    "note": "仅统计服务商公开资料中声明覆盖该地区的品牌；未声明具体机房坐标时，不虚构机房位置与实时在线状态。",
+    "verifiedAt": "2026-11-25"
+  }
+]

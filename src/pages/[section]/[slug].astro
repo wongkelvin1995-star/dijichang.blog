@@ -1,0 +1,24 @@
+---
+import TopicView from '../../components/TopicView.astro';
+import { topicPages } from '../../data/topics';
+
+export function getStaticPaths() {
+  const excluded = new Set([
+    '/rankings/methodology/',
+    '/performance/evidence/',
+    '/ai/compatibility/',
+  ]);
+  return topicPages
+    .filter((t) => !excluded.has(t.path))
+    .map((t) => {
+      const parts = t.path.split('/').filter(Boolean);
+      return {
+        params: { section: parts[0], slug: parts[1] },
+        props: { topic: t },
+      };
+    });
+}
+
+const { topic } = Astro.props;
+---
+<TopicView topic={topic} />

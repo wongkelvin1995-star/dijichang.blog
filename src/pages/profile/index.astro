@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProfileIsland from '../../components/tools/ProfileIsland';
+import { brands } from '../../lib/data';
+---
+<BaseLayout
+  title="我的皇家档案｜本地收藏、预算记录与个人笔记 - 顶级机场"
+  description="浏览器本地存储的个人皇家档案：管理已收藏品牌、预算记录与个人选购笔记，不收集任何敏感凭证。"
+  noindex={true}
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '我的皇家档案', url: '/profile/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">Function 10 · My Prestige</span>
+      <h1 class="section-title">我的皇家档案（本地存储）</h1>
+      <p class="section-lead">
+        所有收藏与笔记均仅保存在您当前浏览器的 <code style="font-family:var(--font-mono);">localStorage</code> 中，无需注册登录，本站绝不收集机场账号、密码或订阅链接。
+      </p>
+      <ProfileIsland client:load brands={brands} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StreamingCalcIsland from '../../components/tools/StreamingCalcIsland';
+import { plans } from '../../lib/data';
+---
+<BaseLayout
+  title="皇家影音带宽计算器｜4K/8K 视频码率与月流量估算 - 顶级机场"
+  description="采用十进制GB公式精确计算1080P、4K与8K流媒体多设备并发所需的带宽余量、倍率影响与匹配月付套餐。"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '独家工具', url: '/tools/' },
+    { name: '皇家影音带宽计算器', url: '/tools/streaming-calculator/' },
+  ]}
+>
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <span class="chapter-badge">Function 07 · Streaming Quality Lab</span>
+      <h1 class="section-title">皇家影音带宽与月流量计算器</h1>
+      <p class="section-lead">支持自定义平均视频码率、同时播放设备数、每日观看时长与节点倍率，按十进制 GB 标准精算月度需求。</p>
+      <StreamingCalcIsland client:load plans={plans} />
+    </div>
+  </section>
+</BaseLayout>

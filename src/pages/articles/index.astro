@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { articles } from '../../data/articles';
+---
+<BaseLayout
+  title="专业原创阅读中心｜30篇高端网络服务与专线研究文章 - 顶级机场"
+  description="收录顶级机场首批30篇深度原创研究文章，涵盖精品专线核验、性能证据、AI应用、4K/8K流媒体、国际商务与消费风险评估。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '专业阅读中心', url: '/articles/' }]}
+>
+  <section class="scene-band scene-platinum">
+    <FlagshipScene scene="archives" />
+    <div class="container">
+      <span class="chapter-badge">Reading Center · 30 Original Articles</span>
+      <h1 class="section-title">专业原创阅读中心</h1>
+      <p class="section-lead">
+        每篇文章均配备独立目录、真实资料来源、证据边界说明与关联研究工具，不为了字数机械堆砌重复内容。
+      </p>
+
+      <div class="grid-3">
+        {articles.map((a) => (
+          <a href={`/articles/${a.slug}/`} class="imperial-card diamond-hover" style="display:flex;flex-direction:column;gap:0.45rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+              <span class="evidence-pill">#{a.number} · 模板 {a.template}</span>
+              <span style="font-size:0.76rem;color:var(--text-muted);">{a.publishedAt}</span>
+            </div>
+            <h2 style="margin:0;font-size:1.05rem;line-height:1.45;">{a.title}</h2>
+            <p style="margin:0;font-size:0.85rem;color:var(--text-muted);">{a.summary}</p>
+            <div style="font-size:0.78rem;color:var(--deep-gilt);font-weight:700;margin-top:auto;">
+              {a.category} · 阅读全文 →
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "001",
+    "keyword": "顶级机场",
+    "intent": "核心品牌与年度旗舰总览",
+    "targetUrl": "/",
+    "primaryKeyword": "顶级机场",
+    "secondaryKeywords": [
+      "顶级机场",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "002",
+    "keyword": "顶级机场推荐",
+    "intent": "核心品牌推荐与选购入口",
+    "targetUrl": "/",
+    "primaryKeyword": "顶级机场推荐",
+    "secondaryKeywords": [
+      "顶级机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "003",
+    "keyword": "2026顶级机场推荐",
+    "intent": "2026年度资料汇总与评估",
+    "targetUrl": "/premium/annual/",
+    "primaryKeyword": "2026顶级机场推荐",
+    "secondaryKeywords": [
+      "2026顶级机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "004",
+    "keyword": "2027顶级机场推荐",
+    "intent": "2027前瞻选购指南与标准",
+    "targetUrl": "/",
+    "primaryKeyword": "2027顶级机场推荐",
+    "secondaryKeywords": [
+      "2027顶级机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "005",
+    "keyword": "高端机场推荐",
+    "intent": "高端网络服务定义与筛选",
+    "targetUrl": "/",
+    "primaryKeyword": "高端机场推荐",
+    "secondaryKeywords": [
+      "高端机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "006",
+    "keyword": "精品机场推荐",
+    "intent": "精品定位与筛选门槛说明",
+    "targetUrl": "/premium/boutique/",
+    "primaryKeyword": "精品机场推荐",
+    "secondaryKeywords": [
+      "精品机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "007",
+    "keyword": "一线机场推荐",
+    "intent": "一线服务商公开资料总览",
+    "targetUrl": "/premium/",
+    "primaryKeyword": "一线机场推荐",
+    "secondaryKeywords": [
+      "一线机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "008",
+    "keyword": "优质机场推荐",
+    "intent": "优质服务评估维度与总览",
+    "targetUrl": "/premium/",
+    "primaryKeyword": "优质机场推荐",
+    "secondaryKeywords": [
+      "优质机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "009",
+    "keyword": "高品质机场推荐",
+    "intent": "高品质服务特征与门槛",
+    "targetUrl": "/premium/",
+    "primaryKeyword": "高品质机场推荐",
+    "secondaryKeywords": [
+      "高品质机场推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "010",
+    "keyword": "高端梯子推荐",
+    "intent": "高端网络服务选购与边界",
+    "targetUrl": "/premium/network-services/",
+    "primaryKeyword": "高端梯子推荐",
+    "secondaryKeywords": [
+      "高端梯子推荐",
+      "顶级机场核心品牌词"
+    ],
+    "category": "第01类：顶级机场核心品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "011",
+    "keyword": "顶级机场排行榜",
+    "intent": "品质评选榜单与资格机制",
+    "targetUrl": "/rankings/",
+    "primaryKeyword": "顶级机场排行榜",
+    "secondaryKeywords": [
+      "顶级机场排行榜",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "012",
+    "keyword": "高端机场哪个好",
+    "intent": "多品牌客观维度对比",
+    "targetUrl": "/rankings/compare/",
+    "primaryKeyword": "高端机场哪个好",
+    "secondaryKeywords": [
+      "高端机场哪个好",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "013",
+    "keyword": "2026高端机场排行",
+    "intent": "2026年度资料收集与排行说明",
+    "targetUrl": "/rankings/annual/",
+    "primaryKeyword": "2026高端机场排行",
+    "secondaryKeywords": [
+      "2026高端机场排行",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "014",
+    "keyword": "精品机场品牌对比",
+    "intent": "精品品牌参数与证据对比",
+    "targetUrl": "/rankings/compare/",
+    "primaryKeyword": "精品机场品牌对比",
+    "secondaryKeywords": [
+      "精品机场品牌对比",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "015",
+    "keyword": "一线机场怎么选",
+    "intent": "系统化选购决策步骤",
+    "targetUrl": "/guide/selection/",
+    "primaryKeyword": "一线机场怎么选",
+    "secondaryKeywords": [
+      "一线机场怎么选",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "016",
+    "keyword": "顶级机场评选标准",
+    "intent": "Imperial Quality Index 六大维度",
+    "targetUrl": "/rankings/methodology/",
+    "primaryKeyword": "顶级机场评选标准",
+    "secondaryKeywords": [
+      "顶级机场评选标准",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "017",
+    "keyword": "高端机场与普通机场区别",
+    "intent": "线路、售后与透明度差异",
+    "targetUrl": "/premium/premium-vs-standard/",
+    "primaryKeyword": "高端机场与普通机场区别",
+    "secondaryKeywords": [
+      "高端机场与普通机场区别",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "018",
+    "keyword": "高端机场值得买吗",
+    "intent": "长期消费价值与成本分析",
+    "targetUrl": "/premium/value/",
+    "primaryKeyword": "高端机场值得买吗",
+    "secondaryKeywords": [
+      "高端机场值得买吗",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "019",
+    "keyword": "高端机场综合比较",
+    "intent": "综合参数与政策对比",
+    "targetUrl": "/rankings/compare/",
+    "primaryKeyword": "高端机场综合比较",
+    "secondaryKeywords": [
+      "高端机场综合比较",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "020",
+    "keyword": "高端机场口碑排名怎么看",
+    "intent": "口碑证据真实性核验方法",
+    "targetUrl": "/rankings/review-evidence/",
+    "primaryKeyword": "高端机场口碑排名怎么看",
+    "secondaryKeywords": [
+      "高端机场口碑排名怎么看",
+      "高端榜单与筛选决策"
+    ],
+    "category": "第02类：高端榜单与筛选决策",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "021",
+    "keyword": "IEPL高端机场推荐",
+    "intent": "IEPL专线原理与公开声明汇总",
+    "targetUrl": "/lines/iepl/",
+    "primaryKeyword": "IEPL高端机场推荐",
+    "secondaryKeywords": [
+      "IEPL高端机场推荐",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "022",
+    "keyword": "IPLC高端机场推荐",
+    "intent": "IPLC内网专线特征与资料",
+    "targetUrl": "/lines/iplc/",
+    "primaryKeyword": "IPLC高端机场推荐",
+    "secondaryKeywords": [
+      "IPLC高端机场推荐",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "023",
+    "keyword": "全专线机场推荐",
+    "intent": "全专线宣传核验与品牌分布",
+    "targetUrl": "/lines/dedicated/",
+    "primaryKeyword": "全专线机场推荐",
+    "secondaryKeywords": [
+      "全专线机场推荐",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "024",
+    "keyword": "精品专线机场推荐",
+    "intent": "精品专线筛选与证据边界",
+    "targetUrl": "/lines/dedicated/",
+    "primaryKeyword": "精品专线机场推荐",
+    "secondaryKeywords": [
+      "精品专线机场推荐",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "025",
+    "keyword": "企业级线路机场",
+    "intent": "企业级线路与个人机场界限",
+    "targetUrl": "/lines/enterprise/",
+    "primaryKeyword": "企业级线路机场",
+    "secondaryKeywords": [
+      "企业级线路机场",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "026",
+    "keyword": "高端BGP中转机场",
+    "intent": "BGP多线中转架构与特征",
+    "targetUrl": "/lines/bgp/",
+    "primaryKeyword": "高端BGP中转机场",
+    "secondaryKeywords": [
+      "高端BGP中转机场",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "027",
+    "keyword": "原生IP专线机场",
+    "intent": "原生IP与专线结合评估",
+    "targetUrl": "/lines/ip-types/",
+    "primaryKeyword": "原生IP专线机场",
+    "secondaryKeywords": [
+      "原生IP专线机场",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "028",
+    "keyword": "高端机场线路架构",
+    "intent": "跨境链路拓扑与中转架构解析",
+    "targetUrl": "/lines/architecture/",
+    "primaryKeyword": "高端机场线路架构",
+    "secondaryKeywords": [
+      "高端机场线路架构",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "029",
+    "keyword": "高端机场跨境链路选择",
+    "intent": "不同跨境链路适用场景",
+    "targetUrl": "/lines/architecture/",
+    "primaryKeyword": "高端机场跨境链路选择",
+    "secondaryKeywords": [
+      "高端机场跨境链路选择",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "030",
+    "keyword": "IEPL和IPLC高端线路对比",
+    "intent": "IEPL与IPLC技术差异与对比",
+    "targetUrl": "/lines/iepl-vs-iplc/",
+    "primaryKeyword": "IEPL和IPLC高端线路对比",
+    "secondaryKeywords": [
+      "IEPL和IPLC高端线路对比",
+      "精品专线与网络架构"
+    ],
+    "category": "第03类：精品专线与网络架构",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "031",
+    "keyword": "香港高端机场节点",
+    "intent": "香港地区覆盖品牌与延迟特征",
+    "targetUrl": "/regions/hong-kong/",
+    "primaryKeyword": "香港高端机场节点",
+    "secondaryKeywords": [
+      "香港高端机场节点",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "032",
+    "keyword": "日本精品机场节点",
+    "intent": "日本地区覆盖与跨洋路由特征",
+    "targetUrl": "/regions/japan/",
+    "primaryKeyword": "日本精品机场节点",
+    "secondaryKeywords": [
+      "日本精品机场节点",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "033",
+    "keyword": "新加坡高品质机场",
+    "intent": "新加坡国际商务出口覆盖",
+    "targetUrl": "/regions/singapore/",
+    "primaryKeyword": "新加坡高品质机场",
+    "secondaryKeywords": [
+      "新加坡高品质机场",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "034",
+    "keyword": "美国原生IP机场推荐",
+    "intent": "美国节点覆盖与IP归属核验",
+    "targetUrl": "/regions/united-states/",
+    "primaryKeyword": "美国原生IP机场推荐",
+    "secondaryKeywords": [
+      "美国原生IP机场推荐",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "035",
+    "keyword": "台湾高端节点选择",
+    "intent": "台湾节点覆盖与流媒体特征",
+    "targetUrl": "/regions/taiwan/",
+    "primaryKeyword": "台湾高端节点选择",
+    "secondaryKeywords": [
+      "台湾高端节点选择",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "036",
+    "keyword": "韩国精品机场线路",
+    "intent": "韩国节点覆盖与东北亚路由",
+    "targetUrl": "/regions/south-korea/",
+    "primaryKeyword": "韩国精品机场线路",
+    "secondaryKeywords": [
+      "韩国精品机场线路",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "037",
+    "keyword": "欧洲高端机场线路",
+    "intent": "欧洲节点覆盖与跨境办公",
+    "targetUrl": "/regions/europe/",
+    "primaryKeyword": "欧洲高端机场线路",
+    "secondaryKeywords": [
+      "欧洲高端机场线路",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "038",
+    "keyword": "全球多地区机场推荐",
+    "intent": "七大核心地区图谱与分布",
+    "targetUrl": "/regions/",
+    "primaryKeyword": "全球多地区机场推荐",
+    "secondaryKeywords": [
+      "全球多地区机场推荐",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "039",
+    "keyword": "高端机场住宅IP节点",
+    "intent": "住宅IP技术概念与核验边界",
+    "targetUrl": "/regions/residential-ip/",
+    "primaryKeyword": "高端机场住宅IP节点",
+    "secondaryKeywords": [
+      "高端机场住宅IP节点",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "040",
+    "keyword": "原生IP机场怎么选",
+    "intent": "原生IP定义与ASN核验方法",
+    "targetUrl": "/regions/native-ip/",
+    "primaryKeyword": "原生IP机场怎么选",
+    "secondaryKeywords": [
+      "原生IP机场怎么选",
+      "全球优质出口与节点"
+    ],
+    "category": "第04类：全球优质出口与节点",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "041",
+    "keyword": "高带宽机场推荐",
+    "intent": "高带宽需求指标与测试方法",
+    "targetUrl": "/performance/bandwidth/",
+    "primaryKeyword": "高带宽机场推荐",
+    "secondaryKeywords": [
+      "高带宽机场推荐",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "042",
+    "keyword": "低延迟高端机场",
+    "intent": "RTT延迟指标与路由影响",
+    "targetUrl": "/performance/latency/",
+    "primaryKeyword": "低延迟高端机场",
+    "secondaryKeywords": [
+      "低延迟高端机场",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "043",
+    "keyword": "晚高峰稳定机场推荐",
+    "intent": "晚高峰拥塞成因与证据要求",
+    "targetUrl": "/performance/peak-hours/",
+    "primaryKeyword": "晚高峰稳定机场推荐",
+    "secondaryKeywords": [
+      "晚高峰稳定机场推荐",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "044",
+    "keyword": "高端机场丢包率怎么看",
+    "intent": "丢包率测量与业务影响",
+    "targetUrl": "/performance/packet-loss/",
+    "primaryKeyword": "高端机场丢包率怎么看",
+    "secondaryKeywords": [
+      "高端机场丢包率怎么看",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "045",
+    "keyword": "高端机场抖动怎么判断",
+    "intent": "Jitter抖动对实时通信影响",
+    "targetUrl": "/performance/jitter/",
+    "primaryKeyword": "高端机场抖动怎么判断",
+    "secondaryKeywords": [
+      "高端机场抖动怎么判断",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "046",
+    "keyword": "高端机场速度波动分析",
+    "intent": "单次测速与多日稳定性区别",
+    "targetUrl": "/performance/stability/",
+    "primaryKeyword": "高端机场速度波动分析",
+    "secondaryKeywords": [
+      "高端机场速度波动分析",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "047",
+    "keyword": "高速下载机场怎么选",
+    "intent": "大文件传输与带宽余量评估",
+    "targetUrl": "/performance/bandwidth/",
+    "primaryKeyword": "高速下载机场怎么选",
+    "secondaryKeywords": [
+      "高速下载机场怎么选",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "048",
+    "keyword": "高码率视频机场要求",
+    "intent": "高码率视频播放带宽与稳定要求",
+    "targetUrl": "/streaming/bandwidth/",
+    "primaryKeyword": "高码率视频机场要求",
+    "secondaryKeywords": [
+      "高码率视频机场要求",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "049",
+    "keyword": "高端机场负载均衡",
+    "intent": "多入口负载均衡与容灾机制",
+    "targetUrl": "/performance/load-balancing/",
+    "primaryKeyword": "高端机场负载均衡",
+    "secondaryKeywords": [
+      "高端机场负载均衡",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "050",
+    "keyword": "机场线路拥塞识别方法",
+    "intent": "识别晚高峰拥塞的客观指标",
+    "targetUrl": "/performance/congestion/",
+    "primaryKeyword": "机场线路拥塞识别方法",
+    "secondaryKeywords": [
+      "机场线路拥塞识别方法",
+      "高性能与晚高峰保障"
+    ],
+    "category": "第05类：高性能与晚高峰保障",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "051",
+    "keyword": "ChatGPT高端机场推荐",
+    "intent": "ChatGPT访问条件与品牌声明",
+    "targetUrl": "/ai/chatgpt/",
+    "primaryKeyword": "ChatGPT高端机场推荐",
+    "secondaryKeywords": [
+      "ChatGPT高端机场推荐",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "052",
+    "keyword": "Claude稳定节点推荐",
+    "intent": "Claude地区支持与稳定性要求",
+    "targetUrl": "/ai/claude/",
+    "primaryKeyword": "Claude稳定节点推荐",
+    "secondaryKeywords": [
+      "Claude稳定节点推荐",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "053",
+    "keyword": "Gemini高质量节点",
+    "intent": "Gemini官方条件与网络要求",
+    "targetUrl": "/ai/gemini/",
+    "primaryKeyword": "Gemini高质量节点",
+    "secondaryKeywords": [
+      "Gemini高质量节点",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "054",
+    "keyword": "AI工具专用机场",
+    "intent": "AI办公网络选型与合规边界",
+    "targetUrl": "/ai/",
+    "primaryKeyword": "AI工具专用机场",
+    "secondaryKeywords": [
+      "AI工具专用机场",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "055",
+    "keyword": "ChatGPT原生IP机场",
+    "intent": "IP纯净度与ChatGPT风控关系",
+    "targetUrl": "/ai/chatgpt/",
+    "primaryKeyword": "ChatGPT原生IP机场",
+    "secondaryKeywords": [
+      "ChatGPT原生IP机场",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "056",
+    "keyword": "多AI平台兼容机场",
+    "intent": "多AI平台兼容性对比矩阵",
+    "targetUrl": "/ai/compatibility/",
+    "primaryKeyword": "多AI平台兼容机场",
+    "secondaryKeywords": [
+      "多AI平台兼容机场",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "057",
+    "keyword": "AI办公稳定机场推荐",
+    "intent": "高频AI工作流网络稳定性需求",
+    "targetUrl": "/ai/productivity/",
+    "primaryKeyword": "AI办公稳定机场推荐",
+    "secondaryKeywords": [
+      "AI办公稳定机场推荐",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "058",
+    "keyword": "AI服务地区解锁注意事项",
+    "intent": "平台服务条款与地区可用性边界",
+    "targetUrl": "/ai/availability-policy/",
+    "primaryKeyword": "AI服务地区解锁注意事项",
+    "secondaryKeywords": [
+      "AI服务地区解锁注意事项",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "059",
+    "keyword": "高端机场AI访问对比",
+    "intent": "18家品牌AI声明对比",
+    "targetUrl": "/ai/compatibility/",
+    "primaryKeyword": "高端机场AI访问对比",
+    "secondaryKeywords": [
+      "高端机场AI访问对比",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "060",
+    "keyword": "AI工具网络出口选择",
+    "intent": "不同AI平台推荐出口地区分析",
+    "targetUrl": "/ai/network-requirements/",
+    "primaryKeyword": "AI工具网络出口选择",
+    "secondaryKeywords": [
+      "AI工具网络出口选择",
+      "AI应用高端网络需求"
+    ],
+    "category": "第06类：AI应用高端网络需求",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "061",
+    "keyword": "Netflix高端机场推荐",
+    "intent": "Netflix跨区与4K流媒体声明",
+    "targetUrl": "/streaming/netflix/",
+    "primaryKeyword": "Netflix高端机场推荐",
+    "secondaryKeywords": [
+      "Netflix高端机场推荐",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "062",
+    "keyword": "Disney+精品机场推荐",
+    "intent": "Disney+流媒体兼容与节点",
+    "targetUrl": "/streaming/disney-plus/",
+    "primaryKeyword": "Disney+精品机场推荐",
+    "secondaryKeywords": [
+      "Disney+精品机场推荐",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "063",
+    "keyword": "YouTube 4K高端机场",
+    "intent": "YouTube 4K/8K高码率缓冲分析",
+    "targetUrl": "/streaming/youtube/",
+    "primaryKeyword": "YouTube 4K高端机场",
+    "secondaryKeywords": [
+      "YouTube 4K高端机场",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "064",
+    "keyword": "流媒体专线机场推荐",
+    "intent": "流媒体场景专线质量与倍率考量",
+    "targetUrl": "/streaming/network-quality/",
+    "primaryKeyword": "流媒体专线机场推荐",
+    "secondaryKeywords": [
+      "流媒体专线机场推荐",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "065",
+    "keyword": "多平台流媒体解锁机场",
+    "intent": "多流媒体平台兼容性查询",
+    "targetUrl": "/streaming/compatibility/",
+    "primaryKeyword": "多平台流媒体解锁机场",
+    "secondaryKeywords": [
+      "多平台流媒体解锁机场",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "066",
+    "keyword": "高端机场4K播放要求",
+    "intent": "4K HDR码率与月流量估算",
+    "targetUrl": "/streaming/bandwidth/",
+    "primaryKeyword": "高端机场4K播放要求",
+    "secondaryKeywords": [
+      "高端机场4K播放要求",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "067",
+    "keyword": "高端机场8K视频带宽需求",
+    "intent": "8K超高清视频带宽与流量测算",
+    "targetUrl": "/streaming/8k/",
+    "primaryKeyword": "高端机场8K视频带宽需求",
+    "secondaryKeywords": [
+      "高端机场8K视频带宽需求",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "068",
+    "keyword": "流媒体原生IP节点推荐",
+    "intent": "流媒体解锁与IP类型证据",
+    "targetUrl": "/streaming/ip-evidence/",
+    "primaryKeyword": "流媒体原生IP节点推荐",
+    "secondaryKeywords": [
+      "流媒体原生IP节点推荐",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "069",
+    "keyword": "高端机场多设备追剧",
+    "intent": "多设备并发播放与倍率影响",
+    "targetUrl": "/streaming/multi-device/",
+    "primaryKeyword": "高端机场多设备追剧",
+    "secondaryKeywords": [
+      "高端机场多设备追剧",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "070",
+    "keyword": "流媒体解锁兼容性怎么查",
+    "intent": "历史解锁记录与实测核验方法",
+    "targetUrl": "/streaming/compatibility/",
+    "primaryKeyword": "流媒体解锁兼容性怎么查",
+    "secondaryKeywords": [
+      "流媒体解锁兼容性怎么查",
+      "4K流媒体及跨区体验"
+    ],
+    "category": "第07类：4K流媒体及跨区体验",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "071",
+    "keyword": "商务办公机场推荐",
+    "intent": "国际商务办公网络选型总览",
+    "targetUrl": "/business/",
+    "primaryKeyword": "商务办公机场推荐",
+    "secondaryKeywords": [
+      "商务办公机场推荐",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "072",
+    "keyword": "远程办公高端机场",
+    "intent": "远程办公连续性与稳定性要求",
+    "targetUrl": "/business/remote-work/",
+    "primaryKeyword": "远程办公高端机场",
+    "secondaryKeywords": [
+      "远程办公高端机场",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "073",
+    "keyword": "跨境团队网络服务选择",
+    "intent": "团队授权、安全边界与备用方案",
+    "targetUrl": "/business/team-network/",
+    "primaryKeyword": "跨境团队网络服务选择",
+    "secondaryKeywords": [
+      "跨境团队网络服务选择",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "074",
+    "keyword": "海外视频会议机场",
+    "intent": "视频会议低抖动与低丢包要求",
+    "targetUrl": "/business/video-meeting/",
+    "primaryKeyword": "海外视频会议机场",
+    "secondaryKeywords": [
+      "海外视频会议机场",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "075",
+    "keyword": "高端机场多设备支持",
+    "intent": "多设备并发与客户端政策",
+    "targetUrl": "/business/multi-device/",
+    "primaryKeyword": "高端机场多设备支持",
+    "secondaryKeywords": [
+      "高端机场多设备支持",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "076",
+    "keyword": "路由器高端机场订阅",
+    "intent": "路由器网关部署与订阅兼容性",
+    "targetUrl": "/business/router/",
+    "primaryKeyword": "路由器高端机场订阅",
+    "secondaryKeywords": [
+      "路由器高端机场订阅",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "077",
+    "keyword": "Mac商务机场推荐",
+    "intent": "macOS客户端支持与办公适配",
+    "targetUrl": "/business/macos/",
+    "primaryKeyword": "Mac商务机场推荐",
+    "secondaryKeywords": [
+      "Mac商务机场推荐",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "078",
+    "keyword": "Windows办公机场推荐",
+    "intent": "Windows客户端与企业网络兼容",
+    "targetUrl": "/business/windows/",
+    "primaryKeyword": "Windows办公机场推荐",
+    "secondaryKeywords": [
+      "Windows办公机场推荐",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "079",
+    "keyword": "高端机场同时在线设备限制",
+    "intent": "18家品牌在线设备限制对比",
+    "targetUrl": "/business/multi-device/",
+    "primaryKeyword": "高端机场同时在线设备限制",
+    "secondaryKeywords": [
+      "高端机场同时在线设备限制",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "080",
+    "keyword": "高端机场长期办公稳定性",
+    "intent": "长期办公连续性与冗余规划",
+    "targetUrl": "/business/continuity/",
+    "primaryKeyword": "高端机场长期办公稳定性",
+    "secondaryKeywords": [
+      "高端机场长期办公稳定性",
+      "商务办公与多设备场景"
+    ],
+    "category": "第08类：商务办公与多设备场景",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "081",
+    "keyword": "高端机场套餐价格",
+    "intent": "18家品牌全周期套餐价格总览",
+    "targetUrl": "/plans/",
+    "primaryKeyword": "高端机场套餐价格",
+    "secondaryKeywords": [
+      "高端机场套餐价格",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "082",
+    "keyword": "精品机场月付套餐",
+    "intent": "月付试错优势与实际月付价格",
+    "targetUrl": "/plans/monthly/",
+    "primaryKeyword": "精品机场月付套餐",
+    "secondaryKeywords": [
+      "精品机场月付套餐",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "083",
+    "keyword": "高端机场年付划算吗",
+    "intent": "年付折扣与长期风险权衡",
+    "targetUrl": "/plans/yearly/",
+    "primaryKeyword": "高端机场年付划算吗",
+    "secondaryKeywords": [
+      "高端机场年付划算吗",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "084",
+    "keyword": "高端机场流量套餐对比",
+    "intent": "流量额度、倍率与单价对比",
+    "targetUrl": "/plans/compare/",
+    "primaryKeyword": "高端机场流量套餐对比",
+    "secondaryKeywords": [
+      "高端机场流量套餐对比",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "085",
+    "keyword": "高端机场不限速套餐",
+    "intent": "不限速声明与真实带宽边界",
+    "targetUrl": "/plans/speed-policy/",
+    "primaryKeyword": "高端机场不限速套餐",
+    "secondaryKeywords": [
+      "高端机场不限速套餐",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "086",
+    "keyword": "高端机场客服响应速度",
+    "intent": "客服渠道与服务响应评估标准",
+    "targetUrl": "/plans/support/",
+    "primaryKeyword": "高端机场客服响应速度",
+    "secondaryKeywords": [
+      "高端机场客服响应速度",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "087",
+    "keyword": "高端机场售后服务对比",
+    "intent": "18家品牌售后与工单机制对比",
+    "targetUrl": "/plans/support/",
+    "primaryKeyword": "高端机场售后服务对比",
+    "secondaryKeywords": [
+      "高端机场售后服务对比",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "088",
+    "keyword": "高端机场套餐升级规则",
+    "intent": "套餐升降级、折算与重置规则",
+    "targetUrl": "/plans/upgrade/",
+    "primaryKeyword": "高端机场套餐升级规则",
+    "secondaryKeywords": [
+      "高端机场套餐升级规则",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "089",
+    "keyword": "高端机场试用与退款政策",
+    "intent": "试用条件与退款条款透明度",
+    "targetUrl": "/plans/trial-refund/",
+    "primaryKeyword": "高端机场试用与退款政策",
+    "secondaryKeywords": [
+      "高端机场试用与退款政策",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "090",
+    "keyword": "高端机场价格与性能平衡",
+    "intent": "每GB成本与服务价值评估",
+    "targetUrl": "/plans/value/",
+    "primaryKeyword": "高端机场价格与性能平衡",
+    "secondaryKeywords": [
+      "高端机场价格与性能平衡",
+      "高端套餐与服务质量"
+    ],
+    "category": "第09类：高端套餐与服务质量",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "091",
+    "keyword": "顶级机场购买指南",
+    "intent": "完整购买决策与避坑指南",
+    "targetUrl": "/guide/",
+    "primaryKeyword": "顶级机场购买指南",
+    "secondaryKeywords": [
+      "顶级机场购买指南",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "092",
+    "keyword": "高端机场购买避坑",
+    "intent": "常见营销话术与消费风险识别",
+    "targetUrl": "/guide/purchase-risk/",
+    "primaryKeyword": "高端机场购买避坑",
+    "secondaryKeywords": [
+      "高端机场购买避坑",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "093",
+    "keyword": "精品机场稳定性怎么判断",
+    "intent": "稳定性判断维度与观察周期",
+    "targetUrl": "/performance/stability/",
+    "primaryKeyword": "精品机场稳定性怎么判断",
+    "secondaryKeywords": [
+      "精品机场稳定性怎么判断",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "094",
+    "keyword": "高端机场服务透明度",
+    "intent": "信息披露、历史记录与透明度评估",
+    "targetUrl": "/guide/transparency/",
+    "primaryKeyword": "高端机场服务透明度",
+    "secondaryKeywords": [
+      "高端机场服务透明度",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "095",
+    "keyword": "高端机场隐私与日志政策",
+    "intent": "隐私边界、日志声明与安全建议",
+    "targetUrl": "/guide/privacy/",
+    "primaryKeyword": "高端机场隐私与日志政策",
+    "secondaryKeywords": [
+      "高端机场隐私与日志政策",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "096",
+    "keyword": "高端机场线路宣传如何核验",
+    "intent": "IEPL/IPLC宣传核验与误区",
+    "targetUrl": "/guide/line-verification/",
+    "primaryKeyword": "高端机场线路宣传如何核验",
+    "secondaryKeywords": [
+      "高端机场线路宣传如何核验",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "097",
+    "keyword": "机场专线真假怎么辨别",
+    "intent": "节点名称与真实专线的辨别方法",
+    "targetUrl": "/guide/line-verification/",
+    "primaryKeyword": "机场专线真假怎么辨别",
+    "secondaryKeywords": [
+      "机场专线真假怎么辨别",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "098",
+    "keyword": "高端机场运营历史怎么看",
+    "intent": "运营历史溯源与稳定性关联",
+    "targetUrl": "/guide/operator-history/",
+    "primaryKeyword": "高端机场运营历史怎么看",
+    "secondaryKeywords": [
+      "高端机场运营历史怎么看",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "099",
+    "keyword": "高端机场测速数据可信度",
+    "intent": "测速图局限性与样本可信度审查",
+    "targetUrl": "/guide/test-evidence/",
+    "primaryKeyword": "高端机场测速数据可信度",
+    "secondaryKeywords": [
+      "高端机场测速数据可信度",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "100",
+    "keyword": "高端机场如何选择备用服务",
+    "intent": "主备双线配置与连续性保障",
+    "targetUrl": "/guide/backup-planning/",
+    "primaryKeyword": "高端机场如何选择备用服务",
+    "secondaryKeywords": [
+      "高端机场如何选择备用服务",
+      "风险评估与专业选购"
+    ],
+    "category": "第10类：风险评估与专业选购",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-01",
+    "keyword": "Imperial ONE MAX",
+    "intent": "Imperial Network 品牌设计体系与架构说明",
+    "targetUrl": "/about/",
+    "primaryKeyword": "Imperial ONE MAX",
+    "secondaryKeywords": [
+      "Imperial ONE MAX",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-02",
+    "keyword": "顶级机场品质指数",
+    "intent": "Imperial Quality Index 评选模型详解",
+    "targetUrl": "/rankings/methodology/",
+    "primaryKeyword": "顶级机场品质指数",
+    "secondaryKeywords": [
+      "顶级机场品质指数",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-03",
+    "keyword": "高端机场品质认证怎么看",
+    "intent": "编辑评分与第三方认证的边界说明",
+    "targetUrl": "/guide/transparency/",
+    "primaryKeyword": "高端机场品质认证怎么看",
+    "secondaryKeywords": [
+      "高端机场品质认证怎么看",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "A",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-04",
+    "keyword": "精品机场线路证据",
+    "intent": "专线声明与独立核验证据展示",
+    "targetUrl": "/lines/evidence/",
+    "primaryKeyword": "精品机场线路证据",
+    "secondaryKeywords": [
+      "精品机场线路证据",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-05",
+    "keyword": "高端机场服务质量评估",
+    "intent": "六大维度的服务质量评估标准",
+    "targetUrl": "/rankings/methodology/",
+    "primaryKeyword": "高端机场服务质量评估",
+    "secondaryKeywords": [
+      "高端机场服务质量评估",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  },
+  {
+    "id": "EXT-06",
+    "keyword": "高端网络服务对比工具",
+    "intent": "多品牌真实套餐与政策对比矩阵",
+    "targetUrl": "/tools/service-compare/",
+    "primaryKeyword": "高端网络服务对比工具",
+    "secondaryKeywords": [
+      "高端网络服务对比工具",
+      "扩展品牌词"
+    ],
+    "category": "扩展品牌词",
+    "priority": "S",
+    "publishStatus": "published",
+    "verificationStatus": "content-aligned-2026-11-26"
+  }
+]

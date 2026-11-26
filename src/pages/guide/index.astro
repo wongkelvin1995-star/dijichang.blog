@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+---
+<BaseLayout
+  title="顶级机场购买指南｜专线核验、隐私安全与消费风险评估 - 顶级机场"
+  description="系统梳理高端机场购买避坑、专线真假辨别、服务透明度、隐私日志政策及备用网络规划。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '购买指南', url: '/guide/' }]}
+>
+  <section class="scene-band scene-obsidian">
+    <FlagshipScene scene="archives" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 10 · Imperial Archives</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            皇家专业档案馆：购买调查与消费风险评估
+          </h1>
+          <p class="section-lead">
+            在支付任何预付费用前，学会核验专线宣传真伪、审查测速样本可信度、看懂隐私日志边界并规划好备用连接方案。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            <a href="/guide/selection/" class="btn-imperial btn-primary-gold">五步选购决策</a>
+            <a href="/guide/purchase-risk/" class="btn-imperial btn-secondary-platinum">购买避坑指南</a>
+            <a href="/guide/line-verification/" class="btn-imperial btn-secondary-platinum">专线真假辨别</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="risk" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">专业选购与风险审查专题</h2>
+      <div class="grid-3">
+        <a href="/guide/selection/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">一线机场五步选购决策</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">从量化需求、条款核验到月付试错的系统化决策流程。</p>
+        </a>
+        <a href="/guide/purchase-risk/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">高端机场购买避坑指南</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">识别虚假专线、绝对承诺与非官方渠道客户端风险。</p>
+        </a>
+        <a href="/guide/line-verification/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">专线宣传核验与真假辨别</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">为什么节点名称与单次测速不能证明真实 IEPL/IPLC。</p>
+        </a>
+        <a href="/guide/privacy/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">隐私与日志政策解析</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">理性认识无日志口号边界与端到端加密原则。</p>
+        </a>
+        <a href="/guide/test-evidence/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">测速数据可信度审查</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">核对测试环境 11 项要素，过滤无效推广测速图。</p>
+        </a>
+        <a href="/guide/backup-planning/" class="imperial-card diamond-hover">
+          <h3 style="margin:0 0 0.45rem;">如何选择备用网络服务</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">异构上游主备双线与不限时按量流量包搭配策略。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

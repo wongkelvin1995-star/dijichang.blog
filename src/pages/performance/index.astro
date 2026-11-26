@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import { performanceData } from '../../lib/data';
+---
+<BaseLayout
+  title="网络性能研究｜高带宽、低延迟与晚高峰稳定性分析 - 顶级机场"
+  description="解析下载速率、延迟、抖动、丢包率与晚高峰拥塞指标，明确实测证据规范与独立实测分工。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '性能研究', url: '/performance/' }]}
+>
+  <section class="scene-band scene-navy">
+    <FlagshipScene scene="velocity" />
+    <div class="container">
+      <span class="chapter-badge">Chapter 05 · Velocity Lab</span>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+        至尊性能实验室：网络质量指标与晚高峰研究
+      </h1>
+      <p class="section-lead">
+        {performanceData.methodology.notice}
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+        <a href="/performance/evidence/" class="btn-imperial btn-primary-gold">进入性能证据中心</a>
+        <a href="/performance/peak-hours/" class="btn-imperial btn-secondary-platinum">晚高峰研究</a>
+        <a href="/performance/packet-loss/" class="btn-imperial btn-secondary-platinum">丢包率解读</a>
+        <a href="/performance/jitter/" class="btn-imperial btn-secondary-platinum">抖动判断</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

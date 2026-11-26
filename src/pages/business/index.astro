@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlagshipScene from '../../components/FlagshipScene.astro';
+import AureviaArt from '../../components/AureviaArt.astro';
+import BusinessPlannerIsland from '../../components/tools/BusinessPlannerIsland';
+import { brands } from '../../lib/data';
+---
+<BaseLayout
+  title="国际商务服务｜商务办公、远程会议与多设备网络规划 - 顶级机场"
+  description="提供国际商务网络规划工具，解析远程办公、海外视频会议、多设备限制及个人服务与企业级 SLA 的边界。"
+  breadcrumbs={[{ name: '首页', url: '/' }, { name: '商务办公', url: '/business/' }]}
+>
+  <section class="scene-band scene-champagne">
+    <FlagshipScene scene="lounge" />
+    <div class="container">
+      <div class="grid-2" style="align-items:center;gap:2rem;">
+        <div>
+          <span class="chapter-badge">Chapter 08 · Executive Lounge</span>
+          <h1 class="section-title" style="font-size:clamp(1.8rem,3vw,2.5rem);">
+            国际商务中心：远程办公与多设备连续性研究
+          </h1>
+          <p class="section-lead">
+            面向长时间国际商务办公、远程视频会议及多平台设备协同的用户。本站明确区分个人消费级订阅与正规企业专线，不将普通代理包装为企业级 SLA 合规服务。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            <a href="/tools/business-planner/" class="btn-imperial btn-primary-gold">启动商务规划工具</a>
+            <a href="/business/video-meeting/" class="btn-imperial btn-secondary-platinum">视频会议要求</a>
+            <a href="/business/multi-device/" class="btn-imperial btn-secondary-platinum">设备限制对比</a>
+          </div>
+        </div>
+        <div style="max-width:340px;margin:0 auto;">
+          <AureviaArt pose="business" compact />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene-band scene-platinum">
+    <div class="container">
+      <h2 class="section-title">国际商务网络规划交互工具</h2>
+      <BusinessPlannerIsland client:load brands={brands} />
+    </div>
+  </section>
+</BaseLayout>

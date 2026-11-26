@@ -1,0 +1,291 @@
+---
+import FlagshipScene from './FlagshipScene.astro';
+import AureviaArt from './AureviaArt.astro';
+import OrionSprite from './OrionSprite.astro';
+import PremiumSelectorIsland from './tools/PremiumSelectorIsland';
+import LineMatrixIsland from './tools/LineMatrixIsland';
+import GlobalAtlasIsland from './tools/GlobalAtlasIsland';
+import {
+  brands,
+  plans,
+  lines,
+  regions,
+  qualityIndex,
+  servicePolicies,
+  getSiteStats,
+} from '../lib/data';
+
+const stats = getSiteStats(30);
+const selectorBrands = brands.map((b) => {
+  const q = qualityIndex.brands.find((x) => x.brandId === b.id);
+  const p = servicePolicies.find((x) => x.brandId === b.id);
+  return {
+    id: b.id,
+    name: b.name,
+    tagline: b.tagline,
+    deviceLimit: b.deviceLimit,
+    lineTypes: b.lineTypes,
+    aiTools: b.aiTools,
+    streaming: b.streaming,
+    supportChannels: p?.supportChannels || [],
+    evidenceCompleteness: q?.evidenceCompleteness ?? 0,
+  };
+});
+
+const tenCenters = [
+  { id: '01', name: '皇家旗舰总部', en: 'Imperial Headquarters', href: '/premium/', desc: '001–010 年度高端定位与精品筛选门槛' },
+  { id: '02', name: '至尊品质评选大厅', en: 'Prestige Hall', href: '/rankings/', desc: '011–020 皇家品质指数与评选资格核验' },
+  { id: '03', name: '铂金专线研究中心', en: 'Platinum Backbone', href: '/lines/', desc: '021–030 IEPL/IPLC/BGP 跨境架构研究' },
+  { id: '04', name: '全球网络探索大厅', en: 'Global Atlas', href: '/regions/', desc: '031–040 七大地区出口、原生IP与住宅IP' },
+  { id: '05', name: '至尊性能实验室', en: 'Velocity Lab', href: '/performance/', desc: '041–050 带宽、延迟、丢包与晚高峰证据' },
+  { id: '06', name: '高端AI研究中心', en: 'Intelligence Nexus', href: '/ai/', desc: '051–060 ChatGPT/Claude/Gemini 兼容研究' },
+  { id: '07', name: '皇家影音剧院', en: 'Platinum Cinema', href: '/streaming/', desc: '061–070 4K/8K 码率带宽与流媒体研究' },
+  { id: '08', name: '国际商务中心', en: 'Executive Lounge', href: '/business/', desc: '071–080 远程办公、会议与多设备连续性' },
+  { id: '09', name: '精品套餐服务中心', en: 'Prestige Collection', href: '/plans/', desc: '081–090 真实售价、流量倍率与售后条款' },
+  { id: '10', name: '皇家专业档案馆', en: 'Imperial Archives', href: '/guide/', desc: '091–100 购买避坑、隐私安全与备用规划' },
+];
+---
+
+<!-- Module 01: 皇家至尊品牌 Hero -->
+<section class="scene-band scene-platinum" style="padding:3.25rem 0 2.75rem;">
+  <FlagshipScene scene="headquarters" />
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;align-items:center;">
+      <div class="fx-reveal">
+        <div style="display:flex;align-items:center;gap:0.65rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+          <span class="chapter-badge">顶级机场 · Imperial Network</span>
+          <span class="evidence-pill">IMPERIAL ONE MAX · 2027 旗舰版</span>
+        </div>
+        <h1 style="font-family:var(--font-serif);font-size:clamp(1.85rem,3.4vw,2.75rem);line-height:1.25;margin:0 0 0.85rem;">
+          顶级机场：高端专线、优质节点与服务品质选购指南
+        </h1>
+        <p style="font-size:1.08rem;font-weight:700;color:var(--deep-gilt);margin:0 0 0.75rem;">
+          真正的品质，不止于速度。True Quality Goes Beyond Speed.
+        </p>
+        <p style="font-size:0.98rem;color:var(--text-secondary);margin:0 0 1.4rem;">
+          面向关注高端网络服务品质、精品 IEPL/IPLC 专线、全球优质出口、长时间商务办公、AI 应用与 4K/8K 影音的用户。本站 2027 年度指南依据 2026 年可获得的公开资料编写，坚持以可核验证据代替高价溢价幻觉。
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem;margin-bottom:1.1rem;">
+          <a href="/premium/" class="btn-imperial btn-primary-gold">探索精品机场</a>
+          <a href="/rankings/methodology/" class="btn-imperial btn-secondary-platinum">查看品质评选标准</a>
+          <a href="/tools/service-compare/" class="btn-imperial btn-secondary-platinum">比较高端套餐</a>
+          <a href="/tools/premium-selector/" class="btn-imperial btn-secondary-platinum">开始专业智能选购</a>
+        </div>
+        <div style="font-size:0.82rem;color:var(--text-muted);">
+          资料基准日期：{stats.latestVerifiedDate}｜<a href="/updates/" style="text-decoration:underline;">核验来源与更正记录</a>｜<a href="/disclosure/" style="text-decoration:underline;">推广关系披露</a>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;">
+        <div class="fx-goddess-parallax" style="max-width:370px;width:100%;">
+          <AureviaArt pose="welcome" />
+        </div>
+        <div style="display:flex;align-items:center;gap:0.65rem;background:var(--surface-card);border:1px solid var(--border-gold);padding:0.45rem 0.9rem;border-radius:999px;">
+          <OrionSprite size={32} />
+          <span style="font-size:0.8rem;font-weight:600;">ORION 铂金智核 · <a href="/search/" style="text-decoration:underline;">全站实时检索</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real Database Live Stats Bar -->
+    <div class="grid-4" style="margin-top:2.25rem;gap:0.85rem;">
+      <div class="imperial-card" style="padding:1rem;">
+        <div style="font-size:0.76rem;color:var(--text-muted);">已收录品牌 / 评选资格</div>
+        <div style="font-size:1.35rem;font-weight:800;">{stats.totalBrands} 家 / {stats.eligibleBrands} 家合格</div>
+      </div>
+      <div class="imperial-card" style="padding:1rem;">
+        <div style="font-size:0.76rem;color:var(--text-muted);">已核验历史套餐记录</div>
+        <div style="font-size:1.35rem;font-weight:800;color:var(--deep-gilt);">{stats.verifiedPlans} 条</div>
+      </div>
+      <div class="imperial-card" style="padding:1rem;">
+        <div style="font-size:0.76rem;color:var(--text-muted);">已取得线路声明</div>
+        <div style="font-size:1.35rem;font-weight:800;">{stats.lineDeclarationsCount} 份</div>
+      </div>
+      <div class="imperial-card" style="padding:1rem;">
+        <div style="font-size:0.76rem;color:var(--text-muted);">已发布原创研究 / 核验日期</div>
+        <div style="font-size:1.35rem;font-weight:800;">{stats.publishedArticles} 篇 · {stats.latestVerifiedDate}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 02 & 03: 奥蕾薇娅品牌欢迎寄语 & 2027 顶级机场专业选购指南 -->
+<section class="scene-band scene-champagne">
+  <FlagshipScene scene="headquarters" />
+  <div class="container">
+    <div class="grid-2" style="gap:1.5rem;">
+      <article class="imperial-card">
+        <span class="chapter-badge">02 · 奥蕾薇娅品牌欢迎寄语</span>
+        <h2 class="section-title" style="font-size:1.45rem;">欢迎来到顶级机场（Imperial Network）</h2>
+        <p>
+          真正的高端网络服务，不应该仅仅以价格、节点数量或者单次测速成绩来衡量。线路架构、网络性能、服务连续性、设备支持、隐私政策及售后保障，同样是值得认真考虑的因素。对于需要长时间商务办公、视频会议、AI 应用或高码率视频的用户而言，选择价格较高的套餐，并不意味着一定能够获得更好的连接体验。
+        </p>
+        <p style="margin-bottom:0;">
+          顶级机场希望建立一套透明的专业选购体系，通过服务商公开资料、可核验的网络证据、实际套餐条件及服务政策，帮助用户理解不同服务之间的真实区别。我们不会将未经验证的专线宣传视为性能保证，也不会因为某个品牌价格较高，就将其自动归类为顶级机场。
+        </p>
+      </article>
+
+      <article class="imperial-card">
+        <span class="chapter-badge">03 · 2027 顶级机场专业选购指南</span>
+        <h2 class="section-title" style="font-size:1.45rem;">理性决策：从证据出发而非价格溢价</h2>
+        <p>
+          真正有价值的推荐，应该建立在清楚的评价标准、充分的信息来源及适合用户实际需求的基础上。本站 2027 年度指南现阶段依据 2026 年可获得的公开资料编写，后续按照真实信息持续更新。在评估任何一家网络服务商时，建议用户依次核对四项基本事实：
+        </p>
+        <ul style="margin:0;padding-left:1.2rem;display:grid;gap:0.35rem;font-size:0.93rem;">
+          <li><strong>付费周期风险</strong>：首次接入优先选择月付，切勿在未验证本地晚高峰前直接大额年付。</li>
+          <li><strong>倍率与有效流量</strong>：核查主力节点是否按 1x 计费，避免高倍率导致实际流量缩水。</li>
+          <li><strong>设备与客户端政策</strong>：确认同时在线设备上限及是否允许路由器/第三方客户端订阅。</li>
+          <li><strong>备用连接冗余</strong>：商务及高频 AI 用户应配备第二家独立上游作为应急备份。</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Module 04: 十大旗舰研究中心导航 -->
+    <div style="margin-top:2.75rem;">
+      <span class="chapter-badge">04 · 十大旗舰研究中心导航</span>
+      <h2 class="section-title">Imperial ONE MAX 十大动态研究大厅</h2>
+      <div class="grid-5" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;">
+        {tenCenters.map((c) => (
+          <a href={c.href} class="imperial-card diamond-hover" style="padding:1.1rem;display:flex;flex-direction:column;gap:0.35rem;">
+            <span style="font-size:0.74rem;font-weight:800;color:var(--deep-gilt);letter-spacing:0.08em;">CHAPTER {c.id} · {c.en}</span>
+            <strong style="font-size:1.02rem;">{c.name}</strong>
+            <span style="font-size:0.82rem;color:var(--text-muted);">{c.desc}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 05, 06, 07, 08: Prestige Hall -->
+<section class="scene-band scene-platinum">
+  <FlagshipScene scene="prestige" />
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:2rem;margin-bottom:2.25rem;">
+      <div>
+        <span class="chapter-badge">05 &amp; 06 · 精品评选专区与 Imperial Quality Index</span>
+        <h2 class="section-title">顶级机场品质评选与六大权重维度</h2>
+        <p class="section-lead">
+          目前 18 家收录品牌均已具备正式评选资格（<strong>{stats.eligibleBrands} 家合格</strong>），档案、套餐价格与服务条款已完整建档。在独立多日性能实测样本补充前，本站仍坚持如实展示各维度资料边界，不虚构主观跑分。
+        </p>
+        <div class="grid-2" style="gap:0.75rem;">
+          {qualityIndex.weights.map((w) => (
+            <div class="imperial-card" style="padding:0.9rem;">
+              <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.9rem;">
+                <span>{w.name}</span>
+                <span style="color:var(--deep-gilt);">{w.weight}%</span>
+              </div>
+              <p style="margin:0.3rem 0 0;font-size:0.8rem;color:var(--text-muted);">{w.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="max-width:340px;margin:0 auto;">
+        <AureviaArt pose="quality" compact />
+      </div>
+    </div>
+
+    <!-- Module 07: 高端机场与普通机场区别 -->
+    <div class="imperial-card" style="margin-bottom:2.25rem;">
+      <span class="chapter-badge">07 · 高端机场与普通机场区别</span>
+      <h2 style="margin:0.5rem 0 0.75rem;font-size:1.4rem;">核心维度对比：为什么不仅仅是价格差异</h2>
+      <div class="table-scroll">
+        <table class="imperial-table">
+          <thead>
+            <tr>
+              <th>比较维度</th>
+              <th>普通入门级机场</th>
+              <th>合格的高端品质服务（目标标准）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>跨境传输架构</strong></td>
+              <td>多依赖单线公网直连或廉价共享中转，国际出口易拥塞</td>
+              <td>具备清晰公开的多线 BGP 入口或可核验专线架构，冗余度更高</td>
+            </tr>
+            <tr>
+              <td><strong>晚高峰表现</strong></td>
+              <td>20:00–23:30 丢包与抖动显著抬升，流媒体易降画质</td>
+              <td>控制超售比例，在跨运营商晚高峰仍保持低丢包与可用吞吐</td>
+            </tr>
+            <tr>
+              <td><strong>计费倍率与规则</strong></td>
+              <td>常以低月价吸引用户，但主力节点暗藏高倍率或严苛限速</td>
+              <td>倍率政策透明（常见 1x 倍率），重置与升级规则写明于条款</td>
+            </tr>
+            <tr>
+              <td><strong>售后与连续性</strong></td>
+              <td>缺乏工单响应，失联或改规则成本完全由用户承担</td>
+              <td>提供在线客服/工单渠道，维护公告及时，长期规则连贯</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Module 08: 高端机场智能需求匹配工具 -->
+    <div>
+      <span class="chapter-badge">08 · 高端机场智能需求匹配工具</span>
+      <h2 class="section-title">Premium Selector · 实时预算与场景筛选</h2>
+      <PremiumSelectorIsland client:visible brands={selectorBrands} plans={plans} />
+    </div>
+  </div>
+</section>
+
+<!-- Module 09, 10, 11, 12, 13, 14: Platinum Backbone & Global Atlas -->
+<section class="scene-band scene-tech">
+  <FlagshipScene scene="backbone" />
+  <div class="container">
+    <span class="chapter-badge">09–11 · 铂金专线研究中心</span>
+    <h2 class="section-title">IEPL、IPLC 精品专线与 BGP 跨境网络架构解析</h2>
+    <div class="grid-3" style="margin-bottom:2.25rem;">
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;font-size:1.12rem;">09. IEPL 精品专线研究</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          IEPL（国际以太网专线）基于运营商二层点对点以太网传输，跨境段不暴露于公网国际交换拥塞路由。但在消费级机场中，必须核验专线容量是否超售及入口是否稳定，不能仅凭节点名称轻信。<a href="/lines/iepl/" style="text-decoration:underline;font-weight:700;">深入研究 →</a>
+        </p>
+      </article>
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;font-size:1.12rem;">10. IPLC 精品专线研究</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          IPLC（国际私有出租电路）属于点对点传统电路级专线，隔离度高但租用成本昂贵。部分服务商仅在高阶套餐或特定高倍率节点部署 IPLC，选购时需核对其适用范围。<a href="/lines/iplc/" style="text-decoration:underline;font-weight:700;">深入研究 →</a>
+        </p>
+      </article>
+      <article class="imperial-card">
+        <h3 style="margin:0 0 0.5rem;font-size:1.12rem;">11. BGP 及跨境架构分析</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          三网 BGP 入口通过边界网关协议优化电信、联通、移动用户的第一跳接入体验，配合跨境优化通道与多地域落地，构成当前主流的高可用混合网络架构。<a href="/lines/bgp/" style="text-decoration:underline;font-weight:700;">深入研究 →</a>
+        </p>
+      </article>
+    </div>
+
+    <!-- Module 12 & 13: 全球七大主要地区节点资料 & 原生IP/住宅IP -->
+    <span class="chapter-badge">12 &amp; 13 · 全球网络探索大厅与 IP 知识</span>
+    <h2 class="section-title">全球七大主要地区节点资料、原生 IP 与住宅 IP</h2>
+    <div style="margin-bottom:2rem;">
+      <GlobalAtlasIsland client:visible regions={regions} />
+    </div>
+
+    <div class="grid-2" style="margin-bottom:2.25rem;">
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.45rem;">原生 IP（Native IP）边界</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          指 IP 所属 ASN 注册地与实际物理机房所在地区一致的 IP 地址。原生 IP 有助于改善流媒体地区识别，但仍多属于数据中心 IP 段，并不自动等于住宅 IP。<a href="/regions/native-ip/" style="text-decoration:underline;font-weight:700;">查看详情 →</a>
+        </p>
+      </div>
+      <div class="imperial-card">
+        <h3 style="margin:0 0 0.45rem;">住宅 IP（Residential IP）边界</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-secondary);">
+          由本地宽带 ISP 分配给家庭宽带的 IP，风控权重较低但带宽上限与稳定性常不如数据中心专线。严禁将普通机房广播 IP 包装为真实住宅家宽。<a href="/regions/residential-ip/" style="text-decoration:underline;font-weight:700;">查看详情 →</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Module 14: 高端线路证据对比矩阵 -->
+    <span class="chapter-badge">14 · 高端线路证据对比矩阵</span>
+    <h2 class="section-title">18 家品牌线路公开声明对比</h2>
+    <LineMatrixIsland client:visible lines={lines} />
+  </div>
+</section>

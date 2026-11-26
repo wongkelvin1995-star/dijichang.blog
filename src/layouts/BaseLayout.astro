@@ -1,0 +1,211 @@
+---
+import '../styles/imperial.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  breadcrumbs?: BreadcrumbItem[];
+  articleMeta?: {
+    headline: string;
+    datePublished: string;
+    dateModified: string;
+    authorName?: string;
+  };
+  isHome?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  noindex = false,
+  ogType = 'website',
+  breadcrumbs = [],
+  articleMeta,
+  isHome = false,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const canonicalUrl = canonical || `https://dijichang.blog${currentPath}`;
+const ogImage = 'https://dijichang.blog/og-imperial.svg';
+
+const websiteSchema = isHome
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: '顶级机场 · Imperial Network',
+      alternateName: 'Imperial ONE MAX',
+      url: 'https://dijichang.blog/',
+      inLanguage: 'zh-CN',
+      description,
+    }
+  : null;
+
+const breadcrumbSchema =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((item, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: item.name,
+          item: item.url.startsWith('http') ? item.url : `https://dijichang.blog${item.url}`,
+        })),
+      }
+    : null;
+
+const articleSchema = articleMeta
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: articleMeta.headline,
+      datePublished: articleMeta.datePublished,
+      dateModified: articleMeta.dateModified,
+      author: {
+        '@type': 'Organization',
+        name: articleMeta.authorName || '顶级机场编辑部（Imperial Network）',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: '顶级机场 · Imperial Network',
+        url: 'https://dijichang.blog/',
+      },
+      mainEntityOfPage: canonicalUrl,
+      inLanguage: 'zh-CN',
+    }
+  : null;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+    )}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="顶级机场 · Imperial Network" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {websiteSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    )}
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+    {articleSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    )}
+
+    <script is:inline>
+      (function () {
+        try {
+          var theme = localStorage.getItem('imperial-theme');
+          if (theme === 'night') document.documentElement.setAttribute('data-theme', 'night');
+          var motion = localStorage.getItem('imperial-motion');
+          if (motion === 'reduced') document.documentElement.setAttribute('data-motion', 'reduced');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">跳至正文内容</a>
+    <Header currentPath={currentPath} />
+
+    <main id="main-content">
+      {breadcrumbs.length > 0 && (
+        <nav aria-label="面包屑导航" style="background:var(--bg-champagne);border-bottom:1px solid var(--border-silver);padding:0.65rem 0;font-size:0.84rem;">
+          <div class="container" style="display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;color:var(--text-muted);">
+            {breadcrumbs.map((b, idx) => (
+              <>
+                {idx > 0 && <span aria-hidden="true">/</span>}
+                {idx === breadcrumbs.length - 1 ? (
+                  <span aria-current="page" style="color:var(--text-primary);font-weight:700;">{b.name}</span>
+                ) : (
+                  <a href={b.url} style="text-decoration:underline;text-underline-offset:3px;">{b.name}</a>
+                )}
+              </>
+            ))}
+          </div>
+        </nav>
+      )}
+      <slot />
+    </main>
+
+    <Footer currentPath={currentPath} />
+
+    <script is:inline>
+      (function () {
+        var themeBtn = document.getElementById('theme-toggle-btn');
+        var themeLabel = document.getElementById('theme-toggle-label');
+        var motionBtn = document.getElementById('motion-toggle-btn');
+        var motionLabel = document.getElementById('motion-toggle-label');
+
+        function syncLabels() {
+          var isNight = document.documentElement.getAttribute('data-theme') === 'night';
+          if (themeLabel) themeLabel.textContent = isNight ? '日间' : '夜间';
+          var isReduced = document.documentElement.getAttribute('data-motion') === 'reduced';
+          if (motionLabel) motionLabel.textContent = isReduced ? '动态视觉：关闭' : '动态视觉：开启';
+        }
+        syncLabels();
+
+        if (themeBtn) {
+          themeBtn.addEventListener('click', function () {
+            var isNight = document.documentElement.getAttribute('data-theme') === 'night';
+            if (isNight) {
+              document.documentElement.removeAttribute('data-theme');
+              try { localStorage.setItem('imperial-theme', 'day'); } catch (e) {}
+            } else {
+              document.documentElement.setAttribute('data-theme', 'night');
+              try { localStorage.setItem('imperial-theme', 'night'); } catch (e) {}
+            }
+            syncLabels();
+          });
+        }
+
+        if (motionBtn) {
+          motionBtn.addEventListener('click', function () {
+            var isReduced = document.documentElement.getAttribute('data-motion') === 'reduced';
+            if (isReduced) {
+              document.documentElement.removeAttribute('data-motion');
+              try { localStorage.setItem('imperial-motion', 'full'); } catch (e) {}
+            } else {
+              document.documentElement.setAttribute('data-motion', 'reduced');
+              try { localStorage.setItem('imperial-motion', 'reduced'); } catch (e) {}
+            }
+            syncLabels();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
